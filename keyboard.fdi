@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deviceinfo version="0.2">
+  <device>      
+    <match key="info.capabilities" contains="input.keys">
+      <merge key="input.x11_driver" type="string">evdev</merge>
+      <merge key="input.x11_options.XkbRules" type="string">xorg</merge>
+      <merge key="input.x11_options.XkbModel" type="string">macbook79</merge>
+      <merge key="input.x11_options.XkbLayout" type="string">us</merge>
+      <merge key="input.x11_options.XkbVariant" type="string">intl</merge>
+    </match>
+  </device>
+</deviceinfo>
