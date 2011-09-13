@@ -1,0 +1,228 @@
+# -*- muttrc -*- rc file for mutt
+# This file: ~/.mutt/muttrc.common
+#
+# author: Roman Asendorf <roman.asendorf@gmail.com>
+# common for all accounts
+
+set mask      = "!^\\.[^.]"
+# no markers for wrapped long long lines
+set markers   = no
+# Don't mark unread new msgs as old.
+set mark_old  = no
+set use_from  = "yes"
+set fcc_clear
+
+# default list of header fields to weed when displaying
+ignore *
+# ignore Received References Message-Id Delivered-To X-Original-To X-Spam-Level X-Spam-Status X-Spam-Checker-Version Envelope-to X-Gmail-Received X-VirusChecked X-Env-Sender X-Msg-Ref X-StarScan-Version X-Originating-IP X-Virus-Scanned X-CheckCompat X-Originating-Email X-Sender Return-Path Content-Disposition In-Reply-To X-Priority X-Abuse X-Received-before X-Authenticated X-MSMail-Priority X-MimeOLE X-GMX-Antispam X-UID X-RZG-CLASS-ID X-Sasl-enc X-Provags-ID X-GMX-UID X-FuHaFi DomainKey-Status X-VirtualServer X-VirtualServerGroup X-MailingID X-SMHeaderMap X-SMFBL X-OriginalArrivalTime X-RZG-AUTH
+unignore From To Cc Subject Date Reply-To Organization X-Mailer User-Agent X-Spam-Status Mailing-List
+
+# Order to display the headers in
+hdr_order From Reply-To To Cc Subject Date X-Mailer User-Agent
+
+# restore the behaviour of mutt versions up to 1.5.7
+#set menu_move_off
+
+# Tell mutt which MIME types to auto-view
+auto_view application/zip
+auto_view application/x-gzip
+auto_view application/x-gunzip
+auto_view application/octet-stream
+auto_view application/x-zip-compressed
+auto_view application/x-tar-gz
+auto_view application/msword
+auto_view application/x-perl
+auto_view application/x-sh
+auto_view application/x-tcl
+auto_view application/RTF
+auto_view text/html
+auto_view text/x-vcard
+auto_view image/tiffauto_view text/html
+#set implicit_autoview
+#auto_view text/html application/x-pgp-message
+alternative_order text/enriched text/plain text application/postscript image/*
+set mailcap_path="~/.muttmailcap:~/.mailcap:/etc/mailcap"
+set mailcap_sanitize=yes
+
+# set Return-Path according to the From-Field
+set use_envelope_from=yes
+
+# don't add the hostname to the From header
+unset use_domain
+
+# Specifies how to sort messages in the index menu.
+set sort = threads
+
+# Exim does not remove Bcc headers
+unset write_bcc
+
+# Postfix and qmail use Delivered-To for detecting loops
+unset bounce_delivered
+
+# weed out binary-only announcements to -devel-changes
+#macro index \CW T!~s\(.*source.*\)\nWn^T~A\n "Weed out binary-only announcements"
+
+# simulate the old url menu
+macro index,pager \cb "<pipe-message> urlscan --compact<Enter>" 'call urlscan to extract URLs out of a message'
+macro attach,compose \cb "<pipe-message> urlscan --compact<Enter>" 'call urlscan to extract URLs out of a message'
+# macro index,pager \cb |urlview\n 'call urlview to extract URLs out of a message'
+# macro attach,compose \cb |urlview\n 'call urlview to extract URLs out of a message'
+
+# Show documentation when pressing F12
+macro generic,index,pager <f12> "!zcat ~/.mutt/manual.txt.gz | sensible-pager\n" "Show Mutt documentation"
+
+# Default color definitions
+color     hdrdefault    black			cyan
+color     quoted        brightblack		black
+color     signature     magenta			black
+color     indicator     black			red
+color     attachment    black			green
+color     error         red             black
+color     message       white           black
+color     search        brightwhite     magenta
+color     status        white			brightblack
+color     tree          red				black
+color     normal        white			black
+color     tilde         green			black
+color     bold          brightyellow	black
+#color    underline     magenta		black
+color     markers       red				black
+# Colour definitions when on a mono screen
+mono bold      bold
+mono underline underline
+mono indicator reverse
+# Colours for items in the reader
+color header green black ".*:"
+color header magenta black "^(From):"
+color header white black "^(Subject):"
+mono  header bold "^(From|Subject):"
+# Colours for items in the index
+color index brightwhite	black ~N
+# Hmm, don't like this.
+color index brightgreen black "~N (~t asendorf)"
+color index red         black ~F
+color index black       green ~T
+color index brightblack black ~D
+mono  index bold              ~N
+mono  index bold              ~F
+mono  index bold              ~T
+mono  index bold              ~D
+
+# Highlights inside the body of a message.
+# URLs
+color body green  	   black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+color body magenta	   black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+mono  body bold              "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
+mono  body bold              "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
+# email addresses
+color body magenta	   black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+mono  body bold              "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+# Various smilies and the like
+color body brightgreen black "<[Ee]?[Bb]?[Gg]>"         # <g>
+color body brightgreen black "<[Bb][Gg]>"                 # <bg>
+color body brightgreen black " [;:]-*[)>(<|]"               # :-) etc...
+
+# GnuPG configuration
+set pgp_decode_command       = "gpg --charset utf-8 --status-fd=2 %?p?--passphrase-fd 0? --no-verbose --quiet --batch --output - %f"
+set pgp_verify_command       = "gpg --status-fd=2 --no-verbose --quiet --batch --output - --verify %s %f"
+set pgp_decrypt_command      = "gpg --status-fd=2 %?p?--passphrase-fd 0? --no-verbose --quiet --batch --output - %f"
+set pgp_sign_command         = "gpg --no-verbose --batch --quiet --output - %?p?--passphrase-fd 0? --armor --detach-sign --textmode %?a?-u %a? %f"
+set pgp_clearsign_command    = "gpg --charset utf-8 --no-verbose --batch --quiet --output - %?p?--passphrase-fd 0? --armor --textmode --clearsign %?a?-u %a? %f"
+set pgp_encrypt_only_command = "/usr/lib/mutt/pgpewrap gpg --charset utf-8 --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust -- -r %r -- %f"
+set pgp_encrypt_sign_command = "/usr/lib/mutt/pgpewrap gpg --charset utf-8 %?p?--passphrase-fd 0? --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust -- -r %r -- %f"
+set pgp_import_command       = "gpg --no-verbose --import %f"
+set pgp_export_command       = "gpg --no-verbose --export --armor %r"
+set pgp_verify_key_command   = "gpg --verbose --batch --fingerprint --check-sigs %r"
+set pgp_list_pubring_command = "gpg --no-verbose --batch --quiet --with-colons --list-keys %r"
+set pgp_list_secring_command = "gpg --no-verbose --batch --quiet --with-colons --list-secret-keys %r"
+set pgp_good_sign            = "^gpg: Good signature from"
+set pgp_autosign
+
+# receive key from keyserver:
+#set pgp_getkeys_command="wrap.sh -g %r"
+#set pgp_getkeys_command="gpg -q --batch --keyserver the.earth.li --recv-keys %r"
+
+# S/MIME configuration
+#source ~/.mutt/smime.rc
+#set smime_default_key              = ""
+
+# GPG-Encryption
+set crypt_autoencrypt = no
+set crypt_autosign    = yes
+#set pgp_use_gpg_agent = yes
+set pgp_auto_decode   = yes
+set pgp_timeout       = 3 	  # save it for xx minutes
+set pgp_show_unusable = yes   # show unusable PGP keys in menu
+
+# UTF-8 settings
+set charset         = "utf-8"
+set send_charset    = "us-ascii:iso-8859-1:utf-8"
+set assumed_charset = "us-ascii:iso-8859-1:utf-8"
+#set file_charset    = "us-ascii:iso-8859-1:utf-8"
+set config_charset  = "utf-8"
+
+# Header Cache
+set header_cache    = "~/.mutt/MailCache/"
+
+# mailing lists
+lists     `[ -e ~/.mailinglists ] && sed -e ':a; N; s/\n/ /; ta' ~/.mailinglists`
+subscribe `[ -e ~/.mailinglists ] && sed -e ':a; N; s/\n/ /; ta' ~/.mailinglists`
+
+set edit_headers    = yes
+set collapse_unread = no
+#set wrap            = 120
+
+folder-hook . 'set sort=threads; push <collapse-all><collapse-thread>'
+folder-hook Backup|Spam|Drafts|Sent|Trash|Templates 'set sort=date; push <collapse-all><collapse-thread>'
+
+macro generic,index,pager <f5> ":source ~/.mutt/muttrc.offlineimap<enter>I" "Switch to offline mode"
+macro generic,index,pager <f6> ":source ~/.mutt/muttrc.onlineimap<enter>I" "Switch to online mode"
+
+# remap list-reply to G instead of the L key which is used to jump to the bottom
+# of the page
+bind index,pager G list-reply
+bind index L bottom-page
+
+# avoid annoying questions
+set noconfirmappend
+set nomove # never ask for "move mail out of spoolbox"
+set nowait_key
+
+set auto_tag
+set delete
+set fast_reply
+set include
+
+set pager_stop
+set pager_context      = 3
+#set menu_scroll        = yes
+set pager_index_lines  = 5
+
+set attribution   = "On %d, %n wrote:\n"
+set date_format   = "%a %d-%m-%Y %H:%M %z"
+set index_format  = "%4C %Z %d %-28.28F (%?l?%4l&%4c?) %s"
+set pager_format  = "-%Z- %C/%m: %D %-28.28n %s"
+set folder_format = "%2C %5.0N %f"
+#set folder_format = "%2C %t %N %F %2l %-8.8u %-8.8g %8s %d %f"
+
+# special editor-command to wrap signatures
+set editor	= "vim +/^$"
+set query_command="lbdbq '%s'"
+
+#set xterm_title="Mutt %?b?[NEW mail in %b mailboxes]? %?n?[%n NEW]?"
+#set xterm_set_titles
+
+set print_command="iconv -f UTF-8 -t LATIN1 | a2ps -E -2 -B"
+
+set record    = "$spoolfile"
+#folder-hook . 'set record="^"'
+
+unmy_hdr *
+unhook send-hook
+send-hook . 'my_hdr From: $from'
+send-hook ~l 'my_hdr X-Bcc:'
+
+macro index,pager I "<change-folder>$spoolfile<enter>" "open inbox-folder"
+macro index V "<collapse-all>" "collapse/uncollapse all threads"
+macro index,pager <ESC>V "<show-version>" "show version information"
+

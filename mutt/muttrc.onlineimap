@@ -1,0 +1,21 @@
+# -*- muttrc -*- rc file for mutt
+# This file: ~/.mutt/muttrc.offlineimap
+#
+# author: Roman Asendorf <roman.asendorf@gmail.com>
+# mutt config for gmail account
+
+unmailboxes *
+set imap_user	= `[ -e ~/.mutt/auth.gmail ] && sed -ne 's/username=//p' < ~/.mutt/auth.gmail`
+set imap_pass	= `[ -e ~/.mutt/auth.gmail ] && sed -ne 's/password=//p' < ~/.mutt/auth.gmail`
+
+mailboxes `~/bin/list_imap_mailboxes.py -F ~/.mutt/auth.gmail --ssl imap.gmail.com`
+
+set folder	= "imaps://imap.gmail.com:993"
+set spoolfile	= "+INBOX"
+set record		= "+[Google Mail]/Sent Mail"
+set mbox		= "+[Google Mail]/All Mail"
+set postponed	= "+[Google Mail]/Drafts"
+set imap_idle	= yes
+
+# include source file of personal informations
+source ~/.mutt/muttrc.roman

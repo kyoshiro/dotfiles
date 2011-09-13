@@ -1,0 +1,28 @@
+# -*- muttrc -*- rc file for mutt
+# This file: ~/.mutt/muttrc.offlineimap
+#
+# author: Roman Asendorf <roman.asendorf@gmail.com>
+# mutt config for offline imap usage
+
+unmailboxes *
+source ~/.mutt/muttrc.mailboxes
+set mbox_type	= Maildir
+set folder		= ~/.maildb
+set spoolfile	= "+/GoogleMail/INBOX"
+set record		= "+/GoogleMail/[Google Mail]/Sent Mail"
+set mbox		= "+/GoogleMail/[Google Mail]/All Mail"
+set postponed	= "+/GoogleMail/[Google Mail]/Drafts"
+unset record
+set nomove
+
+# Not working with white spaces in [Goolge Mail]
+#macro index,pager A "<change-folder>$mbox<enter>" "open Archive folder"
+#macro index,pager Q "<save-message>$mbox<enter>" "move to Archiv"
+
+# Hook which automatically moves messages which are older then N
+# days from a mailbox to corresponding archive folder:
+# folder-hook "=INBOX" push
+# <tag-pattern>~R~r>14d<enter><tag-prefix-cond><save-message>$mbox<enter>
+
+# include source file of personal information
+source ~/.mutt/muttrc.roman

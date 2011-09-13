@@ -1,0 +1,7 @@
+# -*- muttrc -*- rc file for mutt
+# This file: ~/.mutt/muttrc.default
+#
+# author: Roman Asendorf <roman.asendorf@gmail.com>
+# sets the default entry point, e.g. offlineimap
+
+source ~/.mutt/muttrc.offlineimap

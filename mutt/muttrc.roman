@@ -1,0 +1,20 @@
+# -*- muttrc -*- rc file for mutt
+# This file: ~/.mutt/muttrc.roman
+#
+# author: Roman Asendorf <roman.asendorf@gmail.com>
+# mutt config for personal information
+
+# I have to set these defaults because when you first startup mutt
+# it's not running folder hooks. It just starts in a folder
+set from	= "roman.asendorf@gmail.com"
+set realname	= "Roman Asendorf"
+my_hdr From: Roman Asendorf <roman.asendorf@gmail.com>
+
+set sendmail	= "/usr/bin/msmtp -a GoogleMail"
+set signature	= "~/.mutt/muttrc.signature-gmail"
+
+pgp-hook roman.asendorf@gmail.com 0x9FC21E7E
+set pgp_sign_as="0x9FC21E7E"
+
+# include common configuration
+source ~/.mutt/muttrc.common
