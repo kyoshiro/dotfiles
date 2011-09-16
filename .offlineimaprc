@@ -1,0 +1,26 @@
+# offlineimaprc
+# This file: ~/.offlineimaprc
+#
+# Author: Roman Asendorf <roman.asendorf@gmail.com>
+# Needs offlineimap.py script to fetch credentials from auth file
+
+[general]
+pythonfile = ~/bin/offlineimap.py
+
+accounts = GoogleMail
+
+[Account GoogleMail]
+localrepository = GoogleMail-Local
+remoterepository = GoogleMail-Remote
+
+[Repository GoogleMail-Local]
+type = Maildir
+localfolders = ~/.maildb/GoogleMail/
+
+[Repository GoogleMail-Remote]
+type = Gmail
+remoteusereval = get_username('/home/kyoshiro/.mutt/auth.gmail')
+remotepasseval = get_password('/home/kyoshiro/.mutt/auth.gmail')
+
+realdelete = no
+ssl = yes

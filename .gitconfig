@@ -1,0 +1,13 @@
+[user]
+	name = Roman Asendorf
+	email = roman.asendorf@gmail.com
+
+[color]
+	diff = auto
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	lg = log -p
