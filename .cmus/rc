@@ -43,7 +43,7 @@ set color_info=white
 set color_separator=black
 
 #Status line background color.
-set color_statusline_bg=black
+set color_statusline_bg=darkgray
 
 #Status line foreground color.
 set color_statusline_fg=white
