@@ -43,16 +43,16 @@ set color_info=white
 set color_separator=black
 
 #Status line background color.
-set color_statusline_bg=darkgray
+set color_statusline_bg=black
 
 #Status line foreground color.
 set color_statusline_fg=white
 
 #Background color of the line displaying currently playing track.
-set color_titleline_bg=darkgray
+set color_titleline_bg=black
 
 #Foreground color of the line displaying currently playing track.
-set color_titleline_fg=white
+set color_titleline_fg=lightgreen
 
 #Window background color.
 set color_win_bg=black
