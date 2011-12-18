@@ -19,6 +19,7 @@ net-dns/avahi qt3
 net-dns/avahi qt3
 net-libs/libsoup gnome
 net-libs/glib-networking -libproxy
+net-misc/curl -gnutls
 sys-apps/busybox static
 sys-apps/help2man -nls
 sys-apps/util-linux static-libs
