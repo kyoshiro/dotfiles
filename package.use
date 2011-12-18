@@ -1,0 +1,26 @@
+app-emulation/wine oss
+dev-db/mysql -berkdb -debug
+dev-db/postgresql-base -kerberos
+dev-java/icedtea -javascript
+dev-lang/ruby -cjk
+dev-libs/libgcrypt static-libs
+dev-libs/libgpg-error static-libs
+dev-libs/popt static-libs
+dev-vcs/subversion -debug -dso
+dev-vcs/subversion perl
+gnome-base/gvfs -http
+media-sound/amarok -bindist asf mp4
+media-sound/amarok-utils -bindist asf mp4
+net-analyzer/rrdt4ol -ruby
+net-dns/avahi qt3
+net-libs/glib-networking -libproxy
+sys-apps/busybox static
+sys-apps/help2man -nls
+sys-apps/util-linux static-libs
+sys-fs/lvm2 static
+x11-libs/cairo -qt4
+sys-fs/udev gudev
+virtual/ffmpeg sdl
+media-libs/mlt sdl melt
+media-video/ffmpeg sdl
+
