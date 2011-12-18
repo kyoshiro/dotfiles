@@ -11,16 +11,18 @@ dev-vcs/subversion perl
 gnome-base/gvfs -http
 media-sound/amarok -bindist asf mp4
 media-sound/amarok-utils -bindist asf mp4
+media-libs/mlt sdl melt
+media-video/ffmpeg sdl
+media-video/mplayer -bindist
 net-analyzer/rrdt4ol -ruby
 net-dns/avahi qt3
+net-dns/avahi qt3
+net-libs/libsoup gnome
 net-libs/glib-networking -libproxy
 sys-apps/busybox static
 sys-apps/help2man -nls
 sys-apps/util-linux static-libs
 sys-fs/lvm2 static
-x11-libs/cairo -qt4
 sys-fs/udev gudev
 virtual/ffmpeg sdl
-media-libs/mlt sdl melt
-media-video/ffmpeg sdl
-
+x11-libs/cairo -qt4
