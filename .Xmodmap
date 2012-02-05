@@ -1,0 +1,12 @@
+keycode 104 = Mode_switch
+keycode 94 = grave asciitilde degree
+keycode 49 = section plusminus
+keysym  a = a A adiaeresis Adiaeresis
+keysym  u = u U udiaeresis Udiaeresis
+keysym  o = o O odiaeresis Odiaeresis
+keysym c = c C cent copyright
+keysym d = d D degree
+keysym r = r R registered
+keysym s = s S ssharp
+keysym p = p P section
+keysym y = y Y yen

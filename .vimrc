@@ -195,8 +195,8 @@ if !exists("autocommands_loaded")
 	augroup hooks
 		" replace "Last Modified: with the current time"
 		au BufWritePre,FileWritePre *	call LastMod()
-		au BufWritePre *.py,*.js,*rc :call <SID>StripTrailingWhitespaces()
-		" line highlighting in ins:xert mode
+		au BufWritePre *.py,*.js,*.sh,*.txt,*.org,*.tex :call <SID>StripTrailingWhitespaces()
+		" line highlighting in insert mode
 		autocmd InsertLeave *	set nocul
 		autocmd InsertEnter *	set cul
 		" move to the directory of the edited file

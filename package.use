@@ -12,7 +12,7 @@ gnome-base/gvfs -http
 media-sound/amarok -bindist asf mp4
 media-sound/amarok-utils -bindist asf mp4
 media-libs/mlt sdl melt
-media-video/ffmpeg sdl
+media-video/ffmpeg sdl -openssl
 media-video/mplayer -bindist
 net-analyzer/rrdt4ol -ruby
 net-dns/avahi qt3
