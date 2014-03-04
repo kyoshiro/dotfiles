@@ -852,6 +852,7 @@ command! -nargs=* Find :call Find(<f-args>)
 " Make current file executeable
 command! -nargs=0 Chmodx :!chmod +x %
 
+let g:org_todo_keywords = ['TODO', '|', 'DONE']
 " ---------- personal settings ----------
 " source other personal settings
 runtime! personal.vim
