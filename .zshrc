@@ -33,11 +33,4 @@ source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
-precmd () { __git_ps1 "[%n@%m]" "%~%% " "%s" }
-#autoload -Uz vcs_info
-#precmd_vcs_info() { vcs_info }
-#precmd_functions+=( precmd_vcs_info )
-#setopt prompt_subst
-#RPROMPT=\$vcs_info_msg_0_
-## PROMPT=\$vcs_info_msg_0_'%# '
-#zstyle ':vcs_info:git:*' formats '%b'
+precmd () { __git_ps1 "[%n@%m]" "%~%% "$'\n' "(%s)" }
