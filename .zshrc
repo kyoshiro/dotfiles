@@ -20,17 +20,36 @@ autoload -Uz compinit
 compinit
 setopt autolist automenu
 # End of lines added by compinstall
-#
-# make emacs server work
+
+# Make emacs server work
 alias emacs=/usr/local/bin/emacs
-#
-# make `ls' colorized:
+
+# Make `ls' more colorized:
 alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
 alias grep='grep --color=auto'
-#export LS_OPTIONS='--color=auto'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias gl1="git log --decorate --oneline"
+alias gl="git log --decorate"
+
+export DISPLAY=:0.0
+
 eval "`dircolors`"
+
+if [ -z $SSH_AGENT_PID ]; then
+  echo "~/.zshrc: Starting SSH Agent!"
+  eval `ssh-agent` && ssh-add ~/.ssh/id_rsa
+  echo "~/.zshrc: SSH Agent running (PID: $SSH_AGENT_PID)"
+else
+  echo "~/.zshrc: SSH Agent already running (PID: $SSH_AGENT_PID)"
+fi
+
+# Include git prompt and colorized info
 source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
-precmd () { __git_ps1 "[%n@%m]" "%~%% "$'\n' "(%s)" }
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_SHOWCOMMITHASH=true
+precmd () { __git_ps1 "[%n@%m]" "%~ %% "$'\n' "%s" }
+
