@@ -26,7 +26,14 @@ alias emacs=/usr/local/bin/emacs
 #
 # make `ls' colorized:
 alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
 alias grep='grep --color=auto'
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias gl1="git log --decorate --oneline"
+alias gl="git log --decorate"
+
+export DISPLAY=:0.0
+
 #export LS_OPTIONS='--color=auto'
 eval "`dircolors`"
 
@@ -47,6 +54,8 @@ source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWCOLORHINTS=true
+GIT_PS1_SHOWCOMMITHASH=true
 precmd () { __git_ps1 "[%n@%m]" "%~ %% "$'\n' "%s" }
 #autoload -Uz vcs_info
 #precmd_vcs_info() { vcs_info }

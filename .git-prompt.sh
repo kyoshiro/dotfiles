@@ -242,6 +242,7 @@ __git_ps1_colorize_gitstring ()
 		local c_green='%F{green}'
 		local c_lblue='%F{blue}'
 		local c_clear='%f'
+		local c_yellow='%F{yellow}'
 	else
 		# Using \[ and \] around colors is necessary to prevent
 		# issues with command line editing/browsing/completion!
@@ -253,6 +254,7 @@ __git_ps1_colorize_gitstring ()
 	local bad_color=$c_red
 	local ok_color=$c_green
 	local flags_color="$c_lblue"
+	local hash_color="$c_yellow"
 
 	local branch_color=""
 	if [ $detached = no ]; then
@@ -275,7 +277,15 @@ __git_ps1_colorize_gitstring ()
 	if [ -n "$u" ]; then
 		u="$bad_color$u"
 	fi
+	if [ -n "$h" ]; then
+		w="$hash_color$h"
+	fi
 	r="$c_clear$r"
+}
+
+# Helper function to read commit hash
+__git_commit_hash() {
+    git log -1 --pretty=oneline | cut -c -8
 }
 
 # Helper function to read the first line of a file into a variable.
@@ -469,6 +479,7 @@ __git_ps1 ()
 	local u=""
 	local c=""
 	local p=""
+	local h=""
 
 	if [ "true" = "$inside_gitdir" ]; then
 		if [ "true" = "$bare_repo" ]; then
@@ -490,6 +501,10 @@ __git_ps1 ()
 		   git rev-parse --verify --quiet refs/stash >/dev/null
 		then
 			s="$"
+		fi
+
+		if [ -n "${GIT_PS1_SHOWCOMMITHASH-}" ]; then
+			h="$(git log -1 --pretty=oneline | cut -c -8)"
 		fi
 
 		if [ -n "${GIT_PS1_SHOWUNTRACKEDFILES-}" ] &&
