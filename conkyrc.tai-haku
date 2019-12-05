@@ -162,8 +162,8 @@ ${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /de
 # -- Network
 ${voffset 4}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}IP Address: ${color} ${alignr}${offset -10$}${addrs enp3s0}
-${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp6s0}${alignr}${upspeedgraph enp3s0 8,100}
-${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp6s0}${alignr}${downspeedgraph enp3s0 8,100}
+${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp3s0}${alignr}${upspeedgraph enp3s0 8,100}
+${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp3s0}${alignr}${downspeedgraph enp3s0 8,100}
 # -- Graphics Cards
 ${voffset 4}${color5}${font Roboto:size=10}N V I D I A   ${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}GPU Temp ${color}${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader} °C
