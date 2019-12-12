@@ -116,8 +116,8 @@ conky.config = {
 };
 
 conky.text = [[
-${voffset 4}${color6}{font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${voffset 4}${color6}{font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${voffset 4}${color6}${font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
+${voffset 4}${color6}${font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 # -- General System Info
 ${voffset 8}${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}Hostname:${color} ${alignr}${nodename}
