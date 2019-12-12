@@ -116,8 +116,8 @@ conky.config = {
 };
 
 conky.text = [[
-${voffset 4}$${color6}{font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${voffset 4}$${color6}{font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${voffset 4}${color6}{font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
+${voffset 4}${color6}{font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 # -- General System Info
 ${voffset 8}${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}Hostname:${color} ${alignr}${nodename}
@@ -161,7 +161,8 @@ ${offset 20}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/
 ${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda1}${alignr}${diskiograph_write sda1 8,100}
 # -- Network
 ${voffset 4}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}IP Address: ${color} ${alignr}${offset -10$}${addrs wlp1s0}
+${voffset 4}${offset 20}${color2}IPv4 Addr: ${color}${alignr}${addrs wlp1s0}
+${offset 20}${color2}IPv6 Addr: ${color}${alignr}${v6addrs -s wlp1s0}
 ${color2}${offset 20}Wifi Up:${color} ${alignr}${offset -10$}${upspeed wlp1s0}${alignr}${upspeedgraph wlp1s0 8,100}
 ${color2}${offset 20}Wifi Down:${color} ${alignr}${offset -10$}${downspeed wlp1s0}${alignr}${downspeedgraph wlp1s0 8,100}
 # -- Graphics Cards
