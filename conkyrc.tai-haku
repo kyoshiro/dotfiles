@@ -130,7 +130,7 @@ ${offset 20}${color2}Uptime:${color} ${alignr}${uptime}
 ${voffset 4}${color5}${font Roboto:size=10}P R O C E S S O R   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}CPU Freq:${color} $alignr${freq}MHz
 ${offset 20}${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
-${offset 20}${color2}Load History:${color} ${alignr}${cpugraph 8,100}
+${offset 20}${color2}Load History:${color} ${alignr}${cpugraph 8,85}
 ${offset 20}${color2}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
 ${offset 20}${color2}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
 ${offset 20}${color2}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
@@ -153,23 +153,28 @@ ${offset 20}${color2}4. ${color}${top_mem name 4}${alignr}${offset -10}${top_mem
 ${offset 20}${color2}5. ${color}${top_mem name 5}${alignr}${offset -10}${top_mem cpu 5}%${alignr}${top_mem mem 5}%
 # -- Drives
 ${voffset 4}${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}Root - SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
-${offset 20}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda5}${alignr}${diskiograph_read sda5 8,100}
-${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda5}${alignr}${diskiograph_write sda5 8,100}
-${voffset 4}${offset 20}${color2}Data - HDD:${color} ${alignr}${offset -10}${fs_used /media/kyoshiro/data} / ${fs_size /media/kyoshiro/data}${alignr}${fs_bar /media/kyoshiro/data}
-${offset 20}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sdb1}${alignr}${diskiograph_read sdb1 8,100}
-${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sdb1}${alignr}${diskiograph_write sdb1 8,100}
+${voffset 4}${offset 20}${color2}Root - SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar 8,85}
+${offset 20}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sda5}${alignr}${diskiograph_read sda5 8,85}
+${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sda5}${alignr}${diskiograph_write sda5 8,85}
+${voffset 4}${offset 20}${color2}Data - HDD:${color} ${alignr}${offset -10}${fs_used /media/kyoshiro/data} / ${fs_size /media/kyoshiro/data}${alignr}${fs_bar 8,85 /media/kyoshiro/data}
+${offset 20}${color2}I/O Read:${color} ${alignr}${offset -10}${diskio_read /dev/sdb1}${alignr}${diskiograph_read sdb1 8,85}
+${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /dev/sdb1}${alignr}${diskiograph_write sdb1 8,85}
 # -- Network
 ${voffset 4}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}IP Address: ${color} ${alignr}${offset -10$}${addrs enp3s0}
-${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp3s0}${alignr}${upspeedgraph enp3s0 8,100}
-${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp3s0}${alignr}${downspeedgraph enp3s0 8,100}
+${voffset 4}${offset 20}${color2}IPv4 Addr: ${color} ${alignr}${addrs -s enp3s0}
+${offset 20}${color2}IPv6 Addr: ${color}${alignr}${v6addrs -s enp3s0}
+${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp3s0}${alignr}${upspeedgraph enp3s0 8,85}
+${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp3s0}${alignr}${downspeedgraph enp3s0 8,85}
 # -- Graphics Cards
 ${voffset 4}${color5}${font Roboto:size=10}N V I D I A   ${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}GPU Temp ${color}${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
-#${offset 20}Fan Speed ${alignr}${execi 60 nvidia-settings -q [fan:0]/GPUCurrentFanSpeed -t}%
-${offset 20}${color2}GPU Clock ${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1}MHz
-${offset 20}${color2}Mem Clock ${color}${alignr}${execi 86400 nvidia-settings -q all| grep -m 1 GPUCurrentProcessorClockFreqs | awk '{print $4}' | sed 's/.$//'}MHz
-${offset 20}${color2}Mem Used ${color}${alignr}${execi 60 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t}M
+${voffset 4}${offset 20}${color2}Performance Mode${color}${alignr}${nvidia perfmode}
+${offset 20}${color2}Processor Freq${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentProcessorClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
+${offset 20}${color2}Processor Load${color}${alignr}${nvidia gpuutil}%${offset -10}${alignr}${nvidiabar 8,85 gpuutil}
+${offset 20}${color2}GPU Temp${color}${alignr}${nvidia gputemp}°C
+${offset 20}${color2}GPU Freq${color}${alignr}${nvidia gpufreqcur}MHz
+${offset 20}${color2}Mem Freq${color}${alignr}${nvidia memfreqcur}MHz
+${offset 20}${color2}Mem Transfer Freq${color}${alignr}${nvidia mtrfreqcur}MHz
+#${alignr} ${nvidiabar 8,100 mtrfreq}
+${offset 20}${color2}Mem Usage ${color}${alignr}${nvidia memused} / ${nvidia memmax}M${offset -10}${alignr}${nvidiabar 8,85 memused}
 ${voffset 10}
 ]];
