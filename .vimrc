@@ -186,16 +186,16 @@ if !exists("autocommands_loaded")
 		au BufReadPost,BufNewFile *		call ReadIncludePath()
 
 		" Omni completion settings
-		"au FileType c		setlocal completefunc=ccomplete#Complete
+		au FileType c		setlocal completefunc=ccomplete#Complete
 		au FileType css setlocal omnifunc=csscomplete#CompleteCSS
-		"au FileType html setlocal completefunc=htmlcomplete#CompleteTags
-		"au FileType js setlocal completefunc=javascriptcomplete#CompleteJS
+		au FileType html setlocal completefunc=htmlcomplete#CompleteTags
+		au FileType js setlocal completefunc=javascriptcomplete#CompleteJS
 		"au FileType php setlocal completefunc=phpcomplete#CompletePHP
-		"au FileType python setlocal completefunc=pythoncomplete#Complete
-		"au FileType ruby setlocal completefunc=rubycomplete#Complete
+		au FileType python setlocal completefunc=pythoncomplete#Complete
+		au FileType ruby setlocal completefunc=rubycomplete#Complete
 		"au FileType sql setlocal completefunc=sqlcomplete#Complete
 		"au FileType *		setlocal completefunc=syntaxcomplete#Complete
-		"au FileType xml setlocal completefunc=xmlcomplete#CompleteTags
+		au FileType xml setlocal completefunc=xmlcomplete#CompleteTags
 
 		" insert a prompt for every changed file in the commit message
 		"au FileType svn :1![ -f "%" ] && awk '/^[MDA]/ { print $2 ":\n - " }' %
@@ -398,7 +398,7 @@ fun! <SID>Bc(exp)
 endfun
 
 fun! <SID>RFC(number)
-	silent exe ":e http://www.ietf.org/rfc/rfc" . a:number . ".txt"
+	silent exe ":e https://www.ietf.org/rfc/rfc" . a:number . ".txt"
 endfun
 
 " the function Nr2Hex() returns the Hex string of a number.
@@ -756,7 +756,7 @@ nnoremap <Leader>d :Kwbd<CR>
 " nnoremap Q @q
 
 " opens input for mathematical expressions
-nnoremap <Leader>= :Bc<Space>
+
 
 " edit files even if they do not exist
 nnoremap gcf :e <cfile><CR>
@@ -862,9 +862,22 @@ command! -nargs=* Find :call Find(<f-args>)
 command! -nargs=0 Chmodx :!chmod +x %
 
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
-" ---------- personal settings ----------
-autocmd vimenter * NERDTree
 
+" ----------- Start additional buffers ---------
+autocmd vimenter * NERDTree
+autocmd vimenter * Tagbar
 autocmd VimEnter * wincmd p
+
+" ---------- Airline Configuration -------------
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='molokai'
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+
+" ---------- personal settings ----------
+
 " source other personal settings
 runtime! personal.vim
+
+
