@@ -864,5 +864,7 @@ command! -nargs=0 Chmodx :!chmod +x %
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
 " ---------- personal settings ----------
 autocmd vimenter * NERDTree
+
+autocmd VimEnter * wincmd p
 " source other personal settings
 runtime! personal.vim
