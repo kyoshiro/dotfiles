@@ -116,41 +116,41 @@ conky.config = {
 };
 
 conky.text = [[
-${color6}${voffset 4}${font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${color6}${voffset 4}${font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${voffset 4}$${color6}{font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
+${voffset 4}$${color6}{font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 # -- General System Info
 ${voffset 8}${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
-${color2}${voffset 4}Hostname:${color} ${alignr}${nodename}
-${color2}Distro:${color}${alignr}${execi 86400 lsb_release -a | grep 'Description'|awk {'print $2" "$3'}}
-${color2}Kernel:${color}${alignr}${execi 86400 uname} ${execi 86400 uname -r}
-${color2}Intel: ${color}${alignr}${execpi 86400 lshw -C display | grep "product" | awk {'print $2 $3 $4'}}
-${color2}Intel Driver: ${color}${alignr}${execi 86400 lshw -C display | grep "driver"| awk {'print $2'}}
-${color2}Uptime:${color} ${alignr}${uptime}
+${voffset 4}${offset 20}${color2}Hostname:${color} ${alignr}${nodename}
+${offset 20}${color2}Distro:${color}${alignr}${execi 86400 lsb_release -a | grep 'Description'|awk {'print $2" "$3'}}
+${offset 20}${color2}Kernel:${color}${alignr}${execi 86400 uname} ${execi 86400 uname -r}
+${offset 20}${color2}Intel: ${color}${alignr}${execpi 86400 lshw -C display | grep "product" | awk {'print $2 $3 $4'}}
+${offset 20}${color2}Intel Driver: ${color}${alignr}${execi 86400 lshw -C display | grep "driver"| awk {'print $2'}}
+${offset 20}${color2}Uptime:${color} ${alignr}${uptime}
 # -- CPU and Usage
 ${voffset 4}${color5}${font Roboto:size=10}P R O C E S S O R   ${hr 2}${font}${color}
-${voffset 4}${color2}CPU Freq:${color} $alignr${freq}MHz
-${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
-${color2}History:${color} ${alignr}${cpugraph 8,100}
-${color2}${offset 20}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
-${color2}${offset 20}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
-${color2}${offset 20}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
-${color2}${offset 20}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
-${color2}Top Processes ${alignr}cpu%  ${alignr}mem%${color}
-${voffset 4}${offset 20}${color2}1. ${color}${top name 1}${alignr} ${top cpu 1}    ${alignr}${top mem 1}
-${offset 20}${color2}2. ${color}${top name 2}${alignr} ${alignr}${top cpu 2}    ${alignr}${top mem 2}
-${offset 20}${color2}3. ${color}${top name 3}${alignr} ${alignr}${top cpu 3}    ${alignr}${top mem 3}
-${offset 20}${color2}4. ${color}${top name 4}${alignr} ${alignr}${top cpu 4}    ${alignr}${top mem 4}
-${offset 20}${color2}5. ${color}${top name 5}${alignr} ${alignr}${top cpu 5}    ${alignr}${top mem 5}
+${voffset 4}${offset 20}${color2}CPU Freq:${color} $alignr${freq}MHz
+${offset 20}${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${offset 20}${color2}Load History:${color} ${alignr}${cpugraph 8,100}
+${offset 20}${color2}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
+${offset 20}${color2}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
+${offset 20}${color2}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
+${offset 20}${color2}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
+${voffset 4}${offset 20}${color2}Top Processes ${alignr}${offset -25}CPU${alignr}Mem${color}
+${voffset 4}${offset 20}${color2}1. ${color}${top name 1}${alignr}${offset -10}${top cpu 1}%${alignr}${top mem 1}%
+${offset 20}${color2}2. ${color}${top name 2}${alignr}${offset -10}${top cpu 2}%${alignr}${top mem 2}%
+${offset 20}${color2}3. ${color}${top name 3}${alignr}${offset -10}${top cpu 3}%${alignr}${top mem 3}%
+${offset 20}${color2}4. ${color}${top name 4}${alignr}${offset -10}${top cpu 4}%${alignr}${top mem 4}%
+${offset 20}${color2}5. ${color}${top name 5}${alignr}${offset -10}${top cpu 5}%${alignr}${top mem 5}%
 # -- Memory and Usage
 ${voffset 4}${color5}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
 ${voffset 4}${color2}${offset 20}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
 ${color2}${offset 20}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
-${color2}Top Processes${alignr}cpu%  ${alignr}mem%${color}
-${voffset 4}${offset 20}${color2}1. ${color}${top_mem name 1}${alignr}${top_mem cpu 1}    ${alignr}${top_mem mem 1}
-${offset 20}${color2}2. ${color}${top_mem name 2}${alignr} ${alignr}${top_mem cpu 2}    ${alignr}${top_mem mem 2}
-${offset 20}${color2}3. ${color}${top_mem name 3}${alignr} ${alignr}${top_mem cpu 3}    ${alignr}${top_mem mem 3}
-${offset 20}${color2}4. ${color}${top_mem name 4}${alignr} ${alignr}${top_mem cpu 4}    ${alignr}${top_mem mem 4}
-${offset 20}${color2}5. ${color}${top_mem name 5}${alignr} ${alignr}${top_mem cpu 5}    ${alignr}${top_mem mem 5}
+${voffset 4}${offset 20}${color2}Top Processes${alignr}${offset -25}CPU${alignr}Mem${color}
+${voffset 4}${offset 20}${color2}1. ${color}${top_mem name 1}${alignr}${offset -10}${top_mem cpu 1}%${alignr}${top_mem mem 1}%
+${offset 20}${color2}2. ${color}${top_mem name 2}${alignr}${offset -10}${top_mem cpu 2}%${alignr}${top_mem mem 2}%
+${offset 20}${color2}3. ${color}${top_mem name 3}${alignr}${offset -10}${top_mem cpu 3}%${alignr}${top_mem mem 3}%
+${offset 20}${color2}4. ${color}${top_mem name 4}${alignr}${offset -10}${top_mem cpu 4}%${alignr}${top_mem mem 4}%
+${offset 20}${color2}5. ${color}${top_mem name 5}${alignr}${offset -10}${top_mem cpu 5}%${alignr}${top_mem mem 5}%
 # -- Drives
 ${voffset 4}${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}Root - SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}

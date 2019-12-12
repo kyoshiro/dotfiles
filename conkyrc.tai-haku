@@ -116,41 +116,41 @@ conky.config = {
 };
 
 conky.text = [[
-${color6}${voffset 4}${font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
-${color6}${voffset 4}${font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
+${voffset 4}${color6}${font GE Inspira:size=36}${alignc}${time %l}:${time %M} ${time %p}${font}${color}
+${voffset 4}${color6}${font GE Inspira:size=12}${alignc}${time %A} ${time %B} ${time %e}, ${time %Y}${font}${color}
 # -- General System Info
 ${voffset 8}${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${font}${color}
-${color2}${voffset 4}Hostname:${color} ${alignr}${nodename}
-${color2}Distro:${color}${alignr}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}
-${color2}Kernel:${color}${alignr}${exec uname} ${exec uname -r}
-${color2}Nvidia: ${color}${alignr}${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}
-${color2}Nvidia Driver: ${color}${alignr}${execi 60000 nvidia-smi | grep "Driver Version"| awk {'print $3'}}
-${color2}Uptime:${color} ${alignr}${uptime}
+${voffset 4}${offset 20}${color2}Hostname:${color} ${alignr}${nodename}
+${offset 20}${color2}Distro:${color}${alignr}${execi 86400 lsb_release -a | grep 'Description'|awk {'print $2" "$3'}}
+${offset 20}${color2}Kernel:${color}${alignr}${execi 86400 uname} ${execi 86400 uname -r}
+${offset 20}${color2}Nvidia: ${color}${alignr}${execpi 86400 nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}
+${offset 20}${color2}Nvidia Driver: ${color}${alignr}${execi 86400 nvidia-smi | grep "Driver Version"| awk {'print $3'}}
+${offset 20}${color2}Uptime:${color} ${alignr}${uptime}
 # -- CPU and Usage
 ${voffset 4}${color5}${font Roboto:size=10}P R O C E S S O R   ${hr 2}${font}${color}
-${voffset 4}${color2}CPU Freq:${color} $alignr${freq}MHz
-${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
-${color2}History:${color} ${alignr}${cpugraph 8,100}
-${color2}${offset 20}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
-${color2}${offset 20}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
-${color2}${offset 20}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
-${color2}${offset 20}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
-${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
-${voffset 4}${offset 20}${color2}1. ${color}${top name 1}${alignr}${goto 170} ${goto 222}${top cpu 1} ${goto 274}${top mem 1}
-${offset 20}${color2}2. ${color}${top name 2}${alignr} ${goto 222}${top cpu 2} ${goto 274}${top mem 2}
-${offset 20}${color2}3. ${color}${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
-${offset 20}${color2}4. ${color}${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
-${offset 20}${color2}5. ${color}${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}
+${voffset 4}${offset 20}${color2}CPU Freq:${color} $alignr${freq}MHz
+${offset 20}${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${offset 20}${color2}Load History:${color} ${alignr}${cpugraph 8,100}
+${offset 20}${color2}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
+${offset 20}${color2}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
+${offset 20}${color2}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
+${offset 20}${color2}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
+${voffset 4}${offset 20}${color2}Top Processes ${alignr}${offset -25}CPU${alignr}Mem${color}
+${voffset 4}${offset 20}${color2}1. ${color}${top name 1}${alignr}${offset -10}${top cpu 1}%${alignr}${top mem 1}%
+${offset 20}${color2}2. ${color}${top name 2}${alignr}${offset -10}${top cpu 2}%${alignr}${top mem 2}%
+${offset 20}${color2}3. ${color}${top name 3}${alignr}${offset -10}${top cpu 3}%${alignr}${top mem 3}%
+${offset 20}${color2}4. ${color}${top name 4}${alignr}${offset -10}${top cpu 4}%${alignr}${top mem 4}%
+${offset 20}${color2}5. ${color}${top name 5}${alignr}${offset -10}${top cpu 5}%${alignr}${top mem 5}%
 # -- Memory and Usage
 ${voffset 4}${color5}${font Roboto:size=10}M E M O R Y   ${hr 2}${font}${color}
 ${voffset 4}${color2}${offset 20}RAM: ${color}${alignr}${offset -10}${mem} / ${memmax}${alignr}${membar}
 ${color2}${offset 20}Swap:${color} ${alignr}${offset -10}${swap} / ${swapmax}${alignr}${swapbar}
-${color2}Top Processes${goto 222}cpu%${goto 274}mem%${color}
-${voffset 4}${offset 20}${color2}1. ${color}${top_mem name 1}${alignr}${goto 170} ${goto 222}${top_mem cpu 1} ${goto 274}${top_mem mem 1}
-${offset 20}${color2}2. ${color}${top_mem name 2}${alignr}${goto 170} ${goto 222}${top_mem cpu 2} ${goto 274}${top_mem mem 2}
-${offset 20}${color2}3. ${color}${top_mem name 3}${alignr}${goto 170} ${goto 222}${top_mem cpu 3} ${goto 274}${top_mem mem 3}
-${offset 20}${color2}4. ${color}${top_mem name 4}${alignr}${goto 170} ${goto 222}${top_mem cpu 4} ${goto 274}${top_mem mem 4}
-${offset 20}${color2}5. ${color}${top_mem name 5}${alignr}${goto 170} ${goto 222}${top_mem cpu 5} ${goto 274}${top_mem mem 5}
+${voffset 4}${offset 20}${color2}Top Processes${alignr}${offset -25}CPU${alignr}Mem${color}
+${voffset 4}${offset 20}${color2}1. ${color}${top_mem name 1}${alignr}${offset -10}${top_mem cpu 1}%${alignr}${top_mem mem 1}%
+${offset 20}${color2}2. ${color}${top_mem name 2}${alignr}${offset -10}${top_mem cpu 2}%${alignr}${top_mem mem 2}%
+${offset 20}${color2}3. ${color}${top_mem name 3}${alignr}${offset -10}${top_mem cpu 3}%${alignr}${top_mem mem 3}%
+${offset 20}${color2}4. ${color}${top_mem name 4}${alignr}${offset -10}${top_mem cpu 4}%${alignr}${top_mem mem 4}%
+${offset 20}${color2}5. ${color}${top_mem name 5}${alignr}${offset -10}${top_mem cpu 5}%${alignr}${top_mem mem 5}%
 # -- Drives
 ${voffset 4}${color5}${font Roboto:size=10}D R I V E S   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}Root - SSD:${color} ${alignr}${offset -10}${fs_used /} / ${fs_size /}${alignr}${fs_bar}
@@ -162,14 +162,14 @@ ${offset 20}${color2}I/O Write:${color} ${alignr}${offset -10}${diskio_write /de
 # -- Network
 ${voffset 4}${color5}${font Roboto:size=10}N E T W O R K   ${hr 2}${font}${color}
 ${voffset 4}${offset 20}${color2}IP Address: ${color} ${alignr}${offset -10$}${addrs enp3s0}
-${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp6s0}${alignr}${upspeedgraph enp3s0 8,100}
-${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp6s0}${alignr}${downspeedgraph enp3s0 8,100}
+${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp3s0}${alignr}${upspeedgraph enp3s0 8,100}
+${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp3s0}${alignr}${downspeedgraph enp3s0 8,100}
 # -- Graphics Cards
 ${voffset 4}${color5}${font Roboto:size=10}N V I D I A   ${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}GPU Temp ${color}${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader} °C
-#${offset 20}Fan Speed ${alignr}${execi 60 nvidia-settings -q [fan:0]/GPUCurrentFanSpeed -t} %
-${offset 20}${color2}GPU Clock ${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
-${offset 20}${color2}Mem Clock ${color}${alignr}${execi 86400 nvidia-settings -q all| grep -m 1 GPUCurrentProcessorClockFreqs | awk '{print $4}' | sed 's/.$//'} MHz
-${offset 20}${color2}Mem Used ${color}${alignr}${execi 60 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t} MiB0
+${voffset 4}${offset 20}${color2}GPU Temp ${color}${alignr}${execi 60 nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader}°C
+#${offset 20}Fan Speed ${alignr}${execi 60 nvidia-settings -q [fan:0]/GPUCurrentFanSpeed -t}%
+${offset 20}${color2}GPU Clock ${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1}MHz
+${offset 20}${color2}Mem Clock ${color}${alignr}${execi 86400 nvidia-settings -q all| grep -m 1 GPUCurrentProcessorClockFreqs | awk '{print $4}' | sed 's/.$//'}MHz
+${offset 20}${color2}Mem Used ${color}${alignr}${execi 60 nvidia-settings -q [gpu:0]/UsedDedicatedGPUMemory -t} / ${exec nvidia-settings -q [gpu:0]/TotalDedicatedGPUMemory -t}M
 ${voffset 10}
 ]];
