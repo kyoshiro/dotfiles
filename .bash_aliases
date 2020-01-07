@@ -1,0 +1,5 @@
+alias cddev='cd ~/dev'
+alias cdl='cd ~/dev/local'
+alias cdgl='cd ~/dev/gitlab'
+alias cdNIS='cd ~/dev/gitlab/NIS'
+alias cdg='cd ~/dev/git'
