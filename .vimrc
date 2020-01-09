@@ -782,6 +782,8 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " open quickfix list
 nmap <F9> :copen<CR>
 
