@@ -865,6 +865,12 @@ command! -nargs=0 Chmodx :!chmod +x %
 
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
 
+" ----------- Terraform additions ---------
+
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_fmt_on_save=1
+
 " ----------- Start additional buffers ---------
 autocmd vimenter * NERDTree
 autocmd vimenter * Tagbar
