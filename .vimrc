@@ -865,6 +865,12 @@ command! -nargs=0 Chmodx :!chmod +x %
 
 let g:org_todo_keywords = ['TODO', '|', 'DONE']
 
+" ------------ Run Syntastic in passive mode ----------------"
+
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+let g:syntastic_auto_loc_list = 1
+
 " ----------- Terraform additions ---------
 
 let g:terraform_align=1
