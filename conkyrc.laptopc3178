@@ -28,7 +28,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 conky.config = {
 
 	--Various settings
-
+	own_window = true,
+	own_window_transparent = true,
+	own_window_type = 'desktop',
 	background = true, 							-- forked to background
 	cpu_avg_samples = 2,						-- The number of samples to average for CPU monitoring.
 	diskio_avg_samples = 10,					-- The number of samples to average for disk I/O monitoring.
