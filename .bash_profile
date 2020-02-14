@@ -40,4 +40,5 @@ function parse_git_hash() {
 
 export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;31m\]\$(parse_git_branch)\[\033[00m\]\[\e[33m\]\$(parse_git_hash)\[\e[1;31m\]\$(parse_git_dirty)\[\e[0m\] $ "
 
+export PATH=$PATH:~/bin
 export DISPLAY=:0.0

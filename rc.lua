@@ -55,6 +55,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+-- beautiful.init("/home/rasendorf/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -210,7 +211,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[2])
+    awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -251,7 +252,11 @@ awful.screen.connect_for_each_screen(function(s)
                 city = 'Bremen, DE',
                 units = 'metric',
         		}),
-			brightnessarc_widget(),
+			brightnessarc_widget({
+          		get_brightness_cmd = 'brightnessctl g',
+          		inc_brightness_cmd = 'brightnessctl s +10%',
+          		dec_brightness_cmd = 'brightnessctl s 10%-'
+        	}),
 			batteryarc_widget({
             show_current_level = true,
             --arc_thickness = '1',
@@ -611,6 +616,9 @@ client.connect_signal("mouse::enter", function(c)
 end)
 
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+
+awful.key({}, "#233", function () awful.spawn("brightnessctl s +10%") end, {description = "increase brightness", group = "custom"})
+awful.key({}, "#232", function () awful.spawn("brightnessctl s 10%-") end, {description = "decrease brightness", group = "custom"})
 
 client.connect_signal("focus", function(c)
                               c.border_color = beautiful.border_focus
