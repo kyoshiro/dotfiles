@@ -7,8 +7,20 @@
 SSHAGENT=/usr/bin/ssh-agent
 SSHAGENTARGS="-s"
 if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-	eval `$SSHAGENT $SSHAGENTARGS`
-	trap "kill $SSH_AGENT_PID" 0
+  eval `$SSHAGENT $SSHAGENTARGS`
+  trap "kill $SSH_AGENT_PID" 0
+fi
+
+if [ -z $SSH_AGENT_PID ]; then
+  echo "~/.bash_profile: Starting SSH Agent!"
+  eval `ssh-agent` && ssh-add ~/.ssh/id_rsa
+  echo "~/.bash_profile: SSH Agent running (PID: $SSH_AGENT_PID)"
+else
+  echo "~/.bash_profile: SSH Agent already running (PID: $SSH_AGENT_PID)"
+  if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
+    echo "~/.bash_profile: SSH Agent adding SSH Key:"
+    ssh-add
+  fi
 fi
 
 # Color definitions:
