@@ -211,7 +211,9 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, awful.layout.layouts[2])
+	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[2])
+    -- Japanese Enumeration ;)
+    -- awful.tag({ "一", "二", "三", "四", "五", "六", "七", "八", "九" }, s, awful.layout.layouts[2])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -251,7 +253,7 @@ awful.screen.connect_for_each_screen(function(s)
             weather_widget({api_key = '46d4ecc67ebc834ee8acb367c65104f0',
                 city = 'Bremen, DE',
                 units = 'metric',
-        		}),
+        	}),
 			brightnessarc_widget({
           		get_brightness_cmd = 'brightnessctl g',
           		inc_brightness_cmd = 'brightnessctl s +10%',

@@ -1,13 +1,33 @@
+[core]
+	filemode = false
+	autocrlf = false
 [user]
 	name = Roman Asendorf
 	email = r.asendorf@neusta.de
-
+	username = rasendorf
 [color]
-	diff = auto
+    ui = true
+[color "status"]
+    changed = red bold
+    untracked = yellow bold
+    added = green bold
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [alias]
 	st = status
 	ci = commit
 	br = branch
 	co = checkout
 	df = diff
-	lg = log -p
+	lg = log -p --decorate --all
+	l1 = log --oneline --decorate --all
+	lg1 = log --graph --oneline --decorate --all
+[credential]
+	helper = manager
