@@ -82,7 +82,7 @@ if has('gui_running')
 	" GUI is running or is about to start.
 	set background=light " use colors that fit to a light background
 	"set background=dark " use colors that fit to a dark background
-	set lines=100 columns=200
+	set lines=60 columns=200
 else
 	" This is console Vim.
 	set background=light " use colors that fit to a light background

@@ -5,6 +5,7 @@ alias cdgl='cd ~/dev/gitlab'
 alias cdl='cd ~/dev/local'
 alias cdNIS='cd ~/dev/gitlab/NIS'
 alias cdv='cd ~/dev/local/vagrant'
+alias cdtf='cd ~/dev/gitlab/NSD/p_terraform'
 
 # Vagrant handy shortcuts
 alias vdes='vagrant destroy'
@@ -13,3 +14,13 @@ alias vssh='vagrant ssh'
 alias vstat='vagrant status'
 alias vsus='vagrant suspend'
 alias vup='vagrant up'
+
+# Terraform
+alias tf='terraform'
+alias tfmt='terraform fmt'
+
+#Crypto
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+
+# Kubernetes
+alias kc='kubectl'
