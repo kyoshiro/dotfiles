@@ -48,11 +48,11 @@ conky.config = {
 	xinerama_head = 0,
 	alignment = 'middle_right',					-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 												-- middle_left,middle_middle,middle_right,none
-	-- gap_x = -500,							-- pixels between right or left border
-	-- gap_y = -50,								-- pixels between bottom or left border
+	gap_x = 50,									-- pixels between right or left border
+	gap_y = -30,								-- pixels between bottom or left border
     minimum_height = 300,						-- minimum height of window
     minimum_width = 300,						-- minimum height of window
-   	-- maximum_width = 700,						-- maximum height of window
+   	maximum_width = 700,						-- maximum height of window
 
 	--Graphical
 
@@ -116,6 +116,7 @@ conky.config = {
 	color8 = '#FFA726',  						--orange
 	color9 = '#F1544B',  						--firebrick
 
+
 };
 
 conky.text = [[
@@ -126,18 +127,18 @@ ${voffset 8}${color5}${font Roboto:size=10}${voffset 2}S Y S T E M   ${hr 2}${fo
 ${voffset 4}${offset 20}${color2}Hostname:${color} ${alignr}${nodename}
 ${offset 20}${color2}Distro:${color}${alignr}${execi 86400 lsb_release -a | grep 'Description'|awk {'print $2" "$3'}}
 ${offset 20}${color2}Kernel:${color}${alignr}${execi 86400 uname} ${execi 86400 uname -r}
-${offset 20}${color2}Intel: ${color}${alignr}${execpi 86400 lshw -C display | grep "product" | awk {'print $2 $3 $4'}}
-${offset 20}${color2}Intel Driver: ${color}${alignr}${execi 86400 lshw -C display | grep "driver"| awk {'print $2'}}
+${offset 20}${color2}GPU: ${color}${alignr}${execpi 86400 lshw -C display | grep "product" | awk {'print $2 $3 $4'}}
+${offset 20}${color2}GPU Driver: ${color}${alignr}${execi 86400 lshw -C display | grep "driver"| awk {'print $2'}}
 ${offset 20}${color2}Uptime:${color} ${alignr}${uptime}
 # -- CPU and Usage
 ${voffset 4}${color5}${font Roboto:size=10}P R O C E S S O R   ${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}CPU Freq:${color} $alignr${freq}MHz
-${offset 20}${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
-${offset 20}${color2}Load History:${color} ${alignr}${cpugraph 8,100}
-${offset 20}${color2}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1}
-${offset 20}${color2}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2}
-${offset 20}${color2}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3}
-${offset 20}${color2}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4}
+${voffset 4}${offset 20}${color2}CPU Load History:${color} ${alignr}${cpugraph 8,100}
+${offset 20}${color2}CPU Freq:${color} $alignr${freq}MHz
+${offset 20}${color2}CPU Temp:${color} $alignr${execi 10 sensors | grep 'Package id 0:' | awk {'print $4'}}
+${offset 20}${color2}CPU Core 1:${color} ${alignr}${offset -10}${cpu cpu1}%${alignr}${cpubar cpu1} ${alignr}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${offset 20}${color2}CPU Core 2:${color} ${alignr}${offset -10}${cpu cpu2}%${alignr}${cpubar cpu2} ${alignr}${execi 10 sensors | grep 'Core 1' | awk {'print $3'}}
+${offset 20}${color2}CPU Core 3:${color} ${alignr}${offset -10}${cpu cpu3}%${alignr}${cpubar cpu3} ${alignr}${execi 10 sensors | grep 'Core 2' | awk {'print $3'}}
+${offset 20}${color2}CPU Core 4:${color} ${alignr}${offset -10}${cpu cpu4}%${alignr}${cpubar cpu4} ${alignr}${execi 10 sensors | grep 'Core 3' | awk {'print $3'}}
 ${voffset 4}${offset 20}${color2}Top Processes ${alignr}${offset -25}CPU${alignr}Mem${color}
 ${voffset 4}${offset 20}${color2}1. ${color}${top name 1}${alignr}${offset -10}${top cpu 1}%${alignr}${top mem 1}%
 ${offset 20}${color2}2. ${color}${top name 2}${alignr}${offset -10}${top cpu 2}%${alignr}${top mem 2}%
