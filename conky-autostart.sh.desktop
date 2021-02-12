@@ -4,7 +4,8 @@ Exec=/home/kyoshiro/bin/conky-autostart.sh
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name[en_US]=Conky
 Name=Conky
-Comment[en_US]=Conky Desktop Info Dashboard
+Name[en_US]=Conky
 Comment=Conky Desktop Info Dashboard
+Comment[en_US]=Conky Desktop Info Dashboard
+

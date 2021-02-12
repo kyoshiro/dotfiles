@@ -59,15 +59,23 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 	done
 	unset f
 fi
+
+# Start GNOME Keyring
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets)
+#
+# You probably need to do this too:
+export GPG_AGENT_INFO GNOME_KEYRING_CONTROL GNOME_KEYRING_PID
+
 if [ $failsafe = "yes" ]; then
 	#xscreensaver -no-splash &
 	#kmix &
 	#rxvt-unicode &
 	#gvim &
 	#firefox &
-	#xcompmgr &
+	xcompmgr &
 	#exec ck-launch-session startkde
-	exec awesome
+	exec dbus-launch awesome
 	#exec gnome-session
+	#exec xfce4-session
 fi
 exec $command

@@ -630,6 +630,17 @@ client.connect_signal("unfocus", function(c)
                                 c.border_color = beautiful.border_normal
                                 c.opacity = 0.7
                              end)
+-- Override awesome.quit when we're using GNOME
+_awesome_quit = awesome.quit
+awesome.quit = function()
+    if os.getenv("DESKTOP_SESSION") == "awesome-gnome" then
+       --os.execute("/usr/bin/gnome-session-quit") -- for Ubuntu 14.04
+       os.execute("pkill -9 gnome-session") -- I use this on Ubuntu 16.04
+    else
+    _awesome_quit()
+    end
+end
+
 -- client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 -- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}

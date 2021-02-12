@@ -23,6 +23,29 @@ else
   fi
 fi
 
+
+#pars for fun: install | remove | rollback
+function apt-history(){
+
+      case "$1" in
+        install)
+              grep 'install ' /var/log/dpkg.log | awk '{ print $1" "$2" "$3" "$4 }'
+              ;;
+        upgrade|remove)
+              grep $1 /var/log/dpkg.log
+              ;;
+        rollback)
+              grep upgrade /var/log/dpkg.log | \
+                  grep "$2" -A10000000 | \
+                  grep "$3" -B10000000 | \
+                  awk '{print $4"="$5}'
+              ;;
+        *)
+			grep '(install|upgrade|remove|rollback)' /var/log/dpkg.log | awk '{ print $1" "$2" "$3" "$4 }'
+              ;;
+      esac
+}
+
 # Color definitions:
 RED='\[\e[1;31m\]'
 BOLDYELLOW='\[\e[1;33m\]'
