@@ -24,3 +24,7 @@ alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 
 # Kubernetes
 alias kc='kubectl'
+
+# Asciinema
+alias ascp='asciinema play'
+alias ascr='asciinema rec'
