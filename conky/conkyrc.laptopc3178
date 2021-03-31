@@ -28,7 +28,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 conky.config = {
 
 	--Various settings
-
 	own_window = true,
 	own_window_transparent = true,
 	own_window_type = 'desktop',
@@ -49,7 +48,7 @@ conky.config = {
 	alignment = 'middle_right',			-- top_left,top_middle,top_right,bottom_left,bottom_middle,bottom_right,
 										-- middle_left,middle_middle,middle_right,none
 	gap_x = 50,							-- pixels between right or left border
-	gap_y = -30,						-- pixels between bottom or left border
+	gap_y = -50,						-- pixels between bottom or left border
 	minimum_height = 300,				-- minimum height of window
 	minimum_width = 300,				-- minimum height of window
 	maximum_width = 300,				-- maximum height of window
