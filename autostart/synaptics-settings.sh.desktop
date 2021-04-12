@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/kyoshiro/bin/synaptics-settings.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Synaptics
+Name[en_US]=Synaptics
+Comment=Synaptics Touchpad Settings
+Comment[en_US]=Synaptics Touchpad Settings
+

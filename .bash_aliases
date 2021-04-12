@@ -4,7 +4,7 @@ alias cdg='cd ~/dev/git'
 alias cdgl='cd ~/dev/gitlab'
 alias cdl='cd ~/dev/local'
 alias cdNIS='cd ~/dev/gitlab/NIS'
-alias cdv='cd ~/dev/local/vagrant'
+alias cdv='cd ~/dev/gitlab/NIS/vagrant/puppetcoding'
 alias cdtf='cd ~/dev/gitlab/NSD/p_terraform'
 
 # Vagrant handy shortcuts
