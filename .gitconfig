@@ -31,3 +31,5 @@
 	lg1 = log --graph --oneline --decorate --all
 [credential]
 	helper = manager
+[pull]
+	ff = only
