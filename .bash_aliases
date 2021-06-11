@@ -1,3 +1,6 @@
+# Make NeoVIM preferred vim
+alias vim='nvim'
+
 # Change fast to working dirs
 alias cdd='cd ~/dev'
 alias cdg='cd ~/dev/git'

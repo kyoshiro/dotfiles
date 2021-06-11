@@ -76,7 +76,7 @@ set cpoptions=aABceFsq$  " q: When joining multiple lines leave the cursor at th
 " $:  When making a change to one line, don't redisplay the line, but put a '$' at the end of the changed text.
 " v: Backspaced characters remain visible on the screen in Insert mode.
 
-colorscheme vividchalk
+colorscheme onedark
 
 if has('gui_running')
 	" GUI is running or is about to start.
@@ -885,7 +885,7 @@ autocmd VimEnter * wincmd p
 " ---------- Airline Configuration -------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
+let g:airline_theme='onedark'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 
