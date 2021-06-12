@@ -47,7 +47,7 @@ tztime berlin {
 }
 
 load {
-        format = " %5min"
+        format = " %5min"
 }
 
 
@@ -57,7 +57,7 @@ cpu_temperature 0 {
 }
 
 memory {
-        format = " %used"
+        format = " %used"
         threshold_degraded = "10%"
         format_degraded = "MEMORY: %free"
 }
