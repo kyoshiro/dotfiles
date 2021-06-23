@@ -1,6 +1,5 @@
 git@github.com:kyoshiro/ctrlp.vim.git
 git@github.com:kyoshiro/nerdcommenter.git
-git@github.com:kyoshiro/nerdtree.git
 git@github.com:kyoshiro/syntastic.git
 git@github.com:kyoshiro/tagbar.git
 git@github.com:kyoshiro/vim-airline.git
