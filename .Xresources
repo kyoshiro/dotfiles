@@ -52,9 +52,12 @@ emacs.fullheight: true
 emacs.fullscreen: true
 emacs.fullwidth: true
 
+!URxvt*foreground   	: black
+!URxvt*background	: rgba:ffff/ffff/ffff/bbbb
 URxvt*foreground   	: gray88
-URxvt*background	: rgba:0000/0017/0007/bbbb
-!URxvt*background   : black
+!URxvt*foreground   	: gray77
+URxvt*background	: rgba:0001/0017/0007/8888
+!!URxvt*background   : black
 URxvt*depth: 32
 URxvt*fade : 33
 

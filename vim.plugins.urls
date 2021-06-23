@@ -13,6 +13,9 @@ git@github.com:kyoshiro/vim-snippets.git
 git@github.com:kyoshiro/vimux.git
 git@github.com:kyoshiro/vim-vividchalk.git
 git@github.com:kyoshiro/editorconfig-vim.git
+git@github.com:kyoshiro/onedark.vim.git
+git@github.com:kyoshiro/ranger.vim.git
+git@github.com:kyoshiro/coc.vim.git
 git@github.com:kyoshiro/fzf.vim.git
 git@github.com:kyoshiro/vim-ruby.git
 git@github.com:kyoshiro/vim-surround.git

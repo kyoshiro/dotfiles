@@ -908,4 +908,3 @@ map <leader>rld :RangerLCD<cr>
 " source other personal settings
 runtime! personal.vim
 
-
