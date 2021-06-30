@@ -53,3 +53,4 @@ GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWCOMMITHASH=true
 precmd () { __git_ps1 "[%n@%m]" "%~ %% "$'\n' "%s" }
 
+if [ -e /home/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /home/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

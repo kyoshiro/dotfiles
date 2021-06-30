@@ -184,6 +184,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym Super_R exec xmouseless
+bindsym Menu exec xmouseless
+bindsym Caps_Lock exec xmouseless
+bindsym XF86Display exec xrandr-laptop-layout.sh
+bindsym F2 exec xrandr-office-layout.sh
+
 set $transparent #02020202
 set $grey #c9c9c9c9
 set $white #ffffffff
@@ -207,6 +213,8 @@ default_floating_border pixel 1
 
 # Startup programs
 exec --no-startup-id gnome-keyring-daemon --unlock
+exec --no-startup-id xinput --disable 13
+exec --no-startup-id xinput --disable 14
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.img
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 exec_always ~/.config/i3/autoname_workspaces.py &
