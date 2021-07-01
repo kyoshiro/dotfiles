@@ -213,9 +213,11 @@ default_floating_border pixel 1
 
 # Startup programs
 exec --no-startup-id gnome-keyring-daemon --unlock
-exec --no-startup-id xinput --disable 13
-exec --no-startup-id xinput --disable 14
+exec --no-startup-id blueman-applet
+#exec --no-startup-id xinput --disable 13
+#exec --no-startup-id xinput --disable 14
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.img
+exec --no-startup-id autolock
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 exec_always ~/.config/i3/autoname_workspaces.py &
 exec urxvt
