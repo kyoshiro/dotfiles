@@ -186,7 +186,7 @@ bindsym $mod+r mode "resize"
 
 bindsym Super_R exec xmouseless
 bindsym Menu exec xmouseless
-bindsym Super_L exec xmouseless
+#bindsym Super_L exec xmouseless
 bindsym XF86Display exec xrandr-laptop-layout.sh
 bindsym F2 exec xrandr-office-layout.sh
 

@@ -54,7 +54,8 @@ emacs.fullwidth: true
 
 !URxvt*foreground   	: black
 !URxvt*background	: rgba:ffff/ffff/ffff/bbbb
-URxvt*foreground   	: gray88
+URxvt*foreground   	: #98c379
+!URxvt*foreground   	: gray88
 !URxvt*foreground   	: gray77
 URxvt*background	: rgba:0001/0017/0007/8888
 !!URxvt*background   : black
