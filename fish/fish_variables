@@ -1,11 +1,15 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR EDITOR:vim
+SETUVAR TERMINAL:urxvt
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_cdNIS:cd\x20\x7e/dev/gitlab/NIS
 SETUVAR _fish_abbr_cdg:cd\x20\x7e/dev/git
 SETUVAR _fish_abbr_cdgl:cd\x20\x7e/dev/gitlab
 SETUVAR _fish_abbr_cdtf:cd\x20\x7e/dev/gitlab/NSD/p_terraform
 SETUVAR _fish_abbr_cgv:cd\x20\x7e/dev/gitlab/NIS/vagrant/puppetcoding
+SETUVAR _fish_abbr_kc:kubectl
+SETUVAR _fish_abbr_kcc:kubectl\x20\x2d\x2dkubeconfig\x20\x7e/\x2ekube/
 SETUVAR _fish_abbr_tf:terraform
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
@@ -37,3 +41,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/opt/local/bin

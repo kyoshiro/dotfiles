@@ -1,6 +1,6 @@
 " Author: Roman Asendorf roman DOT asendorf AT gmail DOT com
 "
-source ~/.vim/bundle/vim-pathogen/autoload/pathogen.vim
+source ~/.config/nvim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " Prevent modelines in files from being evaluated (avoids a potential
@@ -12,7 +12,7 @@ set modelines=5
 " ########## miscellaneous options ##########
 set nocompatible               " Use Vim defaults instead of 100% vi compatibility
 set whichwrap=<,>              " Cursor key move the cursor to the next/previous line if pressed at the end/beginning of a line
-ret backspace=indent,eol,start " more powerful backspacing
+set backspace=indent,eol,start " more powerful backspacing
 set viminfo='20,\"50           " read/write a .viminfo file, don't store more than
 set history=100                " keep 50 lines of command line history
 set incsearch                  " Incremental search
