@@ -10,6 +10,7 @@ SETUVAR _fish_abbr_cdtf:cd\x20\x7e/dev/gitlab/NSD/p_terraform
 SETUVAR _fish_abbr_cgv:cd\x20\x7e/dev/gitlab/NIS/vagrant/puppetcoding
 SETUVAR _fish_abbr_kc:kubectl
 SETUVAR _fish_abbr_kcc:kubectl\x20\x2d\x2dkubeconfig\x20\x7e/\x2ekube/
+SETUVAR _fish_abbr_rgrep:grep\x20\x2dr
 SETUVAR _fish_abbr_tf:terraform
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack

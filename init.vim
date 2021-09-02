@@ -43,7 +43,8 @@ set ssop-=folds                " do not store folds
 set wildmenu             " When 'wildmenu' is on, command-line completion operates in an enhanced mode.
 set wildcharm=<C-Z>      " Shortcut to open the wildmenu when you are in the command mode - it's similar to <C-D>
 set showmode             " If in Insert, Replace or Visual mode put a message on the last line.
-set guifont=Monospace\ 9 " guifont + fontsize
+set guifont=Inconsolata\ for\ Powerline:h11 " guifont + fontsize
+"set g:Powerline_symbols='fancy'
 set guicursor=a:blinkon0 " cursor-blinking off!!
 set ruler                " show the cursor position all the time
 set nowrap               " kein Zeilenumbruch
@@ -87,12 +88,12 @@ else
 	" This is console Vim.
 	set background=light " use colors that fit to a light background
 	"set background=dark " use colors that fit to a dark background
-	  if exists("+lines")
-	    set lines=50
-	  endif
-	  if exists("+columns")
-	    set columns=100
-	  endif
+	  "if exists("+lines")
+	  "  set lines=50
+	  "endif
+	  "if exists("+columns")
+	  "  set columns=100
+	  "endif
 endif
 
 syntax on " syntax highlighting
