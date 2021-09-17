@@ -21,20 +21,15 @@ compinit
 setopt autolist automenu
 # End of lines added by compinstall
 
-# Make emacs server work
-alias emacs=/usr/local/bin/emacs
-
 # Make `ls' more colorized:
-alias ls='ls --color=auto'
-alias ll='ls -la --color=auto'
+alias ls='ls -FG'
+alias ll='ls -la -FG'
 alias grep='grep --color=auto'
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias gl1="git log --decorate --oneline"
 alias gl="git log --decorate"
 
 export DISPLAY=:0.0
-
-eval "`dircolors`"
 
 if [ -z $SSH_AGENT_PID ]; then
   echo "~/.zshrc: Starting SSH Agent!"
@@ -51,6 +46,9 @@ GIT_PS1_SHOWUNTRACKEDFILES=true
 GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWCOLORHINTS=true
 GIT_PS1_SHOWCOMMITHASH=true
-precmd () { __git_ps1 "[%n@%m]" "%~ %% "$'\n' "%s" }
+
+#precmd () { __git_ps1 "%{$fg[blue]%}[%{$reset_color%} %n%{$fg[red]%}@%{$reset_color%}%m %{$fg[blue]%}]%{$reset_color%}" "%~ %% %(5~|%-1~/…/%3~|%4~)" "(%s)" }
+precmd () { __git_ps1 "%{$fg[blue]%}[%{$reset_color%} %n%{$fg[red]%}@%{$reset_color%}%m %{$fg[blue]%}]%{$reset_color%}" "%{$fg[green]%}%(5~|%-1~/…/%3~|%4~)%{$reset_color%} " " (%s) " }
 
 if [ -e /home/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /home/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

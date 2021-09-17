@@ -23,6 +23,12 @@ function fish_prompt --description 'Write out the prompt'
         set color_host $fish_color_host_remote
     end
 
+    set -l nix_shell_info (
+      if test -n "$IN_NIX_SHELL"
+        echo -n "<nix-shell> "
+      end
+    )
+
     # Write pipestatus
     set -l prompt_status (__fish_print_pipestatus " [" "]" "|" (set_color $fish_color_status) (set_color --bold $fish_color_status) $last_pipestatus)
 
