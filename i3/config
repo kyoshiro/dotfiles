@@ -199,7 +199,7 @@ set $white #ffffffff
 bar {
 		position top
 		colors {
-        	background $transparent
+			background $transparent
 			statusline $grey
 			#default_border $white
 		}
