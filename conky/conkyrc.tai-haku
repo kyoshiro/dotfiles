@@ -48,8 +48,8 @@ conky.config = {
 	gap_x = 15,									-- pixels between right or left border
 	gap_y = 0,									-- pixels between bottom or left border
 	minimum_height = 600,						-- minimum height of window
-	minimum_width = 300,						-- minimum height of window
-	maximum_width = 300,						-- maximum height of window
+	minimum_width = 600,						-- minimum height of window
+	maximum_width = 600,						-- maximum height of window
 
 	--Graphical
 
@@ -166,15 +166,15 @@ ${offset 20}${color2}IPv6 Addr: ${color}${alignr}${v6addrs -s enp3s0}
 ${color2}${offset 20}Eth Up:${color} ${alignr}${offset -10$}${upspeed enp3s0}${alignr}${upspeedgraph enp3s0 8,85}
 ${color2}${offset 20}Eth Down:${color} ${alignr}${offset -10$}${downspeed enp3s0}${alignr}${downspeedgraph enp3s0 8,85}
 # -- Graphics Cards
-${voffset 4}${color5}${font Roboto:size=10}N V I D I A   ${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${hr 2}${font}${color}
-${voffset 4}${offset 20}${color2}Performance Mode${color}${alignr}${nvidia perfmode}
-${offset 20}${color2}Processor Freq${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentProcessorClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
-${offset 20}${color2}Processor Load${color}${alignr}${nvidia gpuutil}%${offset -10}${alignr}${nvidiabar 8,85 gpuutil}
-${offset 20}${color2}GPU Temp${color}${alignr}${nvidia gputemp}°C
-${offset 20}${color2}GPU Freq${color}${alignr}${nvidia gpufreqcur}MHz
-${offset 20}${color2}Mem Freq${color}${alignr}${nvidia memfreqcur}MHz
-${offset 20}${color2}Mem Transfer Freq${color}${alignr}${nvidia mtrfreqcur}MHz
-#${alignr} ${nvidiabar 8,100 mtrfreq}
-${offset 20}${color2}Mem Usage ${color}${alignr}${nvidia memused} / ${nvidia memmax}M${offset -10}${alignr}${nvidiabar 8,85 memused}
+# ${voffset 4}${color5}${font Roboto:size=10}N V I D I A   ${execp  nvidia-smi --query-supported-clocks=gpu_name --format=csv,noheader}${hr 2}${font}${color}
+# ${voffset 4}${offset 20}${color2}Performance Mode${color}${alignr}${nvidia perfmode}
+# ${offset 20}${color2}Processor Freq${color}${alignr}${execi 60 nvidia-settings -q GPUCurrentProcessorClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
+# ${offset 20}${color2}Processor Load${color}${alignr}${nvidia gpuutil}%${offset -10}${alignr}${nvidiabar 8,85 gpuutil}
+# ${offset 20}${color2}GPU Temp${color}${alignr}${nvidia gputemp}°C
+# ${offset 20}${color2}GPU Freq${color}${alignr}${nvidia gpufreqcur}MHz
+# ${offset 20}${color2}Mem Freq${color}${alignr}${nvidia memfreqcur}MHz
+# ${offset 20}${color2}Mem Transfer Freq${color}${alignr}${nvidia mtrfreqcur}MHz
+# #${alignr} ${nvidiabar 8,100 mtrfreq}
+# ${offset 20}${color2}Mem Usage ${color}${alignr}${nvidia memused} / ${nvidia memmax}M${offset -10}${alignr}${nvidiabar 8,85 memused}
 ${voffset 10}
 ]];
