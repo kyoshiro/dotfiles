@@ -24,7 +24,7 @@ alias vup='vagrant up'
 
 # Terraform
 alias tf='terraform'
-alias tfmt='terraform fmt'
+alias tfmt='terraform fmt -recursive'
 
 #Crypto
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"

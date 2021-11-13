@@ -21,6 +21,9 @@ compinit
 setopt autolist automenu
 # End of lines added by compinstall
 
+# bash_aliases
+source ~/.bash_aliases
+
 # Make `ls' more colorized:
 alias ls='ls -FG'
 alias ll='ls -la -FG'
@@ -50,5 +53,4 @@ GIT_PS1_SHOWCOMMITHASH=true
 #precmd () { __git_ps1 "%{$fg[blue]%}[%{$reset_color%} %n%{$fg[red]%}@%{$reset_color%}%m %{$fg[blue]%}]%{$reset_color%}" "%~ %% %(5~|%-1~/…/%3~|%4~)" "(%s)" }
 precmd () { __git_ps1 "%{$fg[blue]%}[%{$reset_color%} %n%{$fg[red]%}@%{$reset_color%}%m %{$fg[blue]%}]%{$reset_color%}" "%{$fg[green]%}%(5~|%-1~/…/%3~|%4~)%{$reset_color%} " " (%s) " }
 
-if [ -e /home/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /home/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
