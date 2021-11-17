@@ -9,6 +9,13 @@ call pathogen#infect()
 set modeline
 set modelines=5
 
+" #### Theme settings
+"
+"set background=dark
+colorscheme tokyonight
+let g:tokyonight_style = "storm"
+
+
 " ########## miscellaneous options ##########
 set nocompatible               " Use Vim defaults instead of 100% vi compatibility
 set whichwrap=<,>              " Cursor key move the cursor to the next/previous line if pressed at the end/beginning of a line
@@ -81,13 +88,13 @@ colorscheme onedark
 
 if has('gui_running')
 	" GUI is running or is about to start.
-	set background=light " use colors that fit to a light background
-	"set background=dark " use colors that fit to a dark background
+	"set background=light " use colors that fit to a light background
+	set background=dark " use colors that fit to a dark background
 	set lines=60 columns=200
 else
 	" This is console Vim.
-	set background=light " use colors that fit to a light background
-	"set background=dark " use colors that fit to a dark background
+	"set background=light " use colors that fit to a light background
+	set background=dark " use colors that fit to a dark background
 	  "if exists("+lines")
 	  "  set lines=50
 	  "endif
@@ -887,7 +894,7 @@ autocmd VimEnter * wincmd p
 " ---------- Airline Configuration -------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='onedark'
+let g:airline_theme='papercolor'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 
