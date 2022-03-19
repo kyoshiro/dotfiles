@@ -79,4 +79,5 @@ export PATH=$PATH:~/bin
 #export DISPLAY=:0.0
 #export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
+if [ -e /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
