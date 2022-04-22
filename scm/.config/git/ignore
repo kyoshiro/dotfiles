@@ -1,0 +1,15 @@
+Session.vim
+*.log
+build/
+temp-*
+*~
+*.debhelper
+*.ex
+*.pyc
+*.bak
+*.egg-info
+*.egg-info/*
+.~lock*
+*.deb
+*.orig
+*.rej

@@ -3,7 +3,7 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR TERMINAL:urxvt
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
@@ -114,6 +114,7 @@ SETUVAR _fish_abbr_qs:quilt\x20series
 SETUVAR _fish_abbr_qt:quilt\x20top
 SETUVAR _fish_abbr_r:rg
 SETUVAR _fish_abbr_rgrep:grep\x20\x2dr
+SETUVAR _fish_abbr_rot13:tr\x20\x22A\x2dZa\x2dz\x22\x20\x22N\x2dZA\x2dMn\x2dza\x2dm\x22
 SETUVAR _fish_abbr_ru:rg\x20\x2duuu
 SETUVAR _fish_abbr_t:exa\x20\x2dT
 SETUVAR _fish_abbr_tf:terraform
@@ -151,4 +152,5 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_user_paths:/opt/homebrew/bin\x1e/opt/local/bin

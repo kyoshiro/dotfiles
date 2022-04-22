@@ -1,0 +1,66 @@
+add_newline = true
+
+[character]
+vicmd_symbol = "[V](bold cyan)"
+success_symbol = "[↳](bold cyan)"
+error_symbol = "[✗](bold red)"
+
+[status]
+style = "bold red"
+disabled = false
+symbol = ""
+format = "[$symbol$status]($style) "
+
+[cmd_duration]
+show_notifications = true
+min_time_to_notify = 30000
+
+[directory]
+truncation_symbol = "…/"
+
+[kubernetes]
+style = "blue bold"
+disabled = false
+
+[git_branch]
+always_show_remote = true
+format = "on [$symbol$branch]($style)(:[$remote_name/$remote_branch]($style)) "
+
+[git_status]
+# disabled = true
+style = "bold purple"
+ahead = "⇡$count"
+behind = "⇣$count"
+diverged = "⇕$ahead_count/$behind_count"
+
+[custom.quilt_applied]
+description = "List of applied quilt patches"
+when = 'set -o pipefail; findfile patches | xargs -I {} test -e "{}/series"'
+shell = ["sh"]
+command = "quilt applied | wc -l | tr -d '\n'; echo -n '/'; quilt series | wc -l"
+format = "[$symbol$output]($style) "
+symbol = "🩹"
+style = "bold blue"
+
+[custom.quilt_patches]
+disabled = true
+description = "List of total quilt patches"
+when = 'set -o pipefail; findfile patches | xargs -I {} test -e "{}/series"'
+shell = ["bash"]
+command = "quilt series | wc -l"
+format = "/[$symbol$output]($style) "
+style = "bold blue"
+
+[custom.nix_packages]
+disabled = false
+description = "Nix shell information"
+when = '[ -n "${IN_NIX_SHELL}" ]'
+shell = ["sh"]
+command = "echo [${ANY_NIX_SHELL_PKGS:-${name}}]"
+# format = "[$symbol($output)]($style) "
+style = "bold blue"
+
+[nix_shell]
+# hide output
+format = 'via [$symbol$state](bold blue) '
+# symbol = "❄️ "
