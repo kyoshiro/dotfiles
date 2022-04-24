@@ -7,6 +7,10 @@ set -g fish_cursor_insert block
 set -g fish_cursor_visual block
 set -g fish_escape_delay_ms 10
 
+function fish_greeting
+    neofetch
+end
+
 # hide greeting
 set fish_greeting ""
 
