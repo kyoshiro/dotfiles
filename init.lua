@@ -53,7 +53,7 @@ require('packer').startup(function(use)
   -- Add indentation guides even on blank lines
   use 'lukas-reineke/indent-blankline.nvim'
   -- Add git related info in the signs columns and popups
-  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
+  use { 'lewis6991/gitsigns.nvim', requires = { 'kyoshiro/plenary.nvim' } }
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 end)
@@ -91,8 +91,8 @@ vim.o.completeopt = 'menuone,noselect'
 --Set statusbar
 require('lualine').setup {
   options = {
-    icons_enabled = false,
-    theme = 'tokyonight',
+    icons_enabled = true,
+    theme = 'PaperColor',
     component_separators = '|',
     section_separators = '',
   },
