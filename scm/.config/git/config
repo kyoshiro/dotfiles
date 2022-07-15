@@ -1,8 +1,8 @@
 [user]
 	name = Roman Asendorf
-	signingkey = 444912B0B381009F
-	# set through environment variable EMAIL
-	# email = xxxx
+	email = r.asendorf@neusta.de
+	#email = set by EMAIL env variable
+	username = rasendorf
 [gui]
 	fontui = -family \"Bitstream Vera Sans\" -size 8 -weight bold -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"Bitstream Vera Sans Mono\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
@@ -92,9 +92,10 @@
 
 	########## commits
 	c = commit
-	ca = commit -a
+	ca = commit --amend
     cc = "!bash -c 'if [ -e \"$(git rev-parse --show-toplevel)/.git/COMMIT_EDITMSG\" ]; then git commit -e -F \"$(git rev-parse --show-toplevel)/.git/COMMIT_EDITMSG\"; else git commit; fi'"
-	cam = commit --amend -a
+	cam = commit -am
+	ci = commit -m
 	cm = commit -m
 
 	# take commit message from debian/changelog
@@ -144,7 +145,10 @@
 	ln = log --name-only --pretty=oneline
 	# show unique file names only
 	lf = !bash -c 'git log --name-only --pretty=oneline  "${@}" | grep -vE "^[0-9a-f]{40} " | sort | uniq' -
-
+	lg = log -p --decorate --all
+	l1 = log --oneline --decorate --all
+	lg1 = log --graph --oneline --decorate --all
+	
 	# show latest tag
 	lasttag = describe --tags --abbrev=0
 
