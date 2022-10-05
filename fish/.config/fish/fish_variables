@@ -7,6 +7,8 @@ SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
+SETUVAR _fish_abbr_cd_2E_2E_2E_:cd\x20\x2e\x2e/\x2e\x2e
+SETUVAR _fish_abbr_cd_2E_2E_2E_2E_:cd\x20\x2e\x2e/\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_cdroot:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_dockeri:docker\x20run\x20\x2d\x2drm\x20\x2di\x20\x2dt
 SETUVAR _fish_abbr_f:faas\x2dcli
@@ -32,7 +34,7 @@ SETUVAR _fish_abbr_gbc:git\x20bc
 SETUVAR _fish_abbr_gbm:git\x20bm
 SETUVAR _fish_abbr_gbr:git\x20br
 SETUVAR _fish_abbr_gc:git\x20commit
-SETUVAR _fish_abbr_gca:git\x20commit\x20\x2da
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2dadd\x20\x2d\x2dmessage
 SETUVAR _fish_abbr_gcam:git\x20commit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_gcob:git\x20cob
@@ -57,6 +59,7 @@ SETUVAR _fish_abbr_gri:git\x20rebase\x20\x2d\x2dinteractive
 SETUVAR _fish_abbr_grm:git\x20rm
 SETUVAR _fish_abbr_gst:git\x20st
 SETUVAR _fish_abbr_gsta:git\x20sta
+SETUVAR _fish_abbr_gstu:git\x20st\x20\x2du
 SETUVAR _fish_abbr_gsuba:git\x20submodule\x20add
 SETUVAR _fish_abbr_gsubm:git\x20subm
 SETUVAR _fish_abbr_gsubpre:git\x20subpre
@@ -83,10 +86,11 @@ SETUVAR _fish_abbr_kx:kubectl\x20explain
 SETUVAR _fish_abbr_l:ls\x20\x2dl
 SETUVAR _fish_abbr_la:ls\x20\x2dlaa
 SETUVAR _fish_abbr_lh:ls\x20\x2dlh
-SETUVAR _fish_abbr_ll:ls\x20\x2dla
+SETUVAR _fish_abbr_ll:ls\x20\x2dl
 SETUVAR _fish_abbr_ltr:ls\x20\x2dl\x20\x2dsmodified
 SETUVAR _fish_abbr_ltra:ls\x20\x2dlaa\x20\x2dsmodified
 SETUVAR _fish_abbr_n:__n
+SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_o:xdg\x2dopen
 SETUVAR _fish_abbr_open:xdg\x2dopen
 SETUVAR _fish_abbr_p:paru
@@ -113,6 +117,8 @@ SETUVAR _fish_abbr_tfa:terraform\x20apply
 SETUVAR _fish_abbr_tfi:terraform\x20init
 SETUVAR _fish_abbr_tfp:terraform\x20plan
 SETUVAR _fish_abbr_top:htop
+SETUVAR _fish_abbr_tsi:terraspace\x20init
+SETUVAR _fish_abbr_tsp:terraspace\x20plan
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
