@@ -83,7 +83,7 @@ SETUVAR _fish_abbr_kx:kubectl\x20explain
 SETUVAR _fish_abbr_l:ls\x20\x2dl
 SETUVAR _fish_abbr_la:ls\x20\x2dlaa
 SETUVAR _fish_abbr_lh:ls\x20\x2dlh
-SETUVAR _fish_abbr_ll:ls\x20\x2dl
+SETUVAR _fish_abbr_ll:ls\x20\x2dla
 SETUVAR _fish_abbr_ltr:ls\x20\x2dl\x20\x2dsmodified
 SETUVAR _fish_abbr_ltra:ls\x20\x2dlaa\x20\x2dsmodified
 SETUVAR _fish_abbr_n:__n
