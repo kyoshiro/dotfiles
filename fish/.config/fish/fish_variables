@@ -7,16 +7,7 @@ SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
-SETUVAR _fish_abbr_cdc:cd\x20\x7e/dev/gitlab/customers
-SETUVAR _fish_abbr_cde:cd\x20\x7e/dev/gitlab/external
-SETUVAR _fish_abbr_cdg:cd\x20\x7e/dev/git
-SETUVAR _fish_abbr_cdgl:cd\x20\x7e/dev/gitlab
-SETUVAR _fish_abbr_cdptf:cd\x20\x7e/dev/gitlab/internal/p_terraform
 SETUVAR _fish_abbr_cdroot:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
-SETUVAR _fish_abbr_cdtf:cd\x20\x7e/dev/gitlab/internal/terraform
-SETUVAR _fish_abbr_cdtfo:cd\x20\x7e/dev/gitlab/internal/p_terraform
-SETUVAR _fish_abbr_cdv:cd\x20\x7e/dev/gitlab/internal/vagrant/puppetcoding
-SETUVAR _fish_abbr_cgv:cd\x20\x7e/dev/gitlab/internal/vagrant/puppetcoding
 SETUVAR _fish_abbr_dockeri:docker\x20run\x20\x2d\x2drm\x20\x2di\x20\x2dt
 SETUVAR _fish_abbr_f:faas\x2dcli
 SETUVAR _fish_abbr_g:git
