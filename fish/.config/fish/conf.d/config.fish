@@ -9,6 +9,7 @@ set -g fish_escape_delay_ms 10
 
 function fish_greeting
     neofetch
+    ~/bin/check-boot-required.sh
 end
 
 # hide greeting

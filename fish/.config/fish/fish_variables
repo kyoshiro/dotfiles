@@ -34,7 +34,7 @@ SETUVAR _fish_abbr_gbc:git\x20bc
 SETUVAR _fish_abbr_gbm:git\x20bm
 SETUVAR _fish_abbr_gbr:git\x20br
 SETUVAR _fish_abbr_gc:git\x20commit
-SETUVAR _fish_abbr_gca:git\x20commit\x20\x2d\x2dall\x20\x2d\x2dmessage
+SETUVAR _fish_abbr_gca:git\x20commit\x20\x2da
 SETUVAR _fish_abbr_gcam:git\x20commit\x20\x2d\x2damend
 SETUVAR _fish_abbr_gco:git\x20checkout
 SETUVAR _fish_abbr_gcob:git\x20cob
