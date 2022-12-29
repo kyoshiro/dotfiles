@@ -7,6 +7,7 @@ end
 
 local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePost', { command = 'source <afile> | PackerCompile', group = packer_group, pattern = 'init.lua' })
+vim.api.nvim_create_autocmd('BufWritePre', { command = [[%s/\s\+$//e]], pattern = '*'})
 
 require('packer').startup(function(use)
   use 'kyoshiro/packer.nvim' -- Package manager
@@ -27,6 +28,7 @@ require('packer').startup(function(use)
   use 'kyoshiro/vim-airline-themes'
   use 'kyoshiro/vim-buffergator'
   use 'kyoshiro/vim-fugitive'
+  use 'kyoshiro/vim-hardtime'
   use 'kyoshiro/vim-json'
   use 'kyoshiro/vim-prettier'
   use 'kyoshiro/vim-puppet'
@@ -45,18 +47,22 @@ require('packer').startup(function(use)
   use 'kyoshiro/cmp_luasnip'
   use 'kyoshiro/LuaSnip' -- Snippets plugin
   -- External Plugins
-  use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
-  use 'ludovicchabant/vim-gutentags' -- Automatic tags management
+  -- use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+  -- use 'ludovicchabant/vim-gutentags' -- Automatic tags management
   -- UI to select things (files, grep results, open buffers...)
   use { 'kyoshiro/telescope.nvim', requires = { 'kyoshiro/plenary.nvim' } }
-  use { 'kyoshiro/telescope-fzf-native.nvim', run = 'make' }
+  use { 'kyoshiro/telescope-fzy-native.nvim', run = 'make' }
+
   -- Add indentation guides even on blank lines
   use 'lukas-reineke/indent-blankline.nvim'
   -- Add git related info in the signs columns and popups
-  use { 'lewis6991/gitsigns.nvim', requires = { 'kyoshiro/plenary.nvim' } }
+  use { 'kyoshiro/gitsigns.nvim', requires = { 'kyoshiro/plenary.nvim' } }
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
 end)
+
+-- Enable relative line numbers
+vim.opt.relativenumber = true
 
 --Set highlight on search
 vim.o.hlsearch = false
@@ -65,7 +71,7 @@ vim.o.hlsearch = false
 vim.wo.number = true
 
 --Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = ''
 
 --Enable break indent
 vim.o.breakindent = true
@@ -88,18 +94,38 @@ vim.cmd [[colorscheme tokyonight]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+local gset = vim.api.nvim_set_var
+gset('airline#extensions#tabline#enabled', 1)
+-- gset('airline#extensions#branch#enabled', 1)
+-- gset('airline#extensions#branch#empty_message', '')
+-- gset('airline#extensions#branch#use_vcscommand', 0)
+-- gset('airline#extensions#branch#displayed_head_limit', 10)
+-- gset('airline#extensions#branch#format', 0)
+-- gset('airline#extensions#hunks#enabled', 1)
+-- gset('airline#extensions#hunks#non_zero_only', 0)
+-- gset('airline#extensions#hunks#hunk_symbols', "['+', '~', '-']")
+gset('airline_powerline_fonts', 1)
+gset('airline_theme', "papercolor")
+gset('hybrid_custom_term_colors', 1)
+gset('hybrid_reduced_contrast', 1)
+
 --Set statusbar
-require('lualine').setup {
-  options = {
-    icons_enabled = true,
-    theme = 'PaperColor',
-    component_separators = '|',
-    section_separators = '',
-  },
-}
+-- require('lualine').setup {
+--   options = {
+--     icons_enabled = false,
+--     theme = 'PaperColor',
+--     component_separators = '|',
+--     section_separators = '',
+--   },
+-- }
 
 --Enable Comment.nvim
-require('Comment').setup()
+-- require('Comment').setup()
+
+-- Enable and configure hard time
+gset('hardtime_default_on', 1)
+gset('hardtime_showmsg', 1)
+gset('hardtime_maxcount', 3)
 
 --Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -138,34 +164,53 @@ require('gitsigns').setup {
 }
 
 -- Telescope
-require('telescope').setup {
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    },
-  },
-}
+-- require('telescope').setup {
+--   defaults = {
+--     mappings = {
+--       i = {
+--         ['<C-u>'] = false,
+--         ['<C-d>'] = false,
+--       },
+--     },
+--   },
+-- }
 
 -- Enable telescope fzf native
-require('telescope').load_extension 'fzf'
+-- require('telescope').load_extension 'fzf'
 
 --Add leader shortcuts
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>sf', function()
-  require('telescope.builtin').find_files { previewer = false }
-end)
-vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
-vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
-vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>so', function()
-  require('telescope.builtin').tags { only_current_buffer = true }
-end)
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+-- vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
+-- vim.keymap.set('n', '<leader>sf', function()
+--   require('telescope.builtin').find_files { previewer = false }
+-- end)
+-- vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
+-- vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
+-- vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
+-- vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
+-- vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
+-- vim.keymap.set('n', '<leader>so', function()
+--   require('telescope.builtin').tags { only_current_buffer = true }
+-- end)
+-- vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+
+-- Terraform settings
+
+gset('terraform_align', '1')
+gset('terraform_fold_sections','0')
+gset('terraform_fmt_on_save', '1')
+
+-- Ranger keybindings
+--
+gset('ranger_terminal','urxvt -e')
+vim.keymap.set('n', '<leader>rr', ':RangerEdit<cr>')
+vim.keymap.set('n', '<leader>rv', ':RangerVSplit<cr>')
+vim.keymap.set('n', '<leader>rs', ':RangerSplit<cr>')
+vim.keymap.set('n', '<leader>rt', ':RangerTab<cr>')
+vim.keymap.set('n', '<leader>ri', ':RangerInsert<cr>')
+vim.keymap.set('n', '<leader>ra', ':RangerAppend<cr>')
+vim.keymap.set('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<cr>g@')
+vim.keymap.set('n', '<leader>rd', ':RangerCD<cr>')
+vim.keymap.set('n', '<leader>rld', ':RangerLCD<cr>')
 
 -- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
@@ -244,7 +289,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', '<leader>so', require('telescope.builtin').lsp_document_symbols, opts)
+  -- vim.keymap.set('n', '<leader>so', require('telescope.builtin').lsp_document_symbols, opts)
   vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
 end
 
