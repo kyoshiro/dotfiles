@@ -65,8 +65,8 @@ URxvt*fade : 33
 
 !URxvt*font			: xft:DejaVu Sans Mono:size=8:autohint=true
 !URxvt*boldFont		: xft:DejaVu Sans Mono:size=8:bold:autohint=true
-URxvt*boldFont		: xft:Consolas:size=10:bold, xft:Inconsolata\ for\ Powerline:size=8:bold:autohint=true
-URxvt*font			: xft:Consolas:size=10, xft:Inconsolata\ for\ Powerline:size=8
+URxvt*boldFont		: xft:Consolas:size=12:bold, xft:Inconsolata\ for\ Powerline:size=10:bold:autohint=true
+URxvt*font			: xft:Consolas:size=12, xft:Inconsolata\ for\ Powerline:size=10
 !URxvt*italicFont	: xft:DejaVu Sans Mono:size=8:italic:autohint=true
 !URxvt*boldItalicFont: xft:DejaVu Sans Mono:size=8:bold:italic:autohint=true
 !URxvt*font			: xft:Terminess\ Powerline:size=8
