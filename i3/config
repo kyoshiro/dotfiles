@@ -225,4 +225,4 @@ exec --no-startup-id i3-msg 'workspace 4; exec keepassxc' &
 exec --no-startup-id i3-msg 'workspace 4; exec nextcloud' &
 exec --no-startup-id i3-msg 'workspace 3; exec thunderbird' &
 exec --no-startup-id i3-msg 'workspace 2; exec firefox' &
-exec --no-startup-id i3-msg 'workspace 1; exec urxvt'
+exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
