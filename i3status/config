@@ -3,7 +3,7 @@ general {
         interval = 5
 }
 
-order += "wireless wlp58s0"
+order += "wireless mlan0"
 order += "ethernet enp3s0"
 #order += "cpu_temperature 0"
 order += "load"
@@ -13,7 +13,7 @@ order += "battery 0"
 order += "tztime local"
 order += "tztime berlin"
 
-wireless wlp58s0 {
+wireless mlan0 {
         #format_up = " (%quality at %essid, %bitrate) %ip"
         format_up = " %bitrate"
         format_down = " down"
@@ -32,7 +32,7 @@ battery 0 {
         status_bat = "🔋 BAT"
         status_unk = "? UNK"
         status_full = "☻ FULL"
-        path = "/sys/class/power_supply/BAT%d/uevent"
+        path = "/sys/class/power_supply/BAT1/uevent"
         low_threshold = 10
 }
 
