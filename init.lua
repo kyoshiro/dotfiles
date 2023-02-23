@@ -39,6 +39,7 @@ require('packer').startup(function(use)
   use 'kyoshiro/vim-startify'
   use 'kyoshiro/vim-surround'
   use 'kyoshiro/vim-terraform'
+  use 'kyoshiro/vim-tfsec'
   use 'kyoshiro/vim-unimpaired'
   use 'kyoshiro/vim-vividchalk'
   use 'kyoshiro/vim-rhubarb' -- Fugitive-companion to interact with github
@@ -54,11 +55,12 @@ require('packer').startup(function(use)
   use { 'kyoshiro/telescope-fzy-native.nvim', run = 'make' }
 
   -- Add indentation guides even on blank lines
-  use 'lukas-reineke/indent-blankline.nvim'
+  use 'kyoshiro/indent-blankline.nvim'
   -- Add git related info in the signs columns and popups
   use { 'kyoshiro/gitsigns.nvim', requires = { 'kyoshiro/plenary.nvim' } }
   -- Highlight, edit, and navigate code using a fast incremental parsing library
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use 'kyoshiro/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use 'kyoshiro/cellular-automaton.nvim'
 end)
 
 -- Enable relative line numbers
@@ -125,7 +127,7 @@ gset('hybrid_reduced_contrast', 1)
 -- Enable and configure hard time
 gset('hardtime_default_on', 1)
 gset('hardtime_showmsg', 1)
-gset('hardtime_maxcount', 3)
+gset('hardtime_maxcount', 30)
 
 --Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -312,7 +314,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-lspconfig.sumneko_lua.setup {
+lspconfig.lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
