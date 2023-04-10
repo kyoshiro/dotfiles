@@ -5,7 +5,8 @@ general {
 
 order += "wireless mlan0"
 order += "ethernet enp3s0"
-#order += "cpu_temperature 0"
+order += "ethernet enp5s0"
+order += "cpu_temperature 0"
 order += "load"
 order += "memory"
 order += "disk /"
@@ -20,6 +21,12 @@ wireless mlan0 {
 }
 
 ethernet enp3s0 {
+        #format_up = " %ip (%speed)"
+        format_up = " %speed"
+        format_down = " down"
+}
+
+ethernet enp5s0 {
         #format_up = " %ip (%speed)"
         format_up = " %speed"
         format_down = " down"
@@ -53,7 +60,7 @@ load {
 
 cpu_temperature 0 {
         format = "T: %degrees °C"
-        path = "/sys/devices/platform/coretemp.0/temp1_input"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
 
 memory {

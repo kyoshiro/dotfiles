@@ -212,7 +212,8 @@ default_border pixel 1
 default_floating_border pixel 1
 
 # Startup programs
-# exec --no-startup-id gnome-keyring-daemon --unlock
+exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id gnome-keyring-daemon --unlock
 exec --no-startup-id blueman-applet
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
@@ -221,8 +222,9 @@ exec --no-startup-id autolock
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 exec_always ~/.config/i3/autoname_workspaces.py &
 exec --no-startup-id i3-msg 'workspace 5; exec protonmail-bridge --no-window' &
-exec --no-startup-id i3-msg 'workspace 4; exec keepassxc' &
-exec --no-startup-id i3-msg 'workspace 4; exec nextcloud' &
+exec --no-startup-id i3-msg 'workspace 5; exec keepassxc' &
+exec --no-startup-id i3-msg 'workspace 5; exec nextcloud' &
+exec --no-startup-id i3-msg 'workspace 4; exec discord' &
 exec --no-startup-id i3-msg 'workspace 3; exec thunderbird' &
 exec --no-startup-id i3-msg 'workspace 2; exec firefox' &
 exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
