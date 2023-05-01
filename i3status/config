@@ -16,8 +16,8 @@ order += "tztime berlin"
 
 wireless mlan0 {
         #format_up = " (%quality at %essid, %bitrate) %ip"
-        format_up = " %bitrate"
-        format_down = " down"
+        format_up = "⏚ %bitrate"
+        format_down = "⏚ down"
 }
 
 ethernet enp3s0 {
@@ -34,10 +34,10 @@ ethernet enp5s0 {
 
 battery 0 {
         format = "%status %percentage %remaining %emptytime"
-        format_down = "No battery"
+        format_down = "🛇 NBAT"
         status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
-        status_unk = "? UNK"
+        status_bat = "🛢 BAT"
+        status_unk = "?  UNK"
         status_full = "☻ FULL"
         path = "/sys/class/power_supply/BAT1/uevent"
         low_threshold = 10
@@ -54,22 +54,23 @@ tztime berlin {
 }
 
 load {
-        format = " %5min"
+        format = "⏲ %5min"
 }
 
 
 cpu_temperature 0 {
-        format = "T: %degrees °C"
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
+        format = "🛈 %degrees°C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
 }
 
 memory {
-        format = " %used"
+        format = "⏱ %used"
         threshold_degraded = "10%"
-        format_degraded = "MEMORY: %free"
+        format_degraded = "⏱ %free"
 }
 
 disk "/" {
-        format = " %free"
+        format = " %used"
+        #threshold_degraded = "10%"
+        #format_degraded = " %free"
 }
-
