@@ -34,22 +34,22 @@ ethernet enp5s0 {
 
 battery 0 {
         format = "%status %percentage %remaining %emptytime"
-        format_down = "🛇 NBAT"
+        format_down = "🛈 NBAT"
         status_chr = "⚡ CHR"
-        status_bat = "🛢 BAT"
-        status_unk = "?  UNK"
+        status_bat = "🔋 BAT"
+        status_unk = "🛈  UNK"
         status_full = "☻ FULL"
         path = "/sys/class/power_supply/BAT1/uevent"
         low_threshold = 10
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "🌣 %Y-%m-%d %H:%M:%S"
         hide_if_equals_localtime = true
 }
 
 tztime berlin {
-        format = "%Y-%m-%d %H:%M:%S %Z"
+        format = "🌣 %Y-%m-%d %H:%M:%S %Z"
         timezone = "Europe/Berlin"
 }
 
@@ -59,8 +59,8 @@ load {
 
 
 cpu_temperature 0 {
-        format = "🛈 %degrees°C"
-        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
+        format = "🌡 %degrees°C"
+        path = "/sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input"
 }
 
 memory {
@@ -70,7 +70,7 @@ memory {
 }
 
 disk "/" {
-        format = " %used"
+        format = "🛈 %used"
         #threshold_degraded = "10%"
         #format_degraded = " %free"
 }
