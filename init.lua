@@ -17,7 +17,6 @@ require('packer').startup(function(use)
   use 'kyoshiro/editorconfig-vim'
   use 'kyoshiro/fzf.vim'
   use 'kyoshiro/nvim-treesitter'
-  use 'kyoshiro/nvim-treesitter-textobjects'
   use 'kyoshiro/onedark.vim'
   use 'kyoshiro/papercolor-theme'
   use 'kyoshiro/ranger.vim'
@@ -52,7 +51,7 @@ require('packer').startup(function(use)
   -- use 'ludovicchabant/vim-gutentags' -- Automatic tags management
   -- UI to select things (files, grep results, open buffers...)
   use { 'kyoshiro/telescope.nvim', requires = { 'kyoshiro/plenary.nvim' } }
-  use { 'kyoshiro/telescope-fzy-native.nvim', run = 'make' }
+  -- use { 'kyoshiro/telescope-fzy-native.nvim', run = 'make' }
 
   -- Add indentation guides even on blank lines
   use 'kyoshiro/indent-blankline.nvim'
@@ -60,7 +59,7 @@ require('packer').startup(function(use)
   use { 'kyoshiro/gitsigns.nvim', requires = { 'kyoshiro/plenary.nvim' } }
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'kyoshiro/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  use 'kyoshiro/cellular-automaton.nvim'
+  --use 'kyoshiro/cellular-automaton.nvim'
 end)
 
 -- Enable relative line numbers
@@ -166,16 +165,16 @@ require('gitsigns').setup {
 }
 
 -- Telescope
--- require('telescope').setup {
---   defaults = {
---     mappings = {
---       i = {
---         ['<C-u>'] = false,
---         ['<C-d>'] = false,
---       },
---     },
---   },
--- }
+require('telescope').setup {
+  defaults = {
+    mappings = {
+      i = {
+        ['<C-u>'] = false,
+        ['<C-d>'] = false,
+      },
+    },
+  },
+}
 
 -- Enable telescope fzf native
 -- require('telescope').load_extension 'fzf'
@@ -214,57 +213,19 @@ vim.keymap.set('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<cr>g@'
 vim.keymap.set('n', '<leader>rd', ':RangerCD<cr>')
 vim.keymap.set('n', '<leader>rld', ':RangerLCD<cr>')
 
--- Treesitter configuration
--- Parsers must be installed manually via :TSInstall
-require('nvim-treesitter.configs').setup {
-  highlight = {
-    enable = true, -- false will disable the whole extension
-  },
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = 'gnn',
-      node_incremental = 'grn',
-      scope_incremental = 'grc',
-      node_decremental = 'grm',
-    },
-  },
-  indent = {
-    enable = true,
-  },
-  textobjects = {
-    select = {
-      enable = true,
-      lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
-      keymaps = {
-        -- You can use the capture groups defined in textobjects.scm
-        ['af'] = '@function.outer',
-        ['if'] = '@function.inner',
-        ['ac'] = '@class.outer',
-        ['ic'] = '@class.inner',
-      },
-    },
-    move = {
-      enable = true,
-      set_jumps = true, -- whether to set jumps in the jumplist
-      goto_next_start = {
-        [']m'] = '@function.outer',
-        [']]'] = '@class.outer',
-      },
-      goto_next_end = {
-        [']M'] = '@function.outer',
-        [']['] = '@class.outer',
-      },
-      goto_previous_start = {
-        ['[m'] = '@function.outer',
-        ['[['] = '@class.outer',
-      },
-      goto_previous_end = {
-        ['[M'] = '@function.outer',
-        ['[]'] = '@class.outer',
-      },
-    },
-  },
+
+require'nvim-treesitter'.setup {
+  -- A list of parser names or tiers ('stable', 'core', 'community', 'unsupported')
+  ensure_install = { },
+
+  -- List of parsers to ignore installing
+  ignore_install = { 'unsupported' },
+
+  -- Automatically install missing parsers when entering buffer
+  auto_install = true,
+
+  -- Directory to install parsers and queries to
+  install_dir = vim.fn.stdpath('data') .. '/site'
 }
 
 -- Diagnostic keymaps
@@ -292,7 +253,7 @@ local on_attach = function(_, bufnr)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
   -- vim.keymap.set('n', '<leader>so', require('telescope.builtin').lsp_document_symbols, opts)
-  vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
+  -- vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
 end
 
 -- nvim-cmp supports additional completion capabilities
