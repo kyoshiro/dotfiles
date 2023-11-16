@@ -1,5 +1,3 @@
-" Author: Roman Asendorf roman DOT asendorf AT gmail DOT com
-"
 source ~/.config/nvim/bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
