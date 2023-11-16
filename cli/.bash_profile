@@ -81,3 +81,22 @@ export PATH=$PATH:~/bin
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
 if [ -e /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+#AWSume alias to source the AWSume script
+alias awsume="source awsume"
+
+#Auto-Complete function for AWSume
+_awsume() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(awsume-autocomplete)
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+}
+complete -F _awsume awsume
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/rasendorf/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
