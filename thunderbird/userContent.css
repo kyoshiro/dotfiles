@@ -1,3 +1,15 @@
+/* New Contact button */
+#toolbarCreateContact {
+  background-color: #990099 !important;
+  border-color: #660066 !important;
+}
+
+/* New Contact button - Hover*/
+#toolbarCreateContact:hover {
+  background-color: color-mix(in srgb, #990099 89%, transparent) !important;
+  border-color: #660066 !important;
+}
+
 .toolbarbutton-1, .searchBox, .themeableSearchBox { /* Eliminate borders, round corners, and increase height on buttons and search bars */
     border: none !important;
     border-radius: 5px !important;
@@ -5,6 +17,7 @@
     background-color: #66066 !important;
 }
 
+/* Contact Card */
 tr[is="ab-card-row"].selected td {
   background-color: #990099 !important;
 }
@@ -21,6 +34,7 @@ tr[is="ab-card-row"]:hover td > .card-container{
   background-color: color-mix(in srgb, #909 11%, transparent) !important;
 }
 
+/* General settings per color scheme light/dark */
 @media (-moz-content-prefers-color-scheme:light) {
   /* Light Theme */
     :root {
@@ -85,22 +99,20 @@ tr[is="ab-card-row"]:hover td > .card-container{
     --tr-hover-background-color: #990099 !important;
     --tr-selected-background-color: #660066 !important;
   }
-#booksPane{
-  background-color: var(--sidebar-background-color) !important;
-}
 
-#cardsPane{
-  background-color: var(--sidebar-background-color) !important;
-}
+  #booksPane{
+    background-color: var(--sidebar-background-color) !important;
+  }
 
-table[is="tree-view-table"] td {
-  background-color: #222222 !important;
-}
-tr[is="ab-card-row"] td > .card-container {
-  background-color: #222222 !important;
-}
+  #cardsPane{
+    background-color: var(--sidebar-background-color) !important;
+  }
 
-
-
+  table[is="tree-view-table"] td {
+    background-color: #222222 !important;
+  }
+  tr[is="ab-card-row"] td > .card-container {
+    background-color: #222222 !important;
+  }
 }
 

@@ -1,10 +1,10 @@
-/* New message button */
+/* New message, Event, Task, Contact button */
 #folderPaneWriteMessage, #sidePanelNewEvent, #sidePanelNewTask, #toolbarCreateContact {
   background-color: #990099 !important;
   border-color: #660066 !important;
 }
 
-/* New  button */
+/* New message, Event, Task, Contact button - Hover*/
 #folderPaneWriteMessage:hover, #sidePanelNewEvent:hover, #sidePanelNewTask:hover, #toolbarCreateContact:hover {
   background-color: color-mix(in srgb, #990099 89%, transparent) !important;
   border-color: #660066 !important;
@@ -156,9 +156,8 @@ li.selected > .container:hover {
     --tr-hover-background-color: #990099 !important;
     --tr-selected-background-color: #660066 !important;
   }
-#calSidebar {
-  background-color: #222222 !important;
-}
 
+  #calSidebar {
+    background-color: #222222 !important;
+  }
 }
-
