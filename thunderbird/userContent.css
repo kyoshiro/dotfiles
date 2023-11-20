@@ -1,11 +1,13 @@
 /* New Contact button */
 #toolbarCreateContact {
+  color: #ffffff !important;
   background-color: #990099 !important;
   border-color: #660066 !important;
 }
 
 /* New Contact button - Hover*/
 #toolbarCreateContact:hover {
+  color: #ffffff !important;
   background-color: color-mix(in srgb, #990099 89%, transparent) !important;
   border-color: #660066 !important;
 }
@@ -17,9 +19,35 @@
     background-color: #66066 !important;
 }
 
+/* Tree view / List view */
+table[is="tree-view-table"] > .selected {
+   color: #ffffff !important;
+   background-color: color-mix(in srgb, #909 55%, transparent) !important;
+}
+
+table[is="tree-view-table"]:focus-within > .selected {
+   color: #ffffff !important;
+   background-color: #990099 !important;
+}
+
+/* Tree view / List view */
+[is="tree-view-table-body"] > .selected {
+   color: #ffffff !important;
+   background-color: color-mix(in srgb, #909 55%, transparent) !important;
+}
+
+[is="tree-view-table-body"]:focus-within > .selected {
+   color: #ffffff !important;
+   background-color: #990099 !important;
+}
+
 /* Contact Card */
-tr[is="ab-card-row"].selected td {
+tr[is="ab-card-row"].selected:focus-within td {
   background-color: #990099 !important;
+}
+
+tr[is="ab-card-row"].selected td {
+  background-color: color-mix(in srgb, #909 55%, transparent) !important;
 }
 
 tr[is="ab-card-row"]:hover td {
@@ -71,6 +99,10 @@ tr[is="ab-card-row"]:hover td > .card-container{
     --tr-hover-background-color: #990099 !important;
     --tr-selected-background-color: #660066 !important;
   }
+
+  #books:not(:focus) :where(.bookRow, .listRow).selected > :is(.bookRow-container, .listRow-container){
+     color: #ffffff !important;
+  }
 }
 
 @media (-moz-content-prefers-color-scheme:dark) {
@@ -111,6 +143,7 @@ tr[is="ab-card-row"]:hover td > .card-container{
   table[is="tree-view-table"] td {
     background-color: #222222 !important;
   }
+
   tr[is="ab-card-row"] td > .card-container {
     background-color: #222222 !important;
   }

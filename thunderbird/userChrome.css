@@ -1,10 +1,10 @@
-/* New message, Event, Task, Contact button */
+/* New message button */
 #folderPaneWriteMessage, #sidePanelNewEvent, #sidePanelNewTask, #toolbarCreateContact {
   background-color: #990099 !important;
   border-color: #660066 !important;
 }
 
-/* New message, Event, Task, Contact button - Hover*/
+/* New  button */
 #folderPaneWriteMessage:hover, #sidePanelNewEvent:hover, #sidePanelNewTask:hover, #toolbarCreateContact:hover {
   background-color: color-mix(in srgb, #990099 89%, transparent) !important;
   border-color: #660066 !important;
@@ -30,32 +30,42 @@ tr[is="thread-row"]:hover {
   background-color: color-mix(in srgb, #909 55%, transparent) !important;
 }
 
+/* Tree view / List view */
 [is="tree-view-table-body"] > .selected {
-  background-color: #990099 !important;
+   color: #ffffff !important;
+   background-color: color-mix(in srgb, #909 55%, transparent) !important;
 }
 
-/* Folder pane */
-.container:hover {
-  background-color: color-mix(in srgb, #909 11%, transparent) !important;
+[is="tree-view-table-body"]:focus-within > .selected {
+   color: #ffffff !important;
+   background-color: #990099 !important;
 }
+
 /*
-table[is="tree-view-table"] {
+.container:hover {
   background-color: color-mix(in srgb, #909 11%, transparent) !important;
 }
 */
 
+
+/* Folder pane */
+
 li.selected > .container {
-  background-color: color-mix(in srgb, #909 11%, transparent) !important;
+  background-color: color-mix(in srgb, #909 55%, transparent) !important;
 }
 
 li.selected > .container:hover {
   background-color: color-mix(in srgb, #909 11%, transparent) !important;
 }
 
-
 #folderTree:focus-within li.selected > .container,
 #folderTree li.drop-target > .container {
   background-color: #990099 !important;
+}
+
+#folderTree li.selected > .container,
+#folderTree li.drop-target > .container {
+  background-color: color-mix(in srgb, #909 55%, transparent) !important;
 }
 
 
@@ -126,6 +136,7 @@ li.selected > .container:hover {
     --sidebar-hover-background-color: #660066 !important;
     --sidebar-highlight-background-color: #990099 !important;
     --tr-hover-background-color: #990099 !important;
+    --tr-selected-color: #ffffff !important;
     --tr-selected-background-color: #660066 !important;
   }
 }
@@ -156,8 +167,8 @@ li.selected > .container:hover {
     --tr-hover-background-color: #990099 !important;
     --tr-selected-background-color: #660066 !important;
   }
-
   #calSidebar {
     background-color: #222222 !important;
   }
 }
+
