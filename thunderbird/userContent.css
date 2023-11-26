@@ -1,135 +1,199 @@
 /* New Contact button */
 #toolbarCreateContact {
-  color: #ffffff !important;
-  background-color: #990099 !important;
-  border-color: #660066 !important;
+  color: var(--light-text-color) !important;
+  background-color: var(--highlight-background-color) !important;
+  border-color: var(--highlight-dimmed-background-color) !important;
 }
 
 /* New Contact button - Hover*/
 #toolbarCreateContact:hover {
-  color: #ffffff !important;
-  background-color: color-mix(in srgb, #990099 89%, transparent) !important;
-  border-color: #660066 !important;
+  color: var(--light-text-color) !important;
+  background-color: color-mix(in srgb, var(--highlight-background-color) 88%, transparent) !important;
+  border-color: var(--highlight-dimmed-background-color) !important;
 }
 
-.toolbarbutton-1, .searchBox, .themeableSearchBox { /* Eliminate borders, round corners, and increase height on buttons and search bars */
-    border: none !important;
-    border-radius: 5px !important;
-    height: 31px !important;
-    background-color: #66066 !important;
+.searchBox, .themeableSearchBox { /* Eliminate borders, round corners, and increase height on buttons and search bars */
+  border: none !important;
+  border-radius: 5px !important;
+  height: 31px !important;
+  color: var(--light-color) !important;
+  background-color: var(--highlight-background-color) !important;
 }
 
-/* Tree view / List view */
-table[is="tree-view-table"] > .selected {
-   color: #ffffff !important;
-   background-color: color-mix(in srgb, #909 55%, transparent) !important;
-}
-
-table[is="tree-view-table"]:focus-within > .selected {
-   color: #ffffff !important;
-   background-color: #990099 !important;
+.toolbarbutton-1:hover {
+  color: var(--light-text-color) !important;
+  background-color: var(--hover-background-color) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 88%, transparent) !important; */
+  border-color: var(--highlight-dimmed-background-color) !important;
 }
 
 /* Tree view / List view */
 [is="tree-view-table-body"] > .selected {
-   color: #ffffff !important;
-   background-color: color-mix(in srgb, #909 55%, transparent) !important;
+  background-color: var(--highlight-dimmed-background-color) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 55%, transparent) !important; */
 }
 
 [is="tree-view-table-body"]:focus-within > .selected {
-   color: #ffffff !important;
-   background-color: #990099 !important;
+  color: var(--light-color) !important;
+  background-color: var(--highlight-background-color) !important;
+}
+
+[is="tree-view-table-body"] > :hover {
+  background-color: var(--hover-background-color) !important;
+}
+
+.container:hover {
+  background-color: var(--hover-background-color) !important;
+}
+
+/* Folder pane */
+li.selected > .container {
+  background-color: var(--highlight-dimmed-background-color) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 55%, transparent) !important; */
+}
+
+li.selected > .container:hover {
+  background-color: var(--hover-background-color) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 11%, transparent) !important; */
+}
+
+table[is="tree-view-table"] > .selected {
+  background-color: color-mix(in srgb, var(--highlight-dimmed-background-color) 10%, transparent) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 55%, transparent) !important; */
+   /* color: var(--light-text-color) !important; */
+}
+
+table[is="tree-view-table"]:focus-within > .selected {
+  background-color: color-mix(in srgb, var(--highlight-background-color) 100%, transparent) !important;
 }
 
 /* Contact Card */
 tr[is="ab-card-row"].selected:focus-within td {
-  background-color: #990099 !important;
+  background-color: color-mix(in srgb, var(--highlight-background-color) 100%, transparent) !important;
+  /* background-color: var(--highlight-background-color) !important; */
+}
+
+tr[is="ab-card-row"].selected:focus-within td > .card-container{
+  background-color: color-mix(in srgb, var(--highlight-background-color) 100%, transparent) !important;
+  /* background-color: var(--highlight-background-color) !important; */
 }
 
 tr[is="ab-card-row"].selected td {
-  background-color: color-mix(in srgb, #909 55%, transparent) !important;
+  background-color: color-mix(in srgb, var(--highlight-dimmed-background-color) 10%, transparent) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 55%, transparent) !important; */
 }
 
-tr[is="ab-card-row"]:hover td {
-  background-color: color-mix(in srgb, #909 11%, transparent) !important;
+tr[is="ab-card-row"]:hover td > td.not(.selected) {
+  background-color: color-mix(in srgb, var(--hover-background-color) 10%, transparent) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 88%, transparent) !important; */
 }
 
 tr[is="ab-card-row"].selected td > .card-container{
-  background-color: #990099 !important;
+  background-color: color-mix(in srgb, var(--highlight-dimmed-background-color) 10%, transparent) !important;
+  /* background-color: var(--highlight-dimmed-background-color) !important; */
 }
 
-tr[is="ab-card-row"]:hover td > .card-container{
-  background-color: color-mix(in srgb, #909 11%, transparent) !important;
+tr[is="ab-card-row"]:hover td > .card-container.not(.selected) {
+  background-color: color-mix(in srgb, var(--hover-background-color) 10%, transparent) !important;
+ /* background-color: var(--hover-background-color) !important; */
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 88%, transparent) !important; */
+}
+
+#books:not(:focus) :where(.bookRow, .listRow).selected > :is(.bookRow-container, .listRow-container){
+  background-color: var(--highlight-dimmed-background-color) !important;
+  /* background-color: color-mix(in srgb, var(--highlight-background-color) 55%, transparent) !important; */
+}
+
+#books :where(.bookRow, .listRow):not(.selected) > :is(.bookRow-container:hover, .listRow-container:hover){
+  background-color: var(--hover-background-color) !important;
 }
 
 /* General settings per color scheme light/dark */
 @media (-moz-content-prefers-color-scheme:light) {
   /* Light Theme */
-    :root {
-    --light-color: #990099;
-    --light-text-color: #31363B;
-    --light-white-background: white;
-    --light-light-background: var(--light-color);
-    --light-light-text-color: var(--light-text-color);
-    --highlight-color: #990099;
-    --highlight-text-color: var(--light-light-text-color);
-    --button-background-hover: #330033;
-    --checkbox-checked-border-color: #660066 !important;
-    --checkbox-checked-bgcolor: #990099 !important;
-    --in-content-button-background-hover: #cc00cc !important;
-    --in-content-primary-button-background-hover: #cc00cc !important;
-    --in-content-primary-button-background: #990099 !important;
-    --lwt-tab-line-color: #990099 !important;
-    --selected-item-color: #990099 !important;
-    --mmHighlightBorderColor: #660066 !important;
-    --mmDaySelectedBackground: #990099 !important;
-    --mmDaySelectedColor: #660066 !important;
-    --listbox-selected-bg: #660066 !important;
-    --listbox-focused-selected-bg: #990099 !important;
-
-    --folder-tree-background-color: var(--light-color) !important;
-    --folder-tree-text-color: var(--light-text-color);
-    --folder-tree-row-height: 25px;
-    --folder-tree-highlight-background-color: var(--highlight-color);
-    --folder-tree-highlight-text-color: var(--folder-tree-text-color);
-    --toolbar-field-background-color: #660066 !important;
-    --toolbar-field-highlight-color: #990099 !important;
-    --sidebar-hover-background-color: #660066 !important;
-    --sidebar-highlight-background-color: #990099 !important;
-    --tr-hover-background-color: #990099 !important;
-    --tr-selected-background-color: #660066 !important;
+  :root {
+  --light-color: white;
+  --light-text-color: var(--light-color);
+  --hover-background-color: #dfdfdf;
+  --highlight-text-color: #eeeeee;
+  --highlight-background-color: #990099;
+  --searchbox-background-color: #eeeeee;
+  --sidebar-background-color: #eeeeee;
+  --highlight-dimmed-background-color: #cccccc;
+  --highlight-text-color: var(--light-color) !important;
+  /* --button-background-hover: var(--hover-background-color) !important;
+  /* --button-background-hover: color-mix(in, currentColor 11%, transparent) !important; */
+  --checkbox-checked-border-color: var(--highlight-dimmed-background-color) !important;
+  --checkbox-checked-bgcolor: var(--highlight-background-color) !important;
+  --in-content-button-color-hover: var(--light-text-color) !important;
+  --in-content-button-background-hover: var(--hover-background-color) !important;
+  --in-content-primary-button-background: var(--highlight-background-color) !important;
+  --in-content-primary-button-background-hover: var(--hover-background-color) !important;
+  /*--in-content-button-background: #222222 !important;
+  --in-content-button-background-hover: color-mix(in, currentColor 11%, transparent) !important;
+  --in-content-primary-button-background: var(--highlight-background-color) !important;
+  --in-content-primary-button-background-hover: color-mix(in, currentColor 11%, transparent) !important; */
+  --lwt-tab-line-color: var(--highlight-background-color) !important;
+  --selected-item-color: var(--highlight-background-color) !important;
+  --mmHighlightBorderColor: var(--highlight-dimmed-background-color) !important;
+  --mmDaySelectedBackground: var(--highlight-background-color) !important;
+  --mmDaySelectedColor: var(--highlight-dimmed-background-color) !important;
+  --listbox-selected-bg: var(--highlight-dimmed-background-color) !important;
+  --listbox-focused-selected-bg: var(--highlight-background-color) !important;
+  --folder-tree-row-height: 25px;
+  --toolbar-field-background-color: var(--highlight-dimmed-background-color) !important;
+  --toolbar-field-highlight-color: var(--highlight-background-color) !important;
+  --sidebar-hover-background-color: var(--highlight-dimmed-background-color) !important;
+  --sidebar-highlight-background-color: var(--highlight-background-color) !important;
+  --tr-hover-background-color: var(--highlight-background-color) !important;
+  --tr-selected-color: var(--light-text-color) !important;
+  --tr-selected-background-color: var(--highlight-dimmed-background-color) !important;
   }
 
-  #books:not(:focus) :where(.bookRow, .listRow).selected > :is(.bookRow-container, .listRow-container){
-     color: #ffffff !important;
+  #booksPane{
+    background-color: var(--sidebar-background-color) !important;
+  }
+
+  #cardsPane{
+    background-color: var(--sidebar-background-color) !important;
   }
 }
 
 @media (-moz-content-prefers-color-scheme:dark) {
   /* Dark Theme */
-    :root {
-    --highlight-color: #990099;
-    --button-background-hover: #330033;
-    --checkbox-checked-border-color: #660066 !important;
-    --checkbox-checked-bgcolor: #990099 !important;
-    --in-content-button-background-hover: #cc00cc !important;
-    --in-content-primary-button-background-hover: #cc00cc !important;
-    --in-content-primary-button-background: #990099 !important;
-    --lwt-tab-line-color: #990099 !important;
-    --selected-item-color: #990099 !important;
-    --mmHighlightBorderColor: #660066 !important;
-    --mmDaySelectedBackground: #990099 !important;
-    --mmDaySelectedColor: #660066 !important;
-    --listbox-selected-bg: #660066 !important;
-    --listbox-focused-selected-bg: #990099 !important;
-
-    --folder-tree-row-height: 25px;
-    --toolbar_field_focus: #990099 !important;
-    --toolbar-field-background-color: #660066 !important;
-    --toolbar-field-highlight-color: #ff00ff !important;
-    --sidebar-highlight-background-color: #990099 !important;
-    --tr-hover-background-color: #990099 !important;
-    --tr-selected-background-color: #660066 !important;
+  :root {
+  --light-color: white;
+  --light-text-color: var(--light-color);
+  --highlight-text-color: #bbbbbb;
+  --hover-background-color: #434343;
+  --highlight-background-color: #990099;
+  --searchbox-background-color: #222222;
+  --highlight-dimmed-background-color: #434343;
+  /*--button-background-hover:  color-mix(in, currentColor 11%, transparent) !important; */
+  --checkbox-checked-border-color: var(--highlight-dimmed-background-color) !important;
+  --checkbox-checked-bgcolor: var(--highlight-background-color) !important;
+  --in-content-button-color-hover: var(--light-text-color) !important;
+  --in-content-button-background-hover: var(--highlight-dimmed-background-color) !important;
+  --in-content-primary-button-background: var(--highlight-background-color) !important;
+  --in-content-primary-button-background-hover: var(--highlight-dimmed-background-color) !important;
+  /*--in-content-button-background: #999999 !important;
+  --in-content-button-background-hover:  color-mix(in, currentColor 11%, transparent) !important;
+  --in-content-primary-button-background: var(--highlight-background-color) !important;
+  --in-content-primary-button-background-hover: color-mix(in, currentColor 11%, transparent) !important; */
+  --lwt-tab-line-color: var(--highlight-background-color) !important;
+  --selected-item-color: var(--highlight-background-color) !important;
+  --mmHighlightBorderColor: var(--highlight-dimmed-background-color) !important;
+  --mmDaySelectedBackground: var(--highlight-background-color) !important;
+  --mmDaySelectedColor: var(--highlight-dimmed-background-color) !important;
+  --listbox-selected-bg: var(--highlight-dimmed-background-color) !important;
+  --listbox-focused-selected-bg: var(--highlight-background-color) !important;
+  --folder-tree-row-height: 25px;
+  --toolbar_field_focus: var(--highlight-background-color) !important;
+  --toolbar-field-background-color: var(--highlight-dimmed-background-color) !important;
+  --toolbar-field-highlight-color: var(--highlight-background-color) !important;
+  --sidebar-highlight-background-color: var(--highlight-background-color) !important;
+  --tr-hover-background-color: var(--hover-background-color) !important;
+  --tr-selected-background-color: var(--highlight-dimmed-background-color) !important;
   }
 
   #booksPane{
