@@ -26,21 +26,21 @@ module.exports = {
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
         cursorShape: 'BLOCK',
         // set to `true` (without backticks and without quotes) for blinking cursor
-        cursorBlink: false,
+        cursorBlink: true,
         // color of the text
         foregroundColor: '#f0f',
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#111',
+        backgroundColor: '#223',
+	opacity: {
+		focus: 0.85,
+		blur: 0.6,
+	},
         // terminal selection color
         selectionColor: 'rgba(248,28,229,0.3)',
         // border color (window, tabs)
         borderColor: '#333',
         // custom CSS to embed in the main window
-	opacity: {
-	  focus: 0.9,
-	  blur: 0.5,
-	},
         css: '',
         // custom CSS to embed in the terminal window
         termCSS: '',
