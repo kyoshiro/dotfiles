@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 12
+font pango:DejaVu Sans Mono 10
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -210,6 +210,16 @@ bar {
 for_window [class="^.*"] border pixel 1
 default_border pixel 1
 default_floating_border pixel 1
+
+# Enable window gaps
+for_window [class="^.*"] border pixel 2
+gaps inner 5
+gaps outer 5
+#smart_gaps on
+#smart_borders on
+
+# Enable transparency
+# exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 
 # Startup programs
 exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
