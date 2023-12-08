@@ -1,4 +1,4 @@
-Xft.dpi: 125.0
+Xft.dpi: 108.0
 
 xterm*selectToClipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp

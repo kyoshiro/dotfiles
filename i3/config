@@ -15,6 +15,10 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font pango:monospace 8
 
+# Setting colors here
+set $bg-color #990099
+set $text-color #888888
+set $inactive-bg-color #222222
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 10
@@ -222,9 +226,11 @@ gaps outer 5
 # exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
 
 # Startup programs
+exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id gnome-keyring-daemon --unlock
 exec --no-startup-id blueman-applet
+#exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
 exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.img

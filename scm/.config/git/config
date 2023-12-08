@@ -1,8 +1,7 @@
 [user]
-	name = Roman Asendorf
-	email = r.asendorf@neusta.de
+	name = kyoshiro
+	email = 108440+kyoshiro@users.noreply.github.com
 	#email = set by EMAIL env variable
-	username = rasendorf
 [gui]
 	fontui = -family \"Bitstream Vera Sans\" -size 8 -weight bold -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"Bitstream Vera Sans Mono\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
@@ -148,7 +147,7 @@
 	lg = log -p --decorate --all
 	l1 = log --oneline --decorate --all
 	lg1 = log --graph --oneline --decorate --all
-	
+
 	# show latest tag
 	lasttag = describe --tags --abbrev=0
 
