@@ -1,0 +1,37 @@
+env:
+  TERM: xterm-256color
+
+import:
+  - ~/.config/alacritty/colors/tokyonight-night.yml
+
+# window padding
+window:
+  padding:
+    x: 8
+    y: 8
+  dynamic_padding: true
+  decorations: full
+  opacity: 0.8
+
+# font
+font:
+  size: 13
+  normal:
+    family: FiraCode Nerd Font Mono
+
+  bold:
+    style: Bold
+    family: FiraCode Nerd Font Mono
+  italic:
+    style: Italic
+    family: FiraCode Nerd Font Mono
+  bold_italic:
+    style: Bold Italic
+    family: FiraCode Nerd Font Mono
+
+  offset:
+    x: 0
+    y: 2
+
+# spaces per tab
+tabspaces: 2
