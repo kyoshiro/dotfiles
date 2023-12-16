@@ -48,7 +48,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 5%- # decrease screen brightn
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# sudo update-alternatives --set x-terminal-emulator "$(which terminator)"
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 

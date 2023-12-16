@@ -23,6 +23,8 @@ else
   fi
 fi
 
+# Set preferred TERMINAL
+export TERMINAL=/usr/bin/kitty
 
 #pars for fun: install | remove | rollback
 function apt-history(){
