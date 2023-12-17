@@ -221,9 +221,6 @@ gaps outer 5
 #smart_gaps on
 #smart_borders on
 
-# Enable transparency
-# exec_always --no-startup-id compton --config ~/.config/i3/compton.conf
-
 # Startup programs
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
 exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
