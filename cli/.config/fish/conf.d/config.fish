@@ -1,5 +1,5 @@
 set -x VISUAL nvim
-set -x EDITOR vim
+set -x EDITOR nvim
 
 # cursor shape set by fish_vi_cursor
 set -g fish_cursor_default block
