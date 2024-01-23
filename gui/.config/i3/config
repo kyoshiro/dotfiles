@@ -222,6 +222,7 @@ exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authenticati
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 exec --no-startup-id gnome-keyring-daemon --unlock &
 exec --no-startup-id blueman-applet &
+exec --no-startup-id systemctl start --user xfce4-notifyd.service &
 #exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
