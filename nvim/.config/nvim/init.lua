@@ -89,6 +89,8 @@ vim.wo.signcolumn = 'yes'
 vim.o.termguicolors = true
 vim.cmd [[colorscheme tokyonight-night]]
 
+vim.cmd [[highlight Normal guibg=none]]
+
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
@@ -102,8 +104,8 @@ gset('hybrid_reduced_contrast', 1)
 --     options = {
 --       icons_enabled = true,
 --       theme = 'tokyonight',
---       -- component_separators = '|',
---       -- section_separators = '',
+--       -- 16kcomponent_separators = '|',
+--       16j-- section_separators = '',
 --     },
 -- }
 
