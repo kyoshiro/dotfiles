@@ -1,0 +1,36 @@
+import = ["/Users/rasendorf/.config/alacritty/colors/tokyonight-night.toml"]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 13
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+
+[font.offset]
+x = 0
+y = 2
+
+[window]
+decorations = "none"
+dynamic_padding = true
+opacity = 0.8
+
+[window.padding]
+x = 8
+y = 8
