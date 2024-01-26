@@ -1,4 +1,4 @@
-import = ["/Users/rasendorf/.config/alacritty/colors/tokyonight-night.toml"]
+import = ["~/.config/alacritty/colors/tokyonight-night.toml"]
 live_config_reload = true
 
 [env]
@@ -8,19 +8,23 @@ TERM = "xterm-256color"
 size = 13
 
 [font.bold]
-family = "FiraCode Nerd Font Mono"
+#family = "FiraCode Nerd Font Mono"
+family = "Inconsolata-dz for Powerline"
 style = "Bold"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font Mono"
+family = "Inconsolata-dz for Powerline"
+#family = "FiraCode Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "FiraCode Nerd Font Mono"
+family = "Inconsolata-dz for Powerline"
+#family = "FiraCode Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font Mono"
+family = "Inconsolata-dz for Powerline"
+#family = "FiraCode Nerd Font Mono"
 
 [font.offset]
 x = 0
