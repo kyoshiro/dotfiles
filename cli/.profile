@@ -26,4 +26,19 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export TERMINAL=/usr/bin/alacritty
+PATH_ALACRITTY=$(which alacritty)
+PATH_KITTY=$(which kitty)
+PATH_HYPER=$(which hyper)
+PATH_XTERM=$(which xterm)
+
+if [ -f $PATH_ALACRITTY ]; then
+    TERM=$PATH_ALACRITTY
+elif [ -f $PATH_KITTY ]; then
+    TERM=$PATH_KITTY
+elif [ -f $PATH_HYPER ]; then
+    TERM=$PATH_HYPER
+else
+    TERM=$PATH_XTERM
+fi
+
+export TERMINAL=$TERM
