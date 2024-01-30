@@ -34,7 +34,7 @@ if test -e /usr/bin/ack-grep
 end
 
 # abbr --add t 'tree -f'
-abbr --add t 'exa -T'
+abbr --add t 'eza -T'
 
 abbr --add top 'htop'
 
@@ -65,7 +65,7 @@ abbr --add k9s 'EDITOR=nvim k9s'
 # ls
 function ls
     # command ls -b -CF --file-type --color=auto --group-directories-first $argv
-    command exa --group-directories-first --git -F $argv
+    command eza --group-directories-first --git -F $argv
 end
 abbr --add la 'ls -laa'
 abbr --add ltr 'ls -l -smodified'
