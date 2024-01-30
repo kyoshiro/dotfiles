@@ -111,7 +111,7 @@ SETUVAR _fish_abbr_r:rg
 SETUVAR _fish_abbr_rgrep:grep\x20\x2dr
 SETUVAR _fish_abbr_rot13:tr\x20\x22A\x2dZa\x2dz\x22\x20\x22N\x2dZA\x2dMn\x2dza\x2dm\x22
 SETUVAR _fish_abbr_ru:rg\x20\x2duuu
-SETUVAR _fish_abbr_t:exa\x20\x2dT
+SETUVAR _fish_abbr_t:eza\x20\x2dT
 SETUVAR _fish_abbr_tf:terraform
 SETUVAR _fish_abbr_tfa:terraform\x20apply
 SETUVAR _fish_abbr_tfi:terraform\x20init
