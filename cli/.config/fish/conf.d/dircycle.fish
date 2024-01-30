@@ -1,6 +1,6 @@
 function __fish_dir_list
     echo
-    command exa
+    command eza
     echo
     echo
     commandline -f repaint
