@@ -12,6 +12,7 @@ in
   pkgs.mkShell {
     allowUnfree = true;
     buildInputs = [
+      pre-commit
       azure-cli
       jq
       kubectl
