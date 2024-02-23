@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/colors/tokyonight-night.toml"]
+import = ["~/.config/alacritty/colors/tokyonight-storm.toml"]
 live_config_reload = true
 
 [env]

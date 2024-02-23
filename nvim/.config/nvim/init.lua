@@ -87,7 +87,7 @@ vim.wo.signcolumn = 'yes'
 
 --Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme tokyonight-night]]
+vim.cmd [[colorscheme tokyonight-storm]]
 
 vim.cmd [[highlight Normal guibg=none]]
 
