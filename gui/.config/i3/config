@@ -226,7 +226,7 @@ exec --no-startup-id systemctl start --user xfce4-notifyd.service &
 #exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
-exec --no-startup-id feh --bg-scale ~/.config/i3/wallpaper.img &
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.img &
 exec --no-startup-id autolock &
 exec_always ~/.config/i3/autoname_workspaces.py &
 exec --no-startup-id i3-msg 'workspace 5; exec protonmail-bridge --no-window' &
