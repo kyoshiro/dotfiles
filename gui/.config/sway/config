@@ -31,6 +31,11 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output DP-1 {
+  mode 3840x2160@30.000Hz
+  scale 1
+  bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
+}
 output eDP-1 {
   mode 2736x1824@59.959Hz
   scale 1
@@ -79,7 +84,7 @@ input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
 # Basics:
 #
     # Start a terminal
-    bindsym $mod+Return exec $term
+    bindsym $mod+Return exec i3-sensible-terminal
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -220,7 +225,7 @@ set $transparent #02020202
 set $grey #c9c9c9c9
 set $white #ffffffff
 
-# Start i3bar to display a workspace bar (plus the system information i3status
+# Start swaybar to display a workspace bar (plus the system information swaystatus
 # finds out, if available)
 bar {
 		position top
@@ -255,13 +260,13 @@ exec --no-startup-id systemctl start --user xfce4-notifyd.service &
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
 exec --no-startup-id autolock &
-exec_always ~/.config/i3/autoname_workspaces.py &
-exec --no-startup-id i3-msg 'workspace 5; exec protonmail-bridge --no-window' &
-exec --no-startup-id i3-msg 'workspace 5; exec keepassxc' &
-exec --no-startup-id i3-msg 'workspace 5; exec nextcloud' &
-exec --no-startup-id i3-msg 'workspace 4; exec discord' &
-exec --no-startup-id i3-msg 'workspace 3; exec thunderbird' &
-exec --no-startup-id i3-msg 'workspace 2; exec firefox' &
-exec --no-startup-id i3-msg 'workspace 1; exec i3-sensible-terminal'
+exec_always ~/.config/sway/autoname_workspaces.py &
+exec --no-startup-id swaymsg 'workspace 5; exec protonmail-bridge --no-window' &
+exec --no-startup-id swaymsg 'workspace 5; exec keepassxc' &
+exec --no-startup-id swaymsg 'workspace 5; exec nextcloud' &
+exec --no-startup-id swaymsg 'workspace 4; exec discord' &
+exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
+exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
+exec --no-startup-id swaymsg 'workspace 1; exec sway-sensible-terminal'
 
 include /etc/sway/config.d/*
