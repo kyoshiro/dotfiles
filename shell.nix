@@ -2,7 +2,6 @@ with import <nixpkgs> {};
 let
   my-python-packages = python-packages: [
     python-packages.pip
-    python-package.jq
     python-packages.numpy
     python-packages.msrestazure
     python-packages.requests

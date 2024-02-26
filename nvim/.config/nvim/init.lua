@@ -97,7 +97,7 @@ vim.o.completeopt = 'menuone,noselect'
 local gset = vim.api.nvim_set_var
 gset('hybrid_custom_term_colors', 1)
 gset('hybrid_reduced_contrast', 1)
-
+gset('neovide_transparency', 0.8)
 -- Now don't forget to initialize lualine
 --Set statusbar
 -- require('lualine').setup {
@@ -356,6 +356,13 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- Allow clipboard copy paste in neovim
+vim.g.neovide_input_use_logo = 1
+vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
+
 -- Indent blankline
 require('indent_blankline').setup {
   char = '┊',
@@ -600,4 +607,5 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
 -- vim: ts=2 sts=2 sw=2 et
