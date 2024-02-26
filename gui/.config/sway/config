@@ -228,13 +228,7 @@ set $white #ffffffff
 # Start swaybar to display a workspace bar (plus the system information swaystatus
 # finds out, if available)
 bar {
-		position top
-		colors {
-			background $transparent
-			statusline $grey
-			#default_border $white
-		}
-        status_command i3status
+	swaybar_command waybar
 }
 
 # Removing title bar
@@ -255,12 +249,11 @@ exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authenticati
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 exec --no-startup-id gnome-keyring-daemon --unlock &
 exec --no-startup-id blueman-applet &
-exec --no-startup-id systemctl start --user xfce4-notifyd.service &
+exec swaync
 #exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
 exec --no-startup-id autolock &
-exec_always ~/.config/sway/autoname_workspaces.py &
 exec --no-startup-id swaymsg 'workspace 5; exec protonmail-bridge --no-window' &
 exec --no-startup-id swaymsg 'workspace 5; exec keepassxc' &
 exec --no-startup-id swaymsg 'workspace 5; exec nextcloud' &
@@ -268,5 +261,8 @@ exec --no-startup-id swaymsg 'workspace 4; exec discord' &
 exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
 exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
 exec --no-startup-id swaymsg 'workspace 1; exec sway-sensible-terminal'
+exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+exec_always swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+exec_always swayidle -w timeout 600 'systemctl suspend'
 
 include /etc/sway/config.d/*
