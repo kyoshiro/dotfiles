@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/colors/tokyonight-storm.toml"]
+import = ["~/.config/alacritty/colors/ashokai-urple.toml"]
 live_config_reload = true
 
 [env]
@@ -33,7 +33,7 @@ y = 2
 [window]
 decorations = "none"
 dynamic_padding = true
-opacity = 0.8
+opacity = 0.85
 
 [window.padding]
 x = 8
