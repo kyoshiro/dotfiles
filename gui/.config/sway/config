@@ -92,6 +92,8 @@ input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Start Neovide
+    bindsym $mod+n exec neovide
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -229,6 +231,7 @@ set $white #ffffffff
 # finds out, if available)
 bar {
 	swaybar_command waybar
+#         #status_command i3status
 }
 
 # Removing title bar
