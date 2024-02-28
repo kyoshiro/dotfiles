@@ -34,6 +34,19 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output DP-1 {
   mode 3840x2160@30.000Hz
   scale 1
+  position 0,0
+  bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
+}
+output DP-2 {
+  mode 3840x2160@30.000Hz
+  scale 1
+  position 3840,0
+  bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
+}
+output DP-3 {
+  mode 3840x2160@30.000Hz
+  scale 1
+  position 7680,0
   bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
 }
 output eDP-1 {
