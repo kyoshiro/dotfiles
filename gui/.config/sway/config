@@ -92,6 +92,12 @@ input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
       middle_emulation enabled
 }
 
+# Configure Keyboard
+input * {
+      xkb_layout us
+      xkb_variant intl
+}
+
 ### Key bindings
 #
 # Basics:
