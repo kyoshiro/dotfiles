@@ -83,7 +83,21 @@ input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
 #
 # Basics:
 #
-    # Start a terminal
+    # Use pactl to adjust volume in PulseAudio.
+    set $refresh_i3status killall -SIGUSR1 i3status
+    bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+    bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+    bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+    bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+    # Use brightnessctl to adjust brightness
+    bindsym XF86MonBrightnessUp exec brightnessctl s +5% # increase screen brightness
+    bindsym XF86MonBrightnessDown exec brightnessctl s 5%- # decrease screen brightness
+
+    # Use Mouse+$mod to drag floating windows to their wanted position
+    floating_modifier $mod
+
+    # start a terminal
     bindsym $mod+Return exec i3-sensible-terminal
 
     # Kill focused window
@@ -263,7 +277,7 @@ exec --no-startup-id swaymsg 'workspace 5; exec nextcloud' &
 exec --no-startup-id swaymsg 'workspace 4; exec discord' &
 exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
 exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
-exec --no-startup-id swaymsg 'workspace 1; exec sway-sensible-terminal'
+exec --no-startup-id swaymsg 'workspace 1; exec i3-sensible-terminal'
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec_always swayidle -w timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 exec_always swayidle -w timeout 600 'systemctl suspend'
