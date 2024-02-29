@@ -37,6 +37,7 @@
 "gimp" = " "
 "kitty" = ""
 "ch.proton.bridge-gui" = " "
+"thunar" = ""
 
 [other]
 fallback_icon = "🤨"
