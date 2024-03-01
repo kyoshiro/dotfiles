@@ -61,8 +61,8 @@ output eDP-1 {
  exec swayidle -w \
           timeout 180 'swaylock -f -c 000000 -i ~/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png' \
           timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	  before-sleep 'swaylock -f -c 000000 -i ~/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png' \
-          timeout 600 'systemctl suspend'
+          timeout 600 'systemctl suspend' \
+	  before-sleep 'swaylock -f -c 000000 -i ~/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
