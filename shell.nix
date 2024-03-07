@@ -24,6 +24,6 @@ in
       export PYTHONPATH="$(pwd)/_build/pip_packages/lib/python3.11/site-packages:$PYTHONPATH"
       unset SOURCE_DATE_EPOCH
       export PATH="$PATH:$(pwd)/_build/pip_packages/bin"
+      export PRE_COMMIT_HOME=.precommit
     '';
   }
-

@@ -34,13 +34,13 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 output DP-1 {
   mode 3840x2160@60.000Hz
   scale 1
-  position 0,0
+  position 3840,0
   bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
 }
 output DP-2 {
   mode 3840x2160@60.000Hz
   scale 1
-  position 3840,0
+  position 0,0
   bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
 }
 output DP-3 {
@@ -54,6 +54,13 @@ output eDP-1 {
   scale 1
   bg /home/kyoshiro/Nextcloud/Pictures/Wallpaper/arch_conference_violett.png fill
 }
+
+### Workspaces Configuration
+
+workspace 1 output DP-1
+workspace 2 output DP-2
+workspace 3 output DP-3
+
 ### Idle configuration
 #
 # Example configuration:
