@@ -94,10 +94,16 @@ vim.cmd [[highlight Normal guibg=none]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+-- Set neovide parameters here
 local gset = vim.api.nvim_set_var
-gset('hybrid_custom_term_colors', 1)
-gset('hybrid_reduced_contrast', 1)
-gset('neovide_transparency', 0.8)
+if vim.g.neovide then
+  vim.g.neovide_frame = 'transparent'
+  vim.g.neovide_hybrid_custom_term_colors = 1
+  vim.g.neovide_hybrid_reduced_contrast = 1
+  vim.g.neovide_transparency = 0.8
+end
+
+
 -- Now don't forget to initialize lualine
 --Set statusbar
 -- require('lualine').setup {
@@ -430,7 +436,7 @@ vim.keymap.set('n', '<leader>rd', ':RangerCD<cr>')
 vim.keymap.set('n', '<leader>rld', ':RangerLCD<cr>')
 
 
-require'nvim-treesitter'.setup {
+require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 
