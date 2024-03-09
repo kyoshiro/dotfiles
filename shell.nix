@@ -12,12 +12,10 @@ in
     allowUnfree = true;
     buildInputs = [
       pre-commit
-      azure-cli
       jq
       kubectl
       pwgen
       my-python
-      terraform
     ];
     shellHook = ''
       export PIP_PREFIX="$(pwd)/_build/pip_packages"
