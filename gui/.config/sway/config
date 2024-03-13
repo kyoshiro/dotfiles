@@ -95,7 +95,7 @@ for_window [app_id=".*"] opacity $opacity
 input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
       dwt enabled
       tap enabled
-      natural_scroll enabled
+      natural_scroll disabled
       middle_emulation enabled
 }
 
