@@ -3,6 +3,7 @@ let
   my-python-packages = python-packages: [
     python-packages.pip
     python-packages.numpy
+    #python-packages.systemtools
     python-packages.msrestazure
     python-packages.requests
   ];
