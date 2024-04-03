@@ -341,7 +341,7 @@ require('Comment').setup()
 -- Enable and configure hard time
 gset('hardtime_default_on', 1)
 gset('hardtime_showmsg', 1)
-gset('hardtime_maxcount', 4)
+gset('hardtime_maxcount', 25)
 
 --Remap space as leader key
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
