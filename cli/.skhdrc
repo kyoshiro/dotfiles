@@ -2,7 +2,7 @@
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 #cmd - return : /Applications/Kitty.app/Contents/MacOS/Kitty
 #cmd - return : /Applications/Hyper.app/Contents/MacOS/Hyper
-
+#cmd - n: /Applications/Neovide.app/Contents/MacOS/neovide
 # open mpv with url from clipboard
 shift + cmd - m : mpv $(pbpaste)
 
