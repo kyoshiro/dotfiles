@@ -39,6 +39,8 @@
 "ch.proton.bridge-gui" = " "
 "thunar" = ""
 "spotify" = ""
+"whatsapp" = ""
+"whatsdesk" = ""
 
 [other]
 fallback_icon = "🤨"
