@@ -3,7 +3,6 @@ let
   my-python-packages = python-packages: [
     python-packages.pip
     python-packages.numpy
-    python-packages.msrestazure
     python-packages.requests
   ];
   my-python = python311.withPackages my-python-packages;
