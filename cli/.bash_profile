@@ -98,7 +98,3 @@ _awsume() {
     return 0
 }
 complete -F _awsume awsume
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/rasendorf/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

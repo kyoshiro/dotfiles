@@ -57,7 +57,3 @@ if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rase
 if [ -e /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/rasendorf/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
