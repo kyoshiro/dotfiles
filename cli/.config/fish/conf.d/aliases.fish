@@ -216,4 +216,11 @@ function = -d 'zsh like shortcut to the which command'
     which $argv
 end
 
+## Nix related abbreviations
+
+abbr --add nxclean 'nix-collect-garbage -d'
+abbr --add nxgc 'nix-store --gc'
+abbr --add nxup 'nix-channel --update; nix-env -iA nixpkgs.nix'
+abbr --add nxlg 'nix-env --list-generations'
+
 # vi: ft=fish:tw=0:sw=4:ts=4
