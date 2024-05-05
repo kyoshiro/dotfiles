@@ -1,0 +1,13 @@
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
+
+gtk-color-scheme="tooltip_bg_color:#4B5162\ntooltip_fg_color:#ffffff"
+gtk-color-scheme="selected_fg_color:#ffffff\nselected_bg_color:#990099"
+gtk-color-scheme="base_color:#404552\ntext_color:#d3dae3"
+gtk-color-scheme="insensitive_fg_color:#7c818c"
+gtk-color-scheme="dark_sidebar_bg:#353945"
+gtk-color-scheme="fg_color:#d3dae3\nbg_color:#383c4a"
+gtk-color-scheme="menu_bg:#383c4a"
+gtk-color-scheme="insensitive_bg_color:#3e4350"
+gtk-color-scheme="link_color:#5294e2"
+gtk-color-scheme="notebook_bg:#404552"
