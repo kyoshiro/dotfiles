@@ -91,8 +91,6 @@ SETUVAR _fish_abbr_ltr:ls\x20\x2dl\x20\x2dsmodified
 SETUVAR _fish_abbr_ltra:ls\x20\x2dlaa\x20\x2dsmodified
 SETUVAR _fish_abbr_n:__n
 SETUVAR _fish_abbr_nv:nvim
-SETUVAR _fish_abbr_o:xdg\x2dopen
-SETUVAR _fish_abbr_open:xdg\x2dopen
 SETUVAR _fish_abbr_p:paru
 SETUVAR _fish_abbr_q:quilt
 SETUVAR _fish_abbr_qD:quilt\x20delete\x20\x2dr

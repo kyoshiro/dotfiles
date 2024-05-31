@@ -23,8 +23,8 @@ function __n
 end
 
 
-abbr --add o 'xdg-open'
-abbr --add open 'xdg-open'
+#abbr --add o 'xdg-open'
+#abbr --add open 'xdg-open'
 
 abbr --add n __n
 
