@@ -36,7 +36,7 @@ end
 # abbr --add t 'tree -f'
 abbr --add t 'eza -T'
 
-abbr --add top 'htop'
+abbr --add top 'btop'
 
 abbr --add c 'khard'
 abbr --add h 'cht.sh'
@@ -140,7 +140,7 @@ abbr --add gbc 'git bc'
 abbr --add gbm 'git bm'
 abbr --add gbr 'git br'
 abbr --add gc 'git commit'
-abbr --add gca 'git commit -a'
+abbr --add gca 'git cam'
 abbr --add gcam 'git commit --amend'
 abbr --add gco 'git checkout'
 abbr --add gcob 'git cob'
