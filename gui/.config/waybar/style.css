@@ -61,7 +61,7 @@ button:hover {
 }
 
 #pulseaudio:hover {
-  background-color: #a37800;
+  background: inherit;
   box-shadow: inset 0 -3px #f3cd00;
 }
 
@@ -88,6 +88,11 @@ button:hover {
 #language:hover {
   background: inherit;
   box-shadow: inset 0 -3px #ffffff;
+}
+
+#battery:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #bb0000;
 }
 
 #clock:hover {
@@ -201,7 +206,7 @@ button:hover {
 
 #battery {
   background-color: rgba(43, 48, 59, 0.5);
-  color: #000000;
+  color: #561212;
 }
 
 #battery.charging,
