@@ -60,41 +60,41 @@ LIGHTBLUE='\[\033[1;36m\]'
 PURPLE='\[\e[1;35m\]'
 NOCOLOR='\[\e[0m\]'
 
-# checks if branch has something pending
-function parse_git_dirty() {
-	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo " (*)"
-}
+# # checks if branch has something pending
+# function parse_git_dirty() {
+# 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo " (*)"
+# }
+#
+# # gets the current git branch
+# function parse_git_branch() {
+# 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) /'
+# }
+#
+# # get last commit hash prepended with @ (i.e. @8a323d0)
+# function parse_git_hash() {
+# 	git rev-parse --short HEAD 2> /dev/null | sed "s/\(.*\)/\[\1\]/"
+# }
 
-# gets the current git branch
-function parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) /'
-}
-
-# get last commit hash prepended with @ (i.e. @8a323d0)
-function parse_git_hash() {
-	git rev-parse --short HEAD 2> /dev/null | sed "s/\(.*\)/\[\1\]/"
-}
-
-export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;31m\]\$(parse_git_branch)\[\033[00m\]\[\e[33m\]\$(parse_git_hash)\[\e[1;31m\]\$(parse_git_dirty)\[\e[0m\] $ "
+# export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;31m\]\$(parse_git_branch)\[\033[00m\]\[\e[33m\]\$(parse_git_hash)\[\e[1;31m\]\$(parse_git_dirty)\[\e[0m\] $ "
 
 export PATH=$PATH:~/bin
 #export DISPLAY=:0.0
 #export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
-if [ -e /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#if [ -e /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh ]; then . /home/kyoshiro/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+#if [ -e /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/rasendorf/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
-#AWSume alias to source the AWSume script
-alias awsume="source awsume"
-
-#Auto-Complete function for AWSume
-_awsume() {
-    local cur prev opts
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    prev="${COMP_WORDS[COMP_CWORD-1]}"
-    opts=$(awsume-autocomplete)
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
-}
-complete -F _awsume awsume
+# #AWSume alias to source the AWSume script
+# alias awsume="source awsume"
+#
+# #Auto-Complete function for AWSume
+# _awsume() {
+#     local cur prev opts
+#     COMPREPLY=()
+#     cur="${COMP_WORDS[COMP_CWORD]}"
+#     prev="${COMP_WORDS[COMP_CWORD-1]}"
+#     opts=$(awsume-autocomplete)
+#     COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+#     return 0
+# }
+# complete -F _awsume awsume
