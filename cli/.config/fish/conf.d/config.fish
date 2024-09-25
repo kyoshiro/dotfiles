@@ -8,8 +8,7 @@ set -g fish_cursor_visual block
 set -g fish_escape_delay_ms 10
 
 function fish_greeting
-    neofetch
-    ~/bin/check-boot-required.sh
+    fastfetch
 end
 
 # hide greeting
