@@ -57,6 +57,7 @@ require('packer').startup(function(use)
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'kyoshiro/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'kyoshiro/cellular-automaton.nvim'
+  use 'kyoshiro/nvim-tree.lua'
 end)
 
 -- Enable relative line numbers
@@ -614,4 +615,45 @@ cmp.setup {
   },
 }
 
+-- nvim-tree setup
+
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = {
+      enable = true,
+      ignore_list = {},
+    },
+    exclude = false,
+  },
+})
+
+local function open_nvim_tree()
+  -- open the tree
+  require("nvim-tree.api").tree.open({
+    focus = false,
+    })
+end
+
+-- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 -- vim: ts=2 sts=2 sw=2 et
