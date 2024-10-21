@@ -285,23 +285,26 @@ gaps outer 5
 #smart_gaps on
 #smart_borders on
 
+exec_always import-gsettings
+
 # Startup programs
 exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
-exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+#exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
-exec --no-startup-id gnome-keyring-daemon --unlock &
+#exec --no-startup-id gnome-keyring-daemon --unlock &
 exec --no-startup-id blueman-applet &
 exec swaync
 #exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
 exec --no-startup-id autolock &
-exec --no-startup-id swaymsg 'workspace 5; exec protonmail-bridge --no-window' &
+exec --no-startup-id swaymsg 'workspace 5; exec proton-mail-bridge-gui --no-window' &
 exec --no-startup-id swaymsg 'workspace 5; exec keepassxc' &
-exec --no-startup-id swaymsg 'workspace 5; exec nextcloud' &
 exec --no-startup-id swaymsg 'workspace 4; exec discord' &
 exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
 exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
+exec --no-startup-id swaymsg 'workspace 5; exec nextcloud' &
+exec --no-startup-id swaymsg 'workspace 1; exec koi' &
 exec --no-startup-id swaymsg 'workspace 1; exec kitty' &
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 
