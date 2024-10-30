@@ -301,7 +301,7 @@ exec --no-startup-id swaymsg 'workspace 5; exec keepassxc' &
 exec --no-startup-id swaymsg 'workspace 4; exec discord' &
 exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
 exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
-exec --no-startup-id swaymsg 'workspace 1; exec koi' &
+#exec --no-startup-id swaymsg 'workspace 1; exec koi' &
 exec --no-startup-id swaymsg 'workspace 1; exec kitty' &
 exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && nextcloud --background' &
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
