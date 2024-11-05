@@ -42,3 +42,4 @@ else
 fi
 
 export TERMINAL=$TERM
+export XCURSOR_SIZE=36

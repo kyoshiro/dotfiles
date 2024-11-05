@@ -259,6 +259,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+seat seat0 xcursor_theme breeze_cursors 36
 #
 # Status Bar:
 #
