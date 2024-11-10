@@ -296,6 +296,7 @@ exec swaync
 #exec --no-startup-id lxsession
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
+exec --no-startup-id nm-applet --indicator &
 exec --no-startup-id autolock &
 exec --no-startup-id swaymsg 'workspace 5; exec proton-mail-bridge-gui --no-window' &
 exec --no-startup-id swaymsg 'workspace 5; exec keepassxc' &
