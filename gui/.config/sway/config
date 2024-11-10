@@ -293,18 +293,18 @@ exec dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPL
 #exec --no-startup-id dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id xcompmgr -c -C -t5 -l5 -r4.2 -o.55 &
 #exec --no-startup-id gnome-keyring-daemon --unlock &
-exec --no-startup-id blueman-applet &
-exec --no-startup-id nm-applet --indicator &
-exec --no-startup-id proton-mail-bridge-gui --no-window' &
 exec swaync
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
+exec --no-startup-id blueman-applet &
+exec --no-startup-id nm-applet --indicator &
 exec --no-startup-id autolock &
+exec --no-startup-id swaymsg 'workspace 1; exec proton-mail-bridge-gui --no-window' &
 exec --no-startup-id swaymsg 'workspace 4; exec keepassxc' &
-exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
-exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
-#exec --no-startup-id swaymsg 'workspace 1; exec koi' &
 exec --no-startup-id swaymsg 'workspace 4; exec discord' &
+exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
+exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
+#exec --no-startup-id swaymsg 'workspace 1; exec koi' &
 exec --no-startup-id swaymsg 'workspace 1; exec kitty' &
 exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && nextcloud --background' &
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
