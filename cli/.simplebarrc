@@ -12,7 +12,7 @@
     "spacesBackgroundColorAsForeground": false,
     "widgetsBackgroundColorAsForeground": false,
     "font": "FiraCode Nerd Font Mono",
-    "fontSize": "11px",
+    "fontSize": "10px",
     "yabaiPath": "/usr/local/bin/yabai",
     "shell": "sh",
     "slidingAnimationPace": 4,
