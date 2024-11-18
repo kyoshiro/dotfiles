@@ -34,4 +34,4 @@ yabai -m config layout bsp
 # Override gaps for space 2 only
 #yabai -m config --space 2 window_gap 0
 #
-borders active_color=0xff448fff inactive_color=0xff494d64 width=5.0 &
+borders active_color=0xff448fff inactive_color=0xff494d64 width=2.0 &
