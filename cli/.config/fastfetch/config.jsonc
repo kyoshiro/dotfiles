@@ -9,6 +9,7 @@
   },
   "display": {
     "separator": "  ",
+    "color": "magenta",
   },
   "modules": [
     // Title

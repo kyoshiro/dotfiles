@@ -3,6 +3,7 @@
 # -- Color Definitions --
 export WHITE=0xffffffff
 export BLACK=0x00000000
+
 export TRANSPARENT_BG=0x9b1c1823
 # export TRANSPARENT_BG=0x0b0b0b0b
 export TRANSPARENT_FG=0x0bf141c3f
