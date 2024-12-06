@@ -25,8 +25,8 @@ yabai -m config right_padding  5
 yabai -m config window_gap     5
 
 # Focus
-# yabai -m config focus_follows_mouse autoraise
-# yabai -m config mouse_follows_focus on
+yabai -m config focus_follows_mouse autoraise
+yabai -m config mouse_follows_focus on
 
 # bsp or float (default: float)
 yabai -m config layout bsp
