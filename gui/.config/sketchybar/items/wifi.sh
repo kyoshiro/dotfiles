@@ -5,5 +5,5 @@ sketchybar --add item wifi right \
 	              background.color=$WIFI_COLOR_BG \
 	              label.color=$WIFI_COLOR_FG \
 	              icon.color=$WIFI_COLOR_FG \
-                      icon= \
+                      icon=" " \
                       script="$PLUGIN_DIR/wifi.sh"

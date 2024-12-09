@@ -30,7 +30,7 @@ sketchybar --bar height=20 \
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
 
-sketchybar --default icon.font="SF Pro:Semibold:12.0" \
+sketchybar --default icon.font="FiraCode Nerd Font:Semibold:12.0" \
                      icon.color=$ITEM_COLOR_FG \
                      label.font="SF Pro:Semibold:12.0" \
                      label.color=$ITEM_COLOR_FG \
