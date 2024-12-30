@@ -223,4 +223,8 @@ abbr --add nxgc 'nix-store --gc'
 abbr --add nxup 'nix-channel --update; nix-env -iA nixpkgs.nix'
 abbr --add nxlg 'nix-env --list-generations'
 
+## Desktop related
+#
+abbr --add sshot 'grim -g "$(slurp)" - |wl-copy'
+
 # vi: ft=fish:tw=0:sw=4:ts=4
