@@ -3,7 +3,7 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR TERMINAL:kitty
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
@@ -136,7 +136,7 @@ SETUVAR fish_color_operator:00a6b2
 SETUVAR fish_color_param:00afff
 SETUVAR fish_color_quote:999900
 SETUVAR fish_color_redirection:00afff
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
