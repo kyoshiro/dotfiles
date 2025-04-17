@@ -3,7 +3,7 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR TERMINAL:kitty
-SETUVAR __fish_initialized:3800
+SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
@@ -148,4 +148,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/opt/homebrew/opt/mysql\x2dclient/bin\x1e/opt/homebrew/bin\x1e/opt/local/bin\x1e/opt/homebrew/opt/fzf/bin
+SETUVAR fish_user_paths:/home/kyoshiro/\x2espicetify\x1e/opt/homebrew/opt/mysql\x2dclient/bin\x1e/opt/homebrew/bin\x1e/opt/local/bin\x1e/opt/homebrew/opt/fzf/bin
