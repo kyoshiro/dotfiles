@@ -70,10 +70,10 @@ workspace 3 output DP-3
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec_always killall swayidle; swayidle -w \
-        timeout 300 'swaylock -f -c 000000 -i /home/kyoshiro/.config/sway/wallpaper.jpg' \
-        timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-        timeout 1800 'systemctl suspend' \
-        before-sleep 'swaylock -f -c 000000 -i /home/kyoshiro/.config/sway/wallpaper.jpg'
+	timeout 300 'swaylock -f -c 000000 -i /home/kyoshiro/.config/sway/wallpaper.jpg' \
+	timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 1800 'systemctl suspend' \
+	before-sleep 'swaylock -f -c 000000 -i /home/kyoshiro/.config/sway/wallpaper.jpg'
 
 ### Input configuration
 #
