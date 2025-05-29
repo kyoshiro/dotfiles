@@ -117,6 +117,10 @@
       "key": "{#separator}│  {#keys}🖧 LocalIP",
     },
     {
+      "type": "battery",
+      "key": "{#separator}│  {#keys} Battery",
+    },
+    {
       "type": "disk",
       "key": "{#separator}│  {#keys}󰋊 Disk (/)",
       "folders": "/",
