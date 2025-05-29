@@ -20,11 +20,19 @@
     // System Information
     {
       "type": "custom",
+      "format": "{#1}│",
+    },
+    {
+      "type": "custom",
       "format": "{#1}│ {#}System Information",
     },
     {
       "type": "os",
       "key": "{#separator}│  {#keys}󰍹 OS",
+    },
+    {
+      "type": "host",
+      "key": "{#separator}│  {#keys}🖥 Host",
     },
     {
       "type": "kernel",
@@ -60,12 +68,24 @@
       "key": "{#separator}│  {#keys}󰉼 Theme",
     },
     {
+      "type": "icons",
+      "key": "{#separator}│  {#keys} Icons",
+    },
+    {
+      "type": "font",
+      "key": "{#separator}│  {#keys}󰛖 Font",
+    },
+    {
       "type": "display",
       "key": "{#separator}│  {#keys}󰹑 Resolution",
     },
     {
       "type": "shell",
       "key": "{#separator}│  {#keys}󰞷 Shell",
+    },
+    {
+      "type": "terminal",
+      "key": "{#separator}│  {#keys} Terminal",
     },
     {
       "type": "terminalfont",
@@ -93,9 +113,17 @@
       "key": "{#separator}│  {#keys}󰍛 Memory",
     },
     {
+      "type": "localip",
+      "key": "{#separator}│  {#keys}🖧 LocalIP",
+    },
+    {
       "type": "disk",
       "key": "{#separator}│  {#keys}󰋊 Disk (/)",
       "folders": "/",
+    },
+    {
+      "type": "swap",
+      "key": "{#separator}│  {#keys}󰋊 Swap",
     },
     {
       "type": "custom",
