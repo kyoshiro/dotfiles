@@ -190,3 +190,5 @@
 	spellcheck = false
 
 # vi: ft=txt:tw=72:sw=4:ts=4:noet:cms=#%s
+[safe]
+	directory = /srv/rootless/compose

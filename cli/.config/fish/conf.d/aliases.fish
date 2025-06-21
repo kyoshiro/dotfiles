@@ -18,13 +18,8 @@ function any
     command ps aux | rg $argv
 end
 
-function __n
-    VISUAL=vim _n -Q
-end
-
-
-#abbr --add o 'xdg-open'
-#abbr --add open 'xdg-open'
+abbr --add o 'xdg-open'
+abbr --add open 'xdg-open'
 
 abbr --add n __n
 
@@ -193,8 +188,8 @@ function _ch2root --description "jump to the next parent directory containing a 
     return
 end
 
-abbr --add cd. 'cd (_ch2root debian .git .hg .svn package.json)'
-abbr --add cdroot 'cd (_ch2root debian .git .hg .svn package.json)'
+# abbr --add cd. 'cd (_ch2root debian .git .hg .svn package.json)'
+# abbr --add cdroot 'cd (_ch2root debian .git .hg .svn package.json)'
 
 abbr --add cd.. 'cd ..'
 
@@ -202,11 +197,9 @@ function r -d 'grep replacement'
     rg -S --hidden -n -H $argv | fzf -0 -m
 end
 
-# function f -d 'find for files'
-#     fd -tf $argv | fzf -0 -m
-# end
-
-abbr --add f 'faas-cli'
+function f -d 'find for files'
+    fd -tf $argv | fzf -0 -m
+end
 
 function d -d 'find for directories'
     fd -td $argv | fzf -0 -m
@@ -226,5 +219,9 @@ abbr --add nxlg 'nix-env --list-generations'
 ## Desktop related
 #
 abbr --add sshot 'grim -g "$(slurp)" - |wl-copy'
+### Podman related abbrevations
+abbr --add pm 'podman --cgroup-manager=cgroupfs'
+abbr --add pmc 'podman --cgroup-manager=cgroupfs container'
+abbr --add pmp 'podman --cgroup-manager=cgroupfs ps'
 
 # vi: ft=fish:tw=0:sw=4:ts=4
