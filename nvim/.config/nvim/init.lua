@@ -48,6 +48,7 @@ require('packer').startup(function(use)
   -- UI to select things (files, grep results, open buffers...)
   use { 'kyoshiro/telescope.nvim', requires = { 'kyoshiro/plenary.nvim' } }
   use { 'kyoshiro/telescope-fzf-native.nvim', run = 'make' }
+  use 'kyoshiro/nvim-tabline'
 
   -- Add indentation guides even on blank lines
   use 'kyoshiro/indent-blankline.nvim'
@@ -401,19 +402,19 @@ require('telescope').setup {
 require('telescope').load_extension 'fzf'
 
 --Add leader shortcuts
--- vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
--- vim.keymap.set('n', '<leader>sf', function()
---   require('telescope.builtin').find_files { previewer = false }
--- end)
--- vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
--- vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
--- vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
--- vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
--- vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
--- vim.keymap.set('n', '<leader>so', function()
---   require('telescope.builtin').tags { only_current_buffer = true }
--- end)
--- vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
+vim.keymap.set('n', '<leader>sf', function()
+  require('telescope.builtin').find_files { previewer = false }
+end)
+vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
+vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
+vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
+vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
+vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>so', function()
+  require('telescope.builtin').tags { only_current_buffer = true }
+end)
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
 
 -- Terraform settings
 
@@ -592,6 +593,19 @@ local function open_nvim_tree()
     focus = false,
     })
 end
+
+require('tabline').setup({
+    show_index = true,
+    show_modify = true,
+    show_icon = true,
+    fnamemodify = ':t',
+    modify_indicator = '[+]',
+    no_name = 'No name',
+    brackets = { '[', ']' },
+    inactive_tab_max_length = 0
+})
+
+vim.opt.showtabline = 2
 
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 -- vim: ts=2 sts=2 sw=2 et
