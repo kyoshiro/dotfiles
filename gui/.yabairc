@@ -1,7 +1,7 @@
-#yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-#sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 
-yabai -m config external_bar all:$(sketchybar --query bar |} jq .height).0
+yabai -m config external_bar all:$(sketchybar --query bar | jq .height).0
 
 # Global settings
 yabai -m config window_shadow                float

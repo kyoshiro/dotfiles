@@ -26,6 +26,11 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/Applications/Bookify" ] ; then
+    PATH="$PATH:$HOME/Applications/Bookify"
+fi
+
 PATH_ALACRITTY=$(which alacritty)
 PATH_KITTY=$(which kitty)
 PATH_HYPER=$(which hyper)

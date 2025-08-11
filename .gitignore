@@ -1,3 +1,4 @@
 .envrc
 .precommit
 _build
+gui/.config/gtk-3.0/bookmarks

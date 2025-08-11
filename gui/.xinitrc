@@ -76,11 +76,11 @@ if [ $failsafe = "yes" ]; then
 	#rxvt-unicode &
 	#gvim &
 	#firefox &
-	xcompmgr &
-	#exec ck-launch-session startkde
+	#xcompmgr &
+	exec startplasma-x11
 	#exec dbus-launch lxde-session
 	#exec dbus-launch awesome
-	exec dbus-launch i3
+	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
 	#exec xfce4-session
 fi

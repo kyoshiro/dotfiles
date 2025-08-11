@@ -7,4 +7,4 @@ if type thefuck > /dev/null 2>&1
     thefuck --alias | source
 end
 
-fish_add_path /home/kyoshiro/.spicetify
+eval (ssh-agent -c) > /dev/null 2>&1
