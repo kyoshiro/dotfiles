@@ -133,7 +133,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -170,7 +170,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr} 󰈀"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        "scroll-step": 10, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -186,7 +186,8 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+	"on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle",
     },
     "custom/spotify-metadata": {
         "format": "{}  ",
