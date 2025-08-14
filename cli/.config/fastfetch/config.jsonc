@@ -47,9 +47,16 @@
       "key": "{#separator}│  {#keys}󰏖 Packages",
     },
     {
+      "type": "command",
+      "key": "{#separator}│  {#keys}󰅐 Age",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "keyColor": "blue",
+    },
+    {
       "type": "custom",
       "format": "{#1}│",
     },
+
     // Desktop Environment
     {
       "type": "custom",
