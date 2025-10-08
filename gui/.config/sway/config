@@ -38,6 +38,8 @@ set $menu dmenu_path | wofi | xargs swaymsg exec --
 
 # defined per hostname
 
+include ~/.config/sway/config.display
+
 ### Idle configuration
 #
 # Example configuration:
@@ -292,4 +294,3 @@ exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 exec_always import-gsettings
 
 include /etc/sway/config.d/*
-include config.{{hostname}}

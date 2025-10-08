@@ -2,3 +2,4 @@
 .precommit
 _build
 gui/.config/gtk-3.0/bookmarks
+gui/.config/sway/config.display
