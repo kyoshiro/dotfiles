@@ -2,19 +2,20 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
+        language_version: python3.13
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.15.0
+    rev: v1.21.0
     hooks:
       - id: check-git-config-email
         args: ["--domains", "users.noreply.github.com"]
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.86.0
+    rev: v1.101.0
     hooks:
       - id: terraform_tflint
       - id: terraform_trivy
