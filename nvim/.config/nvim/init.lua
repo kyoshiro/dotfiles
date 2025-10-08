@@ -57,6 +57,8 @@ require('packer').startup(function(use)
   -- Highlight, edit, and navigate code using a fast incremental parsing library
   use 'kyoshiro/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'kyoshiro/nvim-tree.lua'
+
+  use 'github/copilot.vim'
 end)
 
 -- Enable relative line numbers
