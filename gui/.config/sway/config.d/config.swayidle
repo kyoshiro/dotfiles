@@ -7,8 +7,8 @@
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 exec_always killall swayidle; swayidle -w \
-	timeout 300 'swaylock -f -c 000000 -i /home/$USER/.config/sway/wallpaper.jpg' \
-	timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+	timeout 60 'swaylock -f -c 000000 -i /home/$USER/.config/sway/wallpaper.jpg' \
+	timeout 180 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 
 # exec_always killall swayidle; swayidle -w \
 # 	timeout 300 'swaylock -f -c 000000 -i /home/$USER/.config/sway/wallpaper.jpg' \

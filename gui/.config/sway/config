@@ -29,6 +29,9 @@ include ~/.config/sway/config.d/config.inputs
 ### Keybinding configuration
 include ~/.config/sway/config.d/config.keybindings
 
+### SWayidle configuration
+include ~/.config/sway/config.d/config.swayidle
+
 ### Appearance configuration
 set $opacity 0.9
 for_window [class=".*"] opacity $opacity
