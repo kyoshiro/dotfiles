@@ -40,3 +40,12 @@ workspace 3 output eDP-1
 workspace 4 output DP-8
 workspace 6 output DP-8
 workspace 7 output DP-9
+
+### Input configuration
+
+input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
+      dwt enabled
+      tap enabled
+      natural_scroll disabled
+      middle_emulation enabled
+}

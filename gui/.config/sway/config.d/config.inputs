@@ -1,0 +1,10 @@
+### Sway Input Configuration
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+# Configure Keyboard
+input "type:keyboard" {
+      xkb_layout us
+      xkb_variant intl
+      xkb_options caps:escape
+}
