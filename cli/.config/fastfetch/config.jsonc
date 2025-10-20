@@ -7,10 +7,10 @@
       "right": 2,
     },
   },
-  "display": {
-    "separator": "  ",
-    "color": "magenta",
-  },
+  //  "display": {
+  //    "separator": "  ",
+  //    "color": "magenta",
+  //  },
   "modules": [
     // Title
     {

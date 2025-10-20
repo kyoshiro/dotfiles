@@ -1,0 +1,3 @@
+return {
+	"kyoshiro/vim-prettier",
+}
