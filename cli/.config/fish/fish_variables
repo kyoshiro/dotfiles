@@ -3,7 +3,7 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR TERMINAL:kitty
-SETUVAR __fish_initialized:3400
+SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
