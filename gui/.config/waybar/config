@@ -1,17 +1,19 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 0, // Gaps between modules (4px)
+    // "layer": "bottom", // Waybar at top layer
+    //"position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 36, // Waybar height (to be removed for auto height)
+    "width": 1600, // Waybar width
+    //"spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+    "hyprland/workspaces",
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
     ],
     "modules-center": [
+        "hyprland/window",
         "sway/window"
     ],
     "modules-right": [
@@ -32,6 +34,24 @@
         "clock",
         "tray"
     ],
+
+    "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+         "1": "㆒",
+         "2": "二",
+         "3": "三",
+         "4": "四",
+         "5": "五",
+         "6": "六",
+         "7": "七",
+         "8": "八",
+         "9": "九",
+         "10": "十"
+          }
+    },
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,

@@ -1,13 +1,15 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Hack, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-family: Roboto, Fontawesome, Hack, Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-  color: #ffffff;
+  background-color: rgba(43, 48, 59, 0);
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  color: #00ffff;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -16,12 +18,12 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
 window#waybar.empty {
-    background-color: transparent;
+  background-color: transparent;
 }
+/*
 window#waybar.solo {
-    background-color: #FFFFFF;
+    background-color: #000000;
 }
 */
 
@@ -46,18 +48,18 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 /* you can set a style on hover for any module like this */
 #scratchpad:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #idle_inhibitor:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #pulseaudio:hover {
@@ -67,27 +69,27 @@ button:hover {
 
 #network:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #2980b9;
 }
 
 #cpu:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #2ecc71;
 }
 
 #memory:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #9b59b6;
 }
 
 #temperature:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #f0932b;
 }
 
 #language:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #battery:hover {
@@ -97,12 +99,12 @@ button:hover {
 
 #clock:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #custom-spotify-metadata:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #custom-spotify-metadata,
@@ -139,7 +141,7 @@ button:hover {
 
 #workspaces button {
   background-color: rgba(43, 48, 59, 0.5);
-  color: #ffffff;
+  color: #00ffff;
 }
 
 #workspaces button:hover {
@@ -149,7 +151,7 @@ button:hover {
 #workspaces button.focused {
   /*background-color: #64727D;*/
   background-color: rgba(43, 48, 59, 0.5);
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
   font-weight: bold;
 }
 
@@ -159,7 +161,7 @@ button:hover {
 
 #mode {
   background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px #00ffff;
 }
 
 #clock,
@@ -175,6 +177,7 @@ button:hover {
 #custom-media,
 #tray,
 #mode,
+#privacy-item,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
