@@ -7,6 +7,10 @@
       "right": 2,
     },
   },
+  "display": {
+    "separator": "  ",
+    "color": "cyan",
+  },
   "modules": [
     // Title
     {
