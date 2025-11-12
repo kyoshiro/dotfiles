@@ -12,7 +12,4 @@ if test -z $SSH_AUTH_SOCK
     eval (ssh-agent -c) > /dev/null
     set -xg SSH_AUTH_SOCK $SSH_AUTH_SOCK
     set -xg SSH_AGENT_PID $SSH_AGENT_PID
-else
-    echo "Found SSH Agent with following keys: "
-    ssh-add -l
 end
