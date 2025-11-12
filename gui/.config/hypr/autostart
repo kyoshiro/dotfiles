@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export HYPRCURSOR_THEME=hyprcursor_logo
+gsettings set org.gnome.desktop.interface cursor-theme hyprland_theme
+export XCURSOR_PATH=~/.local/share/icons/
 # reset XDPH for screenshare
 sleep 1
 killall xdg-desktop-portal-hyprland

@@ -2,6 +2,8 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
+SETUVAR --export SSH_AGENT_PID:1299242
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXX5Rc63X/agent\x2e1299240
 SETUVAR TERMINAL:kitty
 SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_c:khard

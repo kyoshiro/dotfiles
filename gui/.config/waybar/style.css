@@ -5,15 +5,16 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0);
-  border-left: 2px solid rgba(0, 255, 255, 0.5);
-  border-bottom: 2px solid rgba(0, 255, 255, 0.5);
-  border-right: 2px solid rgba(0, 255, 255, 0.5);
+  background-color: rgba(48, 48, 59, 0.5);
+  border-left: 2px solid rgba(0, 255, 255, 1);
+  border-bottom: 2px solid rgba(0, 255, 255, 1);
+  border-right: 2px solid rgba(0, 255, 255, 1);
   color: #00ffff;
   transition-property: background-color;
   transition-duration: 0.5s;
+  margin-left: 6px;
 }
-
+/*
 window#waybar.hidden {
   opacity: 0.2;
 }
@@ -21,21 +22,7 @@ window#waybar.hidden {
 window#waybar.empty {
   background-color: transparent;
 }
-/*
-window#waybar.solo {
-    background-color: #000000;
-}
 */
-
-window#waybar.termite {
-  background-color: #3f3f3f;
-}
-
-window#waybar.chromium {
-  background-color: #000000;
-  border: none;
-}
-
 button {
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
@@ -97,14 +84,23 @@ button:hover {
   box-shadow: inset 0 -3px #bb0000;
 }
 
+#backlight:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #00ffff;
+}
+
 #clock:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px #00ffff;
+}
+
+#tray:hover {
   background: inherit;
   box-shadow: inset 0 -3px #00ffff;
 }
 
 #custom-spotify-metadata:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #00ffff;
 }
 
 #custom-spotify-metadata,
@@ -185,7 +181,11 @@ button:hover {
   font-weight: bold;
   padding: 0 10px;
 }
-#window,
+
+#window {
+  padding: 0 10px;
+}
+
 #workspaces {
   margin: 0 0px;
 }
@@ -340,6 +340,11 @@ label:focus {
 #tray > .needs-attention {
   -gtk-icon-effect: highlight;
   color: #eb4d4b;
+  background-color: rgba(43, 48, 59, 0.5);
+}
+
+#mode {
+  color: #a9a9a9;
   background-color: rgba(43, 48, 59, 0.5);
 }
 

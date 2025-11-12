@@ -3,7 +3,7 @@
     // "layer": "bottom", // Waybar at top layer
     //"position": "bottom", // Waybar position (top|bottom|left|right)
     "height": 36, // Waybar height (to be removed for auto height)
-    "width": 1600, // Waybar width
+    "width": 1800, // Waybar width
     //"spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
@@ -11,14 +11,15 @@
         "sway/workspaces",
         "sway/mode",
         "sway/scratchpad",
-    ],
-    "modules-center": [
         "hyprland/window",
         "sway/window"
+    ],
+    "modules-center": [
     ],
     "modules-right": [
         "custom/spotify-metadata",
         "mpd",
+	"hyprland/mode",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -34,7 +35,6 @@
         "clock",
         "tray"
     ],
-
     "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
@@ -52,23 +52,23 @@
          "10": "十"
           }
     },
-    // Modules configuration
-    // "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{icon}",
+         "format-icons": {
+         "1": "㆒",
+         "2": "二",
+         "3": "三",
+         "4": "四",
+         "5": "五",
+         "6": "六",
+         "7": "七",
+         "8": "八",
+         "9": "九",
+         "10": "十"
+          }
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
