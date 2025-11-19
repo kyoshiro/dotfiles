@@ -17,7 +17,21 @@
     // Title
     {
       "type": "title",
-      "format": "{#1}╭───────────── {#}{user-name-colored}",
+      "format": "{#1}╭──────────── {#}Welcome on {host-name} ─────────────╮",
+    },
+    // User Information
+    {
+      "type": "custom",
+      "format": "{#1}│",
+    },
+    {
+      "type": "custom",
+      "format": "{#1}│ {#}User Information",
+    },
+    {
+      "type": "users",
+      "key": "│  {#keys} User",
+      "keyColor": "yellow",
     },
     // System Information
     {
@@ -172,7 +186,7 @@
     // Footer
     {
       "type": "custom",
-      "format": "{#1}╰───────────────────────────────╯",
+      "format": "{#1}╰──────────────────────────────────────────────────╯",
     },
   ],
 }
