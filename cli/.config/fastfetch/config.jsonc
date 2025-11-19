@@ -2,14 +2,16 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "padding": {
-      "top": 2,
-      "left": 1,
+      "top": 5,
+      "left": 2,
       "right": 2,
     },
   },
   "display": {
     "separator": "  ",
-    "color": "cyan",
+    "color": {
+      "keys": "1",
+    },
   },
   "modules": [
     // Title
@@ -28,29 +30,34 @@
     },
     {
       "type": "os",
-      "key": "{#separator}│  {#keys}󰍹 OS",
+      "key": "│  {#keys}󰍹 OS",
+      "keyColor": "magenta",
     },
     {
       "type": "host",
-      "key": "{#separator}│  {#keys}🖥 Host",
+      "key": "│  {#keys}🖥 Host",
+      "keyColor": "magenta",
     },
     {
       "type": "kernel",
-      "key": "{#separator}│  {#keys}󰒋 Kernel",
+      "key": "│  {#keys}󰒋 Kernel",
+      "keyColor": "magenta",
     },
     {
       "type": "uptime",
-      "key": "{#separator}│  {#keys}󰅐 Uptime",
+      "key": "│  {#keys}󰅐 Uptime",
+      "keyColor": "magenta",
     },
     {
       "type": "packages",
-      "key": "{#separator}│  {#keys}󰏖 Packages",
+      "key": "│  {#keys}󰏖 Packages",
+      "keyColor": "magenta",
     },
     {
       "type": "command",
-      "key": "{#separator}│  {#keys}󰅐 Age",
+      "key": "│  {#keys}󰅐 Age",
+      "keyColor": "magenta",
       "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
-      "keyColor": "blue",
     },
     {
       "type": "custom",
@@ -64,39 +71,48 @@
     },
     {
       "type": "de",
-      "key": "{#separator}│  {#keys}󰧨 DE",
+      "key": "│  {#keys}󰧨 DE",
+      "keyColor": "cyan",
     },
     {
       "type": "wm",
-      "key": "{#separator}│  {#keys}󱂬 WM",
+      "key": "│  {#keys}󱂬 WM",
+      "keyColor": "cyan",
     },
     {
       "type": "wmtheme",
-      "key": "{#separator}│  {#keys}󰉼 Theme",
+      "key": "│  {#keys}󰉼 Theme",
+      "keyColor": "cyan",
     },
     {
       "type": "icons",
-      "key": "{#separator}│  {#keys} Icons",
+      "key": "│  {#keys} Icons",
+      "keyColor": "cyan",
     },
     {
       "type": "font",
-      "key": "{#separator}│  {#keys}󰛖 Font",
+      "key": "│  {#keys}󰛖 Font",
+      "keyColor": "cyan",
     },
     {
       "type": "display",
-      "key": "{#separator}│  {#keys}󰹑 Resolution",
+      "key": "│  {#keys}󰹑 Resolution",
+      "keyColor": "cyan",
     },
     {
       "type": "shell",
-      "key": "{#separator}│  {#keys}󰞷 Shell",
+      "key": "│  {#keys}󰞷 Shell",
+      "keyColor": "cyan",
     },
     {
       "type": "terminal",
-      "key": "{#separator}│  {#keys} Terminal",
+      "key": "│  {#keys} Terminal",
+      "keyColor": "cyan",
     },
     {
       "type": "terminalfont",
-      "key": "{#separator}│  {#keys}󰛖 Font",
+      "key": "│  {#keys}󰛖 Font",
+      "keyColor": "cyan",
     },
     {
       "type": "custom",
@@ -109,32 +125,39 @@
     },
     {
       "type": "cpu",
-      "key": "{#separator}│  {#keys}󰻠 CPU",
+      "key": "│  {#keys}󰻠 CPU",
+      "keyColor": "green",
     },
     {
       "type": "gpu",
-      "key": "{#separator}│  {#keys}󰢮 GPU",
+      "key": "│  {#keys}󰢮 GPU",
+      "keyColor": "green",
     },
     {
       "type": "memory",
-      "key": "{#separator}│  {#keys}󰍛 Memory",
+      "key": "│  {#keys}󰍛 Memory",
+      "keyColor": "green",
     },
     {
       "type": "localip",
-      "key": "{#separator}│  {#keys}🖧 LocalIP",
+      "key": "│  {#keys}🖧 LocalIP",
+      "keyColor": "green",
     },
     {
       "type": "battery",
-      "key": "{#separator}│  {#keys} Battery",
+      "key": "│  {#keys} Battery",
+      "keyColor": "green",
     },
     {
       "type": "disk",
-      "key": "{#separator}│  {#keys}󰋊 Disk (/)",
+      "key": "│  {#keys}󰋊 Disk (/)",
+      "keyColor": "green",
       "folders": "/",
     },
     {
       "type": "swap",
-      "key": "{#separator}│  {#keys}󰋊 Swap",
+      "keyColor": "green",
+      "key": "│  {#keys}󰋊 Swap",
     },
     {
       "type": "custom",
@@ -143,7 +166,7 @@
     // Colors
     {
       "type": "colors",
-      "key": "{#separator}│",
+      "key": "│",
       "symbol": "circle",
     },
     // Footer
