@@ -1,6 +1,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Roboto, Fontawesome, Hack, Helvetica, Arial, sans-serif;
+  font-family:
+    Noto Sans Mono,
+    Roboto,
+    Fontawesome,
+    Hack,
+    Helvetica,
+    Arial,
+    sans-serif;
   font-size: 14px;
 }
 
@@ -187,6 +194,7 @@ button:hover {
 }
 
 #workspaces {
+  font-weight: bold;
   margin: 0 0px;
 }
 

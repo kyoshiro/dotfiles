@@ -126,8 +126,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+	"locale": "ja_JP.utf-8",
         "format": "{:%H:%M} 🕓",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt> 🕓",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small><span font='Noto Sans Mono'>{calendar}</span></small></tt> 🕓",
         "format-alt": "{:%Y-%m-%d} 🕓"
     },
     "cpu": {
