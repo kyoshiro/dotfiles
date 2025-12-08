@@ -61,6 +61,7 @@ vim.keymap.set('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<cr>g@'
 vim.keymap.set('n', '<leader>rd', ':RangerCD<cr>')
 vim.keymap.set('n', '<leader>rld', ':RangerLCD<cr>')
 
+vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<cr>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
