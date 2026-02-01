@@ -28,7 +28,7 @@
     bindsym $mod+d exec $menu
 
     # Start Neovide
-    bindsym $mod+n exec neovide
+    bindsym $mod+n exec 'kitty nvim'
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -45,6 +45,9 @@
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
+    bindsym $mod+Shift+Escape exec 'swaylock -c 0c0c0c -i "$HOME/.config/sway/wallpaper.jpg"'
+    bindsym $mod+Shift+w exec 'pkill waybar || exec waybar'
+    bindsym $mod+Shift+s exec 'swayshot'
 # Moving around:
 #
     # Move your focus around
