@@ -8,12 +8,10 @@
 #
 # Note if multiple patterns are present in the same application name,
 # precedence is given in order of apparition in this file.
-fallback = "👻"
 
-[matching]
 ".pdf" = ""
 "alacritty" = ""
-"calculator" = ""
+"calculator" = ""
 "ch.proton.bridge-gui" = " "
 "chrome" = ""
 "discord" = " "
@@ -24,28 +22,30 @@ fallback = "👻"
 "github" = ""
 "google" = ""
 "gthumb" = ""
-"keepassxc" = "🔑"
+"keepassxc" = ""
 "kitty" = ""
 "libreoffice calc" = ""
 "libreoffice writer" = ""
 "libreoffice" = ""
 "menu" = ""
 "mpv" = ""
-"music" = "𝄢"
+"music" = ""
 "neovide" = ""
 "nvim" = ""
 "private browsing" = ""
 "rust" = ""
 "spotify" = ""
+"teams-for-linux" = ""
 "thunar" = ""
-"thunderbird" = " "
+"thunderbird" = " "
 "transmission" = ""
 "videostream" = ""
 "vlc" = ""
 "whatsapp" = ""
 "whatsdesk" = ""
+fallback = "👻"
 
-[other]
-fallback_icon = "👻"
-deduplicate_icons = false
-# separator = ": "
+#[other]
+#fallback_icon = "👻"
+#deduplicate_icons = false
+#separator = ": "

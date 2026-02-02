@@ -9,23 +9,23 @@ TERM = "screen-256color"
 size = 12
 
 [font.bold]
-#family = "FiraCode Nerd Font Mono"
-family = "Inconsolata-dz for Powerline"
+family = "FiraCode Nerd Font Mono"
+#family = "Inconsolata-dz for Powerline"
 style = "Bold"
 
 [font.bold_italic]
-family = "Inconsolata-dz for Powerline"
-#family = "FiraCode Nerd Font Mono"
+#family = "Inconsolata-dz for Powerline"
+family = "FiraCode Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "Inconsolata-dz for Powerline"
-#family = "FiraCode Nerd Font Mono"
+#family = "Inconsolata-dz for Powerline"
+family = "FiraCode Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "Inconsolata-dz for Powerline"
-#family = "FiraCode Nerd Font Mono"
+#family = "Inconsolata-dz for Powerline"
+family = "FiraCode Nerd Font Mono"
 
 [font.offset]
 x = 0

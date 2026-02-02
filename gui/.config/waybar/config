@@ -8,6 +8,7 @@
     //"spacing": 10, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+    "custom/icon",
     "hyprland/workspaces",
         "sway/workspaces",
         "sway/mode",
@@ -18,8 +19,8 @@
     "modules-center": [
     ],
     "modules-right": [
-        //"custom/spotify-metadata",
-        //"mpd",
+        "custom/spotify-metadata",
+        "mpd",
         "idle_inhibitor",
         "pulseaudio",
         "network",
@@ -35,40 +36,45 @@
         "clock",
         "tray"
     ],
-    "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{icon}",
-         "format-icons": {
-         "1": "㆒",
-         "2": "二",
-         "3": "三",
-         "4": "四",
-         "5": "五",
-         "6": "六",
-         "7": "七",
-         "8": "八",
-         "9": "九",
-         "10": "十"
-          }
-    },
-    "sway/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "format": "{icon}",
-         "format-icons": {
-         "1": "㆒",
-         "2": "二",
-         "3": "三",
-         "4": "四",
-         "5": "五",
-         "6": "六",
-         "7": "七",
-         "8": "八",
-         "9": "九",
-         "10": "十"
-          }
-    },
+    // "hyprland/workspaces": {
+    //      "disable-scroll": true,
+    //      "all-outputs": true,
+    //      "format": "{icon}",
+    //      "format-icons": {
+    //      "1": "㆒",
+    //      "2": "二",
+    //      "3": "三",
+    //      "4": "四",
+    //      "5": "五",
+    //      "6": "六",
+    //      "7": "七",
+    //      "8": "八",
+    //      "9": "九",
+    //      "10": "十"
+    //       }
+    // },
+    // "sway/workspaces": {
+    //      "disable-scroll": true,
+    //      "all-outputs": true,
+    //      "format": "{name}: {icon}"
+    //      // "format-icons": {
+    //      // "1": "㆒",
+    //      // "2": "二",
+    //      // "3": "三",
+    //      // "4": "四",
+    //      // "5": "五",
+    //      // "6": "六",
+    //      // "7": "七",
+    //      // "8": "八",
+    //      // "9": "九",
+    //      // "10": "十"
+    //      //  }
+    // },
+  "custom/icon": {
+       "format": "  ",
+    "on-click": "wofi --show drun",
+    "tooltip": false
+  },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -210,16 +216,16 @@
         "on-click": "pavucontrol",
 	"on-click-right": "wpctl set-mute @DEFAULT_SINK@ toggle",
     },
-   // "custom/spotify-metadata": {
-   //     "format": "{}  ",
-   //     "max-length": 60,
-   //     "interval": 30,
-   //     "return-type": "json",
-   //     "exec": "~/.config/waybar/custom/spotify/metadata.sh",
-   //     "on-click": "~/.config/waybar/custom/spotify/controls.sh",
-   //     "on-scroll-up": "~/.config/waybar/custom/spotify/controls.sh previous",
-   //     "on-scroll-down": "~/.config/waybar/custom/spotify/controls.sh next",
-   //     "signal": 5,
-   //     "smooth-scrolling-threshold": 1.0,
-   // },
+   "custom/spotify-metadata": {
+       "format": "{}  ",
+       "max-length": 60,
+       "interval": 30,
+       "return-type": "json",
+       "exec": "~/.config/waybar/custom/spotify/metadata.sh",
+       "on-click": "~/.config/waybar/custom/spotify/controls.sh",
+       "on-scroll-up": "~/.config/waybar/custom/spotify/controls.sh previous",
+       "on-scroll-down": "~/.config/waybar/custom/spotify/controls.sh next",
+       "signal": 5,
+       "smooth-scrolling-threshold": 1.0,
+   },
 }
