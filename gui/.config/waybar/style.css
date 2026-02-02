@@ -213,6 +213,10 @@ button:hover {
   background-color: rgba(48, 48, 59, 0.5);
 }
 
+#custom-icon:hover {
+  background: rgba(0, 0, 0, 0.51);
+}
+
 #clock {
   padding: 0 5px;
   color: #afafaf;
