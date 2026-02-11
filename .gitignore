@@ -1,5 +1,6 @@
 .envrc
 .precommit
+.tmux
 _build
 node_modules
 gui/.config/gtk-3.0/bookmarks
