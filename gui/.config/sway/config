@@ -36,7 +36,7 @@ include ~/.config/sway/config.d/config.swayidle
 set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
-seat seat0 xcursor_theme breeze_cursors 36
+seat seat0 xcursor_theme Default
 #
 # Status Bar:
 #
