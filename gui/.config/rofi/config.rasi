@@ -1,0 +1,5 @@
+configuration {
+  modes: "window";
+  show-icons: true;
+}
+@import "purple.rasi"

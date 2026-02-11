@@ -1,6 +1,7 @@
 .envrc
 .precommit
 _build
+node_modules
 gui/.config/gtk-3.0/bookmarks
 gui/.config/gtk-3.0/colors.css
 gui/.config/gtk-3.0/gtk.css
@@ -9,4 +10,5 @@ gui/.config/gtk-4.0/bookmarks
 gui/.config/gtk-4.0/colors.css
 gui/.config/gtk-4.0/gtk.css
 gui/.config/gtk-4.0/settings.ini
-gui/.config/sway/config.display
+gui/.config/sway/config.d/config.outputs
+nvim/.config/nvim/lazy-lock.json
