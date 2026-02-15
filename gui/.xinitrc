@@ -77,11 +77,11 @@ if [ $failsafe = "yes" ]; then
 	#gvim &
 	#firefox &
 	#xcompmgr &
-	exec startplasma-x11
+	#exec startplasma-x11
 	#exec dbus-launch lxde-session
 	#exec dbus-launch awesome
 	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
-	#exec xfce4-session
+	exec xfce4-session
 fi
 exec $command
