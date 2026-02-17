@@ -29,8 +29,8 @@ output eDP-1 {
   # 'Samsung Display Corp. 0x419F Unknown'
   mode 2880x1800@120.000Hz
   scale 1.4
-  #position 3440,0
-  position 3199,1799
+  position 5360,0
+  #position 3199,1799
   #position 2200,1440
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }
@@ -47,22 +47,14 @@ output 'Hewlett Packard HP E241i CN44230YNC' {
   position 0,0
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }
-output eDP-1 {
-  mode 2880x1800@120.000Hz
-  scale 1.4
-  #position 3440,0
-  position 3199,1799
-  #position 2200,1440
-  bg /home/$USER/.config/sway/wallpaper.jpg fill
-}
 
 ### Workspaces Configuration
 
 workspace 1 output eDP-1
 workspace 2 output 'Iiyama North America PL3494WQ 1214134900135'
+workspace 3 output 'Iiyama North America PL3494WQ 1214134900135'
 workspace 4 output 'Iiyama North America PL3494WQ 1214134900135'
-workspace 5 output 'Iiyama North America PL3494WQ 1214134900135'
-workspace 3 output 'Hewlett Packard HP E241i CN44230YNC'
+workspace 5 output 'Hewlett Packard HP E241i CN44230YNC'
 workspace 2 output 'ASUSTek COMPUTER INC ASUS VP28U 0x00009EF1'
 workspace 4 output 'ASUSTek COMPUTER INC ASUS VP28U 0x00009EF1'
 workspace 3 output 'ASUSTek COMPUTER INC ASUS VP28U 0x00001E67C'
