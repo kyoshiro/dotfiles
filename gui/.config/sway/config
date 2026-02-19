@@ -21,16 +21,16 @@ set $menu dmenu_path | wofi | xargs swaymsg exec --
 
 ### Output configuration
 ### Workspaces Configuration
-include ~/.config/sway/config.d/config.outputs
+include ~/.config/sway/conf.d/config.outputs
 
 ### Input configuration
-include ~/.config/sway/config.d/config.inputs
+include ~/.config/sway/conf.d/config.inputs
 
 ### Keybinding configuration
-include ~/.config/sway/config.d/config.keybindings
+include ~/.config/sway/conf.d/config.keybindings
 
 ### SWayidle configuration
-include ~/.config/sway/config.d/config.swayidle
+include ~/.config/sway/conf.d/config.swayidle
 
 ### Appearance configuration
 set $opacity 0.9
@@ -59,7 +59,7 @@ gaps outer 5
 #smart_borders on
 
 ### Startup Applications
-include ~/.config/sway/config.d/config.startups
+include ~/.config/sway/conf.d/config.startups
 
-### Include all configs in config.d
-include /etc/sway/config.d/*
+### Include all configs in conf.d
+include /etc/sway/conf.d/*
