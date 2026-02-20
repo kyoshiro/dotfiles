@@ -8,6 +8,7 @@ exec --no-startup-id swaync
 #exec --no-startup-id xinput --disable 14
 #exec --no-startup-id blueman-applet &
 #exec --no-startup-id nm-applet --indicator &
+exec gentoo-pipewire-launcher restart &
 #exec --no-startup-id autolock &
 exec_always --no-startup-id ~/.cargo/bin/workstyle &> /tmp/workstyle.log
 exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && nextcloud --background' &
