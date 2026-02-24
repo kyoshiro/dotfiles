@@ -18,9 +18,7 @@ output eDP-1 {
   # 'Samsung Display Corp. 0x419F Unknown'
   mode 2880x1800@120.000Hz
   scale 1.4
-  #position 3440,0
   position 3199,1799
-  #position 2200,1440
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }
 
