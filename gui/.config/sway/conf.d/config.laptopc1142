@@ -17,7 +17,7 @@ output 'ASUSTek COMPUTER INC ASUS VP28U 0x0001E67C' {
 output eDP-1 {
   # 'Samsung Display Corp. 0x419F Unknown'
   mode 2880x1800@120.000Hz
-  scale 1.4
+  scale 1.2
   position 3199,1799
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }

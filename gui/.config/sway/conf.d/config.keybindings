@@ -47,7 +47,7 @@
 #
     bindsym $mod+Shift+Escape exec 'swaylock -c 0c0c0c -i "$HOME/.config/sway/wallpaper.jpg"'
     bindsym $mod+Shift+w exec 'pkill waybar || exec waybar'
-    bindsym $mod+Shift+s exec 'swayshot'
+    bindsym $mod+Shift+s exec ~/bin/swayshot
 # Moving around:
 #
     # Move your focus around

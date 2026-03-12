@@ -219,7 +219,7 @@
    "custom/spotify-metadata": {
        "format": "{}  ",
        "max-length": 60,
-       "interval": 30,
+       "interval": "60",
        "return-type": "json",
        "exec": "~/.config/waybar/custom/spotify/metadata.sh",
        "on-click": "~/.config/waybar/custom/spotify/controls.sh",
