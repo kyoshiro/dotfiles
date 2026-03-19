@@ -1,0 +1,3 @@
+[submodule "cli/.config/kitty/kitty-themes"]
+	path = cli/.config/kitty/kitty-themes
+	url = ../kitty-themes/

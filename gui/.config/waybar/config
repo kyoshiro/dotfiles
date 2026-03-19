@@ -134,13 +134,13 @@
     "clock": {
         // "timezone": "America/New_York",
 	// "locale": "ja_JP.utf-8",
-        "format": "{:%H:%M} 🕓",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small><span font='Noto Sans Mono'>{calendar}</span></small></tt> 🕓",
-        "format-alt": "{:%Y-%m-%d} 🕓"
+        "format": "{:%H:%M}  ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small><span font='Noto Sans Mono'>{calendar}</span></small></tt>  ",
+        "format-alt": "{:%Y-%m-%d}  "
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip-format": "{usage}% ",
+        "format": "{usage}%  ",
+        "tooltip-format": "{usage}%  ",
     },
     "memory": {
         "format": "{}% "
@@ -189,8 +189,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "format-wifi": " {bandwidthDownBits}  {bandwidthUpBits} ({signalStrength}%) ",
+        "format-ethernet": " {bandwidthDownBits}  {bandwidthUpBits} 󰈀",
         "tooltip-format": "{ifname} via {gwaddr} 󰈀",
         "format-linked": "{ifname} (No IP) 󰈀",
         "format-disconnected": "Disconnected ⚠",

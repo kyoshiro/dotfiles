@@ -47,23 +47,12 @@ vim.g.maplocalleader = ' '
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-vim.keymap.set('n', '<leader>bn', ':bn<cr>')
-vim.keymap.set('n', '<leader>bp', ':bp<cr>')
-vim.keymap.set('n', '<leader>bl', ':buffers<cr>')
-
 -- Ranger keybindings
 --
 -- gset('ranger_terminal','urxvt -e')
-vim.keymap.set('n', '<leader>rr', ':RangerEdit<cr>')
-vim.keymap.set('n', '<leader>rv', ':RangerVSplit<cr>')
-vim.keymap.set('n', '<leader>rs', ':RangerSplit<cr>')
-vim.keymap.set('n', '<leader>rt', ':RangerTab<cr>')
-vim.keymap.set('n', '<leader>ri', ':RangerInsert<cr>')
-vim.keymap.set('n', '<leader>ra', ':RangerAppend<cr>')
-vim.keymap.set('n', '<leader>rc', ':set operatorfunc=RangerChangeOperator<cr>g@')
-vim.keymap.set('n', '<leader>rd', ':RangerCD<cr>')
-vim.keymap.set('n', '<leader>rld', ':RangerLCD<cr>')
+vim.keymap.set('n', '<leader>r', ':RnvimrToggle<cr>')
 
+-- NvimTree keybindings
 vim.keymap.set('n', '<leader>n', ':NvimTreeToggle<cr>')
 
 -- Diagnostic keymaps
@@ -75,11 +64,11 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-	callback = function()
-		vim.highlight.on_yank()
-	end,
-	group = highlight_group,
-	pattern = '*',
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
 })
 
 -- Allow clipboard copy paste in neovim

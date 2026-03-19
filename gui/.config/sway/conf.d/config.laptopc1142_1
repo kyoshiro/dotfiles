@@ -1,33 +1,23 @@
-# Default config for sway
-#
 ### Output configuration
-#
-# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-#output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#output * bg /Nextcloud/Pictures/Wallpaper/asus-gamer-rog-4k-06.jpg fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 output eDP-1 {
   # 'Samsung Display Corp. 0x419F Unknown'
   mode 2880x1800@120.000Hz
   scale 1.2
-  position 6740,0
+  position 5420,0
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }
 
 output 'Iiyama North America PL3494WQ 1214134900135' {
   mode 3440x1440@120.000Hz
-  scale 0.8
-  position 2440,0
+  scale 1.0
+  position 1980,0
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }
 output 'Hewlett Packard HP E241i CN44230YNC' {
   mode 1920x1200@60.000Hz
-  scale 0.8
+  scale 1.0
   position 0,0
   bg /home/$USER/.config/sway/wallpaper.jpg fill
 }

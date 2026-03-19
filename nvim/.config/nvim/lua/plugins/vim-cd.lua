@@ -1,0 +1,3 @@
+return {
+	"jceb/vim-cd"
+}
