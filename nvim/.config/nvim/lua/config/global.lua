@@ -1,170 +1,68 @@
---Enable Comment.nvim
-require('Comment').setup()
+-- Enable relative line numbers
+vim.opt.relativenumber = true
+vim.opt.showtabline = 2
 
-require('telescope').load_extension 'fzf'
+--Set highlight on search
+vim.o.hlsearch = false
 
---Add leader shortcuts
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>sf', function()
-	require('telescope.builtin').find_files { previewer = false }
-end)
-vim.keymap.set('n', '<leader>sb', require('telescope.builtin').current_buffer_fuzzy_find)
-vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>st', require('telescope.builtin').tags)
-vim.keymap.set('n', '<leader>sd', require('telescope.builtin').grep_string)
-vim.keymap.set('n', '<leader>sp', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>so', function()
-	require('telescope.builtin').tags { only_current_buffer = true }
-end)
-vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles)
+--Make line numbers default
+vim.wo.number = true
 
--- Terraform settings
+--Enable mouse mode
+vim.o.mouse = 'n'
 
-gset('terraform_align', '1')
-gset('terraform_fold_sections', '0')
-gset('terraform_fmt_on_save', '1')
+--Set colorscheme
+vim.o.termguicolors = true
 
--- LSP settings
-local lspconfig = require 'lspconfig'
-local on_attach = function(_, bufnr)
-	local opts = { buffer = bufnr }
-	vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-	vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-	vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-	vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-	vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
-	vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
-	vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
-	vim.keymap.set('n', '<leader>wl', function()
-		vim.inspect(vim.lsp.buf.list_workspace_folders())
-	end, opts)
-	vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, opts)
-	vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
-	vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-	vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, opts)
-	-- vim.keymap.set('n', '<leader>so', require('telescope.builtin').lsp_document_symbols, opts)
-	-- vim.api.nvim_create_user_command("Format", vim.lsp.buf.formatting, {})
-end
+vim.cmd [[highlight Normal guibg=none]]
 
--- nvim-cmp supports additional completion capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+-- Set completeopt to have a better completion experience
+vim.o.completeopt = 'menuone,noselect'
 
--- Enable the following language servers
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
-for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup {
-		on_attach = on_attach,
-		capabilities = capabilities,
-	}
-end
+-- Enable break indent
+vim.o.breakindent = true
 
--- Example custom server
--- Make runtime files discoverable to the server
-local runtime_path = vim.split(package.path, ';')
-table.insert(runtime_path, 'lua/?.lua')
-table.insert(runtime_path, 'lua/?/init.lua')
+-- Enable undo/redo changes even after closing and reopening a file
+vim.o.undofile = true
 
-lspconfig.lua_ls.setup {
-	on_attach = on_attach,
-	capabilities = capabilities,
-	settings = {
-		Lua = {
-			runtime = {
-				-- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-				version = 'LuaJIT',
-				-- Setup your lua path
-				path = runtime_path,
-			},
-			diagnostics = {
-				-- Get the language server to recognize the `vim` global
-				globals = { 'vim' },
-			},
-			workspace = {
-				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file('', true),
-			},
-			-- Do not send telemetry data containing a randomized but unique identifier
-			telemetry = {
-				enable = false,
-			},
-		},
-	},
-}
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
--- luasnip setup
-local luasnip = require 'luasnip'
+-- Keep signcolumn on by default
+vim.o.signcolumn = 'yes'
 
--- nvim-cmp setup
-local cmp = require 'cmp'
-cmp.setup {
-	snippet = {
-		expand = function(args)
-			luasnip.lsp_expand(args.body)
-		end,
-	},
-	mapping = cmp.mapping.preset.insert({
-		['<C-d>'] = cmp.mapping.scroll_docs(-4),
-		['<C-f>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<CR>'] = cmp.mapping.confirm {
-			behavior = cmp.ConfirmBehavior.Replace,
-			select = true,
-		},
-		['<Tab>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			else
-				fallback()
-			end
-		end, { 'i', 's' }),
-		['<S-Tab>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, { 'i', 's' }),
-	}),
-	sources = {
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' },
-	},
-}
+-- Decrease update time
+vim.o.updatetime = 250
 
--- nvim-tree setup
+-- Decrease mapped sequence wait time
+vim.o.timeoutlen = 300
 
--- disable netrw at the very start of your init.lua
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- Configure how new splits should be opened
+vim.o.splitright = true
+vim.o.splitbelow = true
 
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
+-- Sets how neovim will display certain whitespace characters in the editor.
+--  See `:help 'list'`
+--  and `:help 'listchars'`
+--
+--  Notice listchars is set using `vim.opt` instead of `vim.o`.
+--  It is very similar to `vim.o` but offers an interface for conveniently interacting with tables.
+--   See `:help lua-options`
+--   and `:help lua-guide-options`
+vim.o.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
--- OR setup with some options
-require("nvim-tree").setup({
-	sort = {
-		sorter = "case_sensitive",
-	},
-	view = {
-		width = 30,
-	},
-	renderer = {
-		group_empty = true,
-	},
-	filters = {
-		dotfiles = true,
-	},
-	update_focused_file = {
-		enable = true,
-		update_root = {
-			enable = true,
-			ignore_list = {},
-		},
-		exclude = false,
-	},
-})
+-- Preview substitutions live, as you type!
+vim.o.inccommand = 'split'
+
+-- Show which line your cursor is on
+vim.o.cursorline = true
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.o.scrolloff = 10
+
+-- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
+-- instead raise a dialog asking if you wish to save the current file(s)
+-- See `:help 'confirm'`
+vim.o.confirm = true
