@@ -17,7 +17,23 @@ require("config.keybindings")
 require("config.terminal")
 require("config.floaterminal")
 
-vim.cmd [[colorscheme tokyonight-day]]
+local function set_theme()
+  local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
+  if not handle then return end
+
+  local result = handle:read("*a")
+  handle:close()
+
+  if result:match("prefer%-dark") then
+    vim.o.background = "dark"
+    vim.cmd [[colorscheme tokyonight-night]]
+  else
+    vim.o.background = "light"
+    vim.cmd [[colorscheme tokyonight-day]]
+  end
+end
+
+set_theme()
 
 -- vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 -- vim: ts=2 sts=2 sw=2 et
