@@ -7,3 +7,17 @@ input "type:keyboard" {
       xkb_layout us
       xkb_variant intl
 }
+
+# Configure TouchPad
+input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
+      dwt enabled
+      tap enabled
+      natural_scroll disabled
+      middle_emulation enabled
+}
+
+input "1118:2024:Microsoft_Surface_Type_Cover_Touchpad" {
+       dwt enabled
+       tap enabled
+       natural_scroll disabled
+}

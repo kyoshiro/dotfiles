@@ -20,3 +20,4 @@ exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
 exec --no-startup-id swaymsg 'workspace 1; exec kitty' &
 # Check gtk theme settings and apply theme
 exec_always --no-startup-id ~/.config/sway/scripts/import-gsettings
+exec_always --no-startup-id kanshi

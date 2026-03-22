@@ -1,0 +1,15 @@
+profile laptop {
+    output eDP-1 enable position 0,0 mode 2736x1824@59.959Hz scale 1.0
+    exec swaybg -m fill -i /home/$USER/.config/sway/wallpaper.jpg
+    exec swaymsg workspace 1 output eDP-1
+}
+
+profile dock {
+    output eDP-1 enable position 2736,1824 mode 2736x1824@59.959Hz scale 1.0
+    output 'ASUSTek COMPUTER INC ASUS VP28U 0x00009EF1' enable position 0,0 mode 3840x2160@60.000Hz scale 1.2
+    output 'ASUSTek COMPUTER INC ASUS VP28U 0x0001E67C' enable position 3199,0 mode 3840x2160@60.000Hz scale 1.2
+    exec swaybg -m fill -i /home/$USER/.config/sway/wallpaper.jpg
+    exec swaymsg workspace 1 output eDP-1
+    exec swaymsg workspace 2 output 'ASUSTek COMPUTER INC ASUS VP28U 0x00001E67C'
+    exec swaymsg workspace 3 output 'ASUSTek COMPUTER INC ASUS VP28U 0x00009EF1'
+}
