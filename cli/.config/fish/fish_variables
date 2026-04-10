@@ -3,7 +3,6 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR --export SSH_AGENT_PID:1299242
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXX5Rc63X/agent\x2e1299240
 SETUVAR TERMINAL:kitty
 SETUVAR __fish_initialized:4300
 SETUVAR _fish_abbr_c:khard
@@ -121,4 +120,4 @@ SETUVAR _fish_abbr_tsi:terraspace\x20init
 SETUVAR _fish_abbr_tsp:terraspace\x20plan
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_greeting:
-SETUVAR fish_user_paths:/home/rasendorf/\x2espicetify\x1e/home/\x24USER/bin\x1e/home/\x24USER/\x2espicetify\x1e
+SETUVAR fish_user_paths:/home/\x24USER/bin\x1e

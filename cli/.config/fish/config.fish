@@ -7,9 +7,10 @@ if type thefuck > /dev/null 2>&1
     thefuck --alias | source
 end
 
-set -xg SSH_AUTH_SOCK (find /tmp -uid (id -u) -type s -name agent.\* 2>/dev/null)
-if test -z $SSH_AUTH_SOCK
-    eval (ssh-agent -c) > /dev/null
-    set -xg SSH_AUTH_SOCK $SSH_AUTH_SOCK
-    set -xg SSH_AGENT_PID $SSH_AGENT_PID
+set -xg SSH_AUTH_SOCK /tmp/ssh-agent-$USER.socket
+if not test -S $SSH_AUTH_SOCK
+    ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+end
+if not ssh-add -l > /dev/null 2>&1
+    ssh-add ~/.ssh/id_rsa
 end
