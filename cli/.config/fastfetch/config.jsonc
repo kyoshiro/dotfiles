@@ -163,6 +163,12 @@
       "keyColor": "green",
     },
     {
+      "type": "command",
+      "key": "│  {#keys} Battery Health",
+      "keyColor": "green",
+      "text": "energy_full=$(cat /sys/class/power_supply/BAT0/energy_full); energy_full_design=$(cat /sys/class/power_supply/BAT0/energy_full_design); battery_health=$((energy_full*100/energy_full_design)); echo \"$battery_health%\"",
+    },
+    {
       "type": "disk",
       "key": "│  {#keys}󰋊 Disk (/)",
       "keyColor": "green",
