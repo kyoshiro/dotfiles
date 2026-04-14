@@ -1,5 +1,5 @@
 profile laptop {
-    output eDP-1 enable position 3199,1799 mode 2880x1800@120.000Hz scale 1.0
+    output eDP-1 enable position 3199,1799 mode 2880x1800@120.000Hz scale 1.2
     exec swaybg -m fill -i /home/$USER/.config/sway/wallpaper.jpg
     exec swaymsg workspace 1 output eDP-1
 }
