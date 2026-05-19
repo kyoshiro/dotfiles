@@ -3,9 +3,9 @@
 -- This is also a good place to setup other settings (vim.opt)
 
 --map space as leader key
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Load Lazy
 require("config.lazy")
@@ -15,10 +15,12 @@ require("config.global")
 require("config.menu")
 require("config.keybindings")
 require("config.terminal")
+require("config.puppet-autofmt")
 require("config.floaterminal")
 
 local function set_theme()
-  local handle = io.popen("gsettings get org.gnome.desktop.interface color-scheme")
+  local handle = io.popen(
+    "gsettings get org.gnome.desktop.interface color-scheme")
   if not handle then return end
 
   local result = handle:read("*a")
