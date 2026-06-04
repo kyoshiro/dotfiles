@@ -8,7 +8,11 @@ input "type:keyboard" {
       xkb_variant intl
 }
 
-# Configure TouchPad
+# In FreeBSD we need to enable tap-to-click globally
+input * {
+	tap enabled
+}
+
 input "1267:12693:ELAN0676:00_04F3:3195_Touchpad" {
       dwt enabled
       tap enabled
