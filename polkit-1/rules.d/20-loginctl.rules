@@ -1,0 +1,13 @@
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.login1.reboot") == 0 &&
+        subject.isInGroup("wheel")) {
+            return polkit.Result.YES;
+        }
+});
+
+polkit.addRule(function(action, subject) {
+    if (action.id.indexOf("org.freedesktop.login1.suspend") == 0 &&
+        subject.isInGroup("wheel")) {
+            return polkit.Result.YES;
+        }
+});
