@@ -1,16 +1,16 @@
 /* CDE colorized */
 #window {
-  background-color: rgba(193, 193, 193, 1);
+  background-color: rgba(174, 178, 195, 1);
   border-radius: 0rem;
-  border: 7px ridge rgba(63, 61, 51, 1);
+  border: 7px ridge rgba(178, 77, 122, 1);
   font-size: 1.6rem;
   font-family:
     "FiraCode Nerd Font", "Iosevka Nerd Font", "Adwaita Mono", monospace;
 }
 #input {
-  background-color: rgba(193, 193, 193, 0.75);
+  background-color: rgba(174, 178, 195, 0.75);
   color: rgba(0, 0, 0, 1);
-  border: 7px ridge rgba(63, 61, 51, 1);
+  border: 7px ridge rgba(178, 77, 122, 1);
   border-inline-color: rgba(174, 178, 195);
   padding: 0.8rem 1rem;
   font-size: 1.5rem;
@@ -19,7 +19,7 @@
 #input:focus,
 #input:focus-visible,
 #input:active {
-  background: rgba(99, 141, 139, 1);
+  background: rgba(113, 139, 165, 1);
 }
 #scroll {
   margin-top: 9px;
@@ -29,7 +29,7 @@
 }
 #entry {
   color: rgba(0, 0, 0, 1);
-  background-color: rgba(193, 193, 193, 1);
+  background-color: rgba(174, 178, 195, 1);
   padding: 0.6rem 1rem;
 }
 #img {
@@ -38,8 +38,8 @@
 }
 #entry:selected {
   color: rgba(0, 0, 0, 1);
-  border: 1px outset rgba(219, 223, 230, 1);
-  background-color: rgba(219, 223, 230, 1);
+  border: 1px inset rgba(124, 128, 145, 1);
+  background-color: rgba(154, 158, 175, 1);
 }
 #text:selected {
   color: rgba(0, 0, 0, 1);
