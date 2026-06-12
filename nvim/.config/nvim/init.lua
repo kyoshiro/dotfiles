@@ -28,10 +28,10 @@ local function set_theme()
 
   if result:match("prefer%-dark") then
     vim.o.background = "dark"
-    vim.cmd [[colorscheme tokyonight-night]]
+    vim.cmd [[colorscheme darkblue]]
   else
     vim.o.background = "light"
-    vim.cmd [[colorscheme tokyonight-day]]
+    vim.cmd [[colorscheme blue]]
   end
 end
 
