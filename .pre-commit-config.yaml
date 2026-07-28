@@ -8,7 +8,7 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
       - id: trailing-whitespace
-        language_version: python3.13
+        language_version: python3.14
   - repo: https://github.com/homebysix/pre-commit-macadmin
     rev: v1.22.0
     hooks:
