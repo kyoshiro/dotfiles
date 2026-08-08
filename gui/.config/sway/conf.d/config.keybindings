@@ -45,7 +45,8 @@
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
-    bindsym $mod+Shift+Escape exec 'swaylock -c 0c0c0c -i "$HOME/.config/sway/wallpaper.jpg"'
+    bindsym $mod+Escape exec 'swaylock -c 0c0c0c -i "$HOME/.config/sway/wallpaper.jpg"'
+    bindsym $mod+Shift+Escape exec 'lock-suspend'
     bindsym $mod+Shift+w exec 'pkill waybar || exec waybar'
     bindsym $mod+Shift+s exec ~/bin/swayshot
     bindsym $mod+Shift+o exec ~/bin/toggle_dark

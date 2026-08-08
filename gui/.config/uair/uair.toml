@@ -1,0 +1,52 @@
+## ~/.config/uair/uair.toml
+[defaults]
+format = "{time}\n"
+time_format = "%M:%S"
+paused_state_text = "paused"
+resumed_state_text = "resumed"
+
+# --- ROUND 1 ---
+[[sessions]]
+id = "work_1"
+name = "🍅 Work 1"
+duration = "25m"
+command = "notify-send 'Interval Complete!' 'Take a short break.'"
+
+[[sessions]]
+id = "break_1"
+name = "☕ Break 1"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 2 ---
+[[sessions]]
+id = "work_2"
+name = "🍅 Work 2"
+duration = "25m"
+command = "notify-send 'Interval Complete!' 'Take a short break.'"
+
+[[sessions]]
+id = "break_2"
+name = "☕ Break 2"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 3 ---
+[[sessions]]
+id = "work_3"
+name = "🍅 Work 3"
+duration = "25m"
+command = "notify-send 'Interval Complete!' 'Take a short break.'"
+
+[[sessions]]
+id = "break_3"
+name = "☕ Break 3"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 4 ---
+[[sessions]]
+id = "work_4"
+name = "🍅 Work 4"
+duration = "25m"
+command = "notify-send 'Final Interval Complete!' 'Time for a long rest.'"

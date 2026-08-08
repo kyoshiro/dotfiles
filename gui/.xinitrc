@@ -72,9 +72,6 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 
 if [ $failsafe = "yes" ]; then
 	#xscreensaver -no-splash &
-	#kmix &
-	#rxvt-unicode &
-	#gvim &
 	#firefox &
 	#xcompmgr &
 	#exec startplasma-x11
@@ -82,6 +79,6 @@ if [ $failsafe = "yes" ]; then
 	#exec dbus-launch awesome
 	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
-	exec xfce4-session
+	exec wmaker
 fi
 exec $command

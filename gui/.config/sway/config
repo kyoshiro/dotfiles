@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term foot
+set $term alacritty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -48,13 +48,13 @@ bar {
 
 # Removing title bar
 for_window [class="^.*"] border pixel 1
-default_border pixel 1
-default_floating_border pixel 1
+#default_border pixel 1
+#default_floating_border pixel 1
 
 # Enable window gaps
-for_window [class="^.*"] border pixel 2
-gaps inner 5
-gaps outer 5
+#for_window [class="^.*"] border pixel 2
+#gaps inner 5
+#gaps outer 5
 #smart_gaps on
 #smart_borders on
 
