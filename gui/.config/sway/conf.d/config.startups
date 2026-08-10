@@ -6,7 +6,7 @@ exec /usr/libexec/polkit-kde-authentication-agent-1 &
 #exec --no-startup-id xinput --disable 13
 #exec --no-startup-id xinput --disable 14
 # With Gentoo OpenRC we need to run gentoo-pipewire-launcher to get audio
-#exec gentoo-pipewire-launcher restart &
+exec gentoo-pipewire-launcher restart &
 exec --no-startup-id uair -q &
 exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec nextcloud --background' &
 exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec proton-mail-bridge-gui' &
