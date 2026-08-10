@@ -20,6 +20,7 @@
     "bluetooth",
     "network",
     "wireplumber",
+    "tray",
     "backlight",
     "battery",
     "custom/poweroff",

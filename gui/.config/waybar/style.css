@@ -151,6 +151,7 @@
 #wireplumber,
 #backlight,
 #network,
+#tray,
 #custom-lock,
 #custom-music,
 #custom-poweroff,
@@ -169,6 +170,7 @@
 
 #custom-poweroff {
   margin-right: 7px;
+  padding: 0.3rem 0.7rem;
 }
 
 #battery {
@@ -234,8 +236,7 @@
 
 /* --- Tooltip Styles --- */
 tooltip {
-  background-color: #1a1b26;
-  color: #dddddd;
+  background-color: #c6d0f5;
   padding: 5px 12px;
   margin: 5px 0px;
   border-radius: 6px;
