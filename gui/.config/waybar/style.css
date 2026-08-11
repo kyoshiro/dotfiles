@@ -3,9 +3,6 @@
   font-family: "FontAwesome", "Noto Sans Mono", sans;
   font-size: 14px;
   min-height: 0;
-  padding-right: 0px;
-  padding-left: 0px;
-  padding-bottom: 0px;
 }
 
 /* --- Waybar Container --- */
@@ -155,7 +152,7 @@
   background-color: #1a1b26;
   padding: 0.3rem 0.7rem;
   margin: 5px 0px;
-  border-radius: 6px; /* This module is always rounded */
+  border-radius: 6px; /* rounded */
   box-shadow: none;
   min-width: 0;
   border: none;
@@ -166,7 +163,7 @@
 
 #custom-poweroff {
   margin-right: 7px;
-  padding: 0.3rem 0.7rem;
+  padding: 0.5rem 0.7rem;
 }
 
 #battery {
@@ -178,35 +175,20 @@
   color: #babbf1;
 }
 
-#cpu {
-  color: #c6d0f5;
-}
-
-#clock {
-  color: #c6d0f5;
-}
-
-#idle_inhibitor {
-  color: #c6d0f5;
-}
-
+#backlight,
+#cpu,
+#clock,
+#idle_inhibitor,
+#network,
+#custom-lock,
+#custom-poweroff,
 #wireplumber {
-  color: #c6d0f5;
-}
-#backlight {
-  color: #c6d0f5;
-}
-
-#network {
+  font-size: 16px;
   color: #c6d0f5;
 }
 
 #network.disconnected {
   color: #e78284;
-}
-
-#custom-lock {
-  color: #babbf1;
 }
 
 #bluetooth {
