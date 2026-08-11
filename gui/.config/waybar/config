@@ -5,9 +5,7 @@
   "spacing" : 4,
   "modules-left": [
   "sway/workspaces",
-  "sway/mode",
   "sway/scratchpad",
-  "custom/uptime",
   "custom/uair",
   "custom/music",
   ],
@@ -23,6 +21,7 @@
     "tray",
     "backlight",
     "battery",
+    "custom/lock",
     "custom/poweroff",
   ],
 
@@ -63,11 +62,9 @@
   "custom/music": {
     "format": "  {}",
     "format-alt": " ",
-    "escape": true,
     "interval": 5,
     "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
     "on-click": "playerctl play-pause",
-    "tooltip-format": "{artist} - {title}",
     "max-length": 50
   },
 
@@ -92,7 +89,7 @@
   "cpu": {
     "interval": 1,
     "format": "  {usage:>2}%",
-    "on-click": "alacritty -e btop"
+    "on-click": "alacritty -e sudo btop"
   },
 
   "memory": {
