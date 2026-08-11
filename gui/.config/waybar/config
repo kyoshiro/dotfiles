@@ -60,10 +60,11 @@
   },
 
   "custom/music": {
-    "format": "  {}",
-    "format-alt": " ",
+    "format": "♫ {}",
+    "format-alt": "♫",
     "interval": 5,
     "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+    "tooltip-format": "♫ {}",
     "on-click": "playerctl play-pause",
     "max-length": 50
   },
@@ -104,14 +105,6 @@
             "activated": "",
             "deactivated": ""
         }
-  },
-
-  "custom/uptime": {
-    "format": "{}",
-    "format-icon": [""],
-    "tooltip": false,
-    "interval": 1600,
-    "exec": "$HOME/.config/waybar/scripts/uptime.sh"
   },
 
   "backlight": {
@@ -161,18 +154,18 @@
   "format": "\uf011",
   "exec": "uptime -p",
   "on-click" : "sh -c 'lock-suspend'",
-  "tooltip-format": "{}"
+  "tooltip-format": "{}\nClick for Lock Suspend"
   },
 
   "custom/lock": {
-  "tooltip": false,
-  "on-click": "sh -c '(sleep 0s; swaylock)' & disown",
-  "format" : ""
+  "on-click": "sh -c 'lock & disown'",
+  "format" : "",
+  "tooltip-format": "Click for Lock"
   },
 
   "custom/uair": {
   "format": "{icon}",
-  "format-alt": "{icon} {}",
+  "format-alt": "{}",
   "format-icons": [
     "○○○○○○○○○●",
     "○○○○○○○○●●",
@@ -184,7 +177,7 @@
     "○●●●●●●●●●",
     "●●●●●●●●●●"
   ],
-  "tooltip-format": "{icon} {}",
+  "tooltip-format": "{}",
   "return-type": "json",
   "interval": 1,
   "on-click": "uairctl toggle",

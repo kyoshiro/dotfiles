@@ -121,26 +121,22 @@
 
 /* Hover effect for the new uair module (consistent with others + rectangular outline) */
 #custom-uair:hover {
-  background-color: rgb(
-    41,
-    42,
-    53
-  ); /* Brighter highlight, consistent with other individual modules */
+  background: rgb(41, 42, 53);
   color: #c6d0f5; /* Text color change on hover, consistent with other individual modules */
   outline: 1px solid rgba(255, 255, 255, 0.1); /* Rectangular outline on hover */
   outline-offset: -1px;
 }
 
 /* --- Highlighted state for uair module when running (work or break) --- */
-#custom-uair.resumed,
-#custom-uair.break {
+#custom-uair.resumed {
+  background: rgba(41, 42, 53, 0.2);
   color: #99d1db; /* Text color consistent with active workspaces button */
-  background-color: rgba(
-    153,
-    209,
-    219,
-    0.1
-  ); /* Background color consistent with active workspaces button */
+  box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); /* Inner shadow for outline effect */
+  outline: none;
+}
+#custom-uair.break {
+  background: rgba(41, 42, 53, 0.8);
+  color: #99d1db; /* Text color consistent with active workspaces button */
   box-shadow: inset 0 0 0 1px rgba(153, 209, 219, 0.2); /* Inner shadow for outline effect */
   outline: none;
 }
