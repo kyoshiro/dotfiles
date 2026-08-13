@@ -50,3 +50,61 @@ id = "work_4"
 name = "🍅 Work 4"
 duration = "25m"
 command = "notify-send 'Final Interval Complete!' 'Time for a long rest.'"
+
+[[sessions]]
+id = "break_4"
+name = "☕ Break 4"
+duration = "15m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 5 ---
+[[sessions]]
+id = "work_5"
+name = "🍅 Work 5"
+duration = "25m"
+command = "notify-send 'Final Interval Complete!' 'Time for short break.'"
+
+[[sessions]]
+id = "break_5"
+name = "☕ Break 5"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 6 ---
+[[sessions]]
+id = "work_6"
+name = "🍅 Work 6"
+duration = "25m"
+command = "notify-send 'Final Interval Complete!' 'Time for short break.'"
+
+[[sessions]]
+id = "break_6"
+name = "☕ Break 6"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 7 ---
+[[sessions]]
+id = "work_7"
+name = "🍅 Work 7"
+duration = "25m"
+command = "notify-send 'Final Interval Complete!' 'Time for short break.'"
+
+[[sessions]]
+id = "break_7"
+name = "☕ Break 7"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
+
+# --- ROUND 8 ---
+[[sessions]]
+id = "work_8"
+name = "🍅 Work 8"
+duration = "25m"
+command = "notify-send 'Final Interval Complete!' 'Time for a long rest.'"
+
+[[sessions]]
+id = "break_8"
+name = "☕ Break 8"
+duration = "5m"
+command = "notify-send 'Break Over!' 'Back to work.'"
