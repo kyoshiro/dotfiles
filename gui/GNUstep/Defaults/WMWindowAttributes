@@ -1,0 +1,11 @@
+{
+  firefox.Firefox = {
+    Icon = firefox.Firefox.xpm;
+  };
+  keepassxc.KeePassXC = {
+    Icon = keepassxc.KeePassXC.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
+  };
+}

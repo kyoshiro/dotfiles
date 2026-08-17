@@ -1,0 +1,42 @@
+{
+  MenuDisabledColor = gray40;
+  PixmapPath = (
+    "~/GNUstep/Library/WindowMaker/Pixmaps",
+    "~/GNUstep/Library/WindowMaker/Backgrounds",
+    "~/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/WindowMaker/Backgrounds",
+    "/usr/share/pixmaps"
+  );
+  IconTitleBack = "rgb:50/5a/5e";
+  FTitleBack = (hgradient, "rgb:50/5a/5e", "rgb:20/2a/2e");
+  ClipTitleFont = "Verdana:bold:pixelsize=10";
+  IconTitleFont = "Arial,sans serif:pixelsize=9";
+  LargeDisplayFont = "Trebuchet MS,sans serif:pixelsize=24";
+  CenterKey = None;
+  MenuTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  MoveTo6to12Head = None;
+  EnforceIconMargin = NO;
+  AutoArrangeIcons = YES;
+  MoveTo12to6Head = None;
+  WindowTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
+  RunKey = "Mod4+D";
+  ResizebarBack = (solid, "rgb:c2/c0/c5");
+  DisplayFont = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*";
+  MenuTextBack = (hgradient, "rgb:c2/c0/c5", "rgb:82/80/85");
+  TitleJustify = left;
+  MenuTextFont = "Trebuchet MS,sans serif:pixelsize=12";
+  MenuTitleBack = (hgradient, "rgb:50/5a/5e", "rgb:20/2a/2e");
+  IconPath = (
+    "~/GNUstep/Library/Icons",
+    "~/GNUstep/Library/WindowMaker/Pixmaps",
+    "~/GNUstep/Library/WindowMaker/CachedPixmaps",
+    "~/pixmaps",
+    "/usr/share/WindowMaker/Icons",
+    "/usr/share/WindowMaker/Pixmaps",
+    "/usr/share/pixmaps"
+  );
+  PTitleBack = (hgradient, "rgb:51/50/55", "rgb:80/80/80");
+  UTitleBack = (hgradient, "rgb:c2/c0/c5", "rgb:82/80/85");
+}

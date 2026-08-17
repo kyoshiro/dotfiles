@@ -79,6 +79,6 @@ if [ $failsafe = "yes" ]; then
 	#exec dbus-launch awesome
 	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
-	exec wmaker
+	exec dbus-run-session wmaker
 fi
 exec $command
