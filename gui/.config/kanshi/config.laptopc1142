@@ -1,5 +1,5 @@
 profile laptop {
-    output eDP-1 enable position 0,0 mode 2880x1800@120.000Hz scale 1.2
+    output eDP-1 enable position 0,0 mode 2880x1800@120.000Hz scale 1.4
     exec swaybg -m fill -i /home/$USER/.config/sway/wallpaper.jpg
     exec swaymsg workspace 1 output eDP-1
 }
@@ -27,7 +27,7 @@ profile office {
 }
 
 profile office2 {
-    output eDP-1 enable position 2000,1799 mode 2880x1800@120.000Hz scale 1.2
+    output eDP-1 enable position 2000,1799 mode 2880x1800@120.000Hz scale 1.4
     output 'Iiyama North America PL3494WQ 1214134900135' enable position 1920,0 mode 3440x1440@120.000Hz scale 1.0
     output 'Hewlett Packard HP E241i CN44230YNC' enable position 0,0 mode 1920x1200@59.950001Hz scale 1.0
     exec swaybg -m fill -i /home/$USER/.config/sway/wallpaper.jpg

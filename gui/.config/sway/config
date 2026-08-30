@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -33,10 +33,10 @@ include ~/.config/sway/conf.d/config.keybindings
 include ~/.config/sway/conf.d/config.swayidle
 
 ### Appearance configuration
-set $opacity 0.9
-for_window [class=".*"] opacity $opacity
-for_window [app_id=".*"] opacity $opacity
-seat seat0 xcursor_theme Default
+#set $opacity 1.0
+#for_window [class=".*"] opacity $opacity
+#for_window [app_id=".*"] opacity $opacity
+seat seat0 xcursor_theme neutral-nextstep
 #
 # Status Bar:
 #

@@ -3,8 +3,8 @@
 SETUVAR --export EDITOR:nvim
 SETUVAR --export LSCOLORS:gxfxbEaEBxxEhEhBaDaCaD
 SETUVAR --export SSH_AGENT_PID:1299242
-SETUVAR TERMINAL:konsole
-SETUVAR __fish_initialized:4300
+SETUVAR TERMINAL:kitty
+SETUVAR __fish_initialized:3800
 SETUVAR _fish_abbr_c:khard
 SETUVAR _fish_abbr_cd_2E_:cd\x20\x28_ch2root\x20debian\x20\x2egit\x20\x2ehg\x20\x2esvn\x20package\x2ejson\x29
 SETUVAR _fish_abbr_cd_2E_2E_:cd\x20\x2e\x2e
@@ -120,4 +120,5 @@ SETUVAR _fish_abbr_tsi:terraspace\x20init
 SETUVAR _fish_abbr_tsp:terraspace\x20plan
 SETUVAR _fish_abbr_vim:nvim
 SETUVAR fish_greeting:
+SETUVAR fish_key_bindings:fish_default_key_bindings
 SETUVAR fish_user_paths:/home/\x24USER/bin\x1e

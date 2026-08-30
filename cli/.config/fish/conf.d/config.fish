@@ -7,8 +7,16 @@ set -g fish_cursor_insert block
 set -g fish_cursor_visual block
 set -g fish_escape_delay_ms 10
 
+
 function fish_greeting
-    fastfetch
+  if test -r /etc/os-release
+      set -l os_id (grep '^ID=' /etc/os-release | cut -d= -f2 | string trim -c '"')
+      if test "$os_id" = ubuntu
+         fastfetch --logo ubuntu
+      else
+         fastfetch
+      end
+  end
 end
 
 # hide greeting

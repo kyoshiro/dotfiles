@@ -1,7 +1,7 @@
 /* --- Global Styles --- */
 * {
   font-family: "FontAwesome", "Noto Sans Mono", sans;
-  font-size: 14px;
+  font-size: 12px;
   min-height: 0;
 }
 
@@ -189,7 +189,6 @@
 #custom-notification,
 #custom-poweroff,
 #wireplumber {
-  font-size: 16px;
   color: #c6d0f5;
 }
 
@@ -199,7 +198,6 @@
 
 #bluetooth {
   color: #888888;
-  font-size: 16px;
 }
 #bluetooth.on {
   color: #2196f3;
@@ -238,5 +236,4 @@ tooltip {
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
 }

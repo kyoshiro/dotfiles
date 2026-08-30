@@ -66,10 +66,12 @@ fi
 # # You probably need to do this too:
 #export GPG_AGENT_INFO GNOME_KEYRING_CONTROL GNOME_KEYRING_PID SSH_AUTH_SOCK
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 #export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 #dbus-update-activation-environment --systemd DISPLAY
 
+export XDG_SESSION_TYPE=x11
+unset WAYLAND_DISPLAY
 if [ $failsafe = "yes" ]; then
 	#xscreensaver -no-splash &
 	#firefox &
@@ -79,6 +81,7 @@ if [ $failsafe = "yes" ]; then
 	#exec dbus-launch awesome
 	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
+	setxkbmap -layout us -variant intl
 	exec dbus-run-session wmaker
 fi
 exec $command

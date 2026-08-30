@@ -1,5 +1,6 @@
 Xft.dpi: 108.0
 Xcursor.size:32
+Xcursor.theme:neutral-nextstep
 
 xterm*selectToClipboard: true
 xterm*disallowedWindowOps: 20,21,SetXProp

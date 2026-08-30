@@ -122,7 +122,7 @@
  '(search-exit-option t)
  '(send-mail-function (quote sendmail-send-it))
  '(set-buffer-file-coding-system (quote utf-8))
-;; '(set-default-font "-misc-fixed-medium-r-normal--11-*-75-*-*-*-*-*")
+ '(set-default-font "-misc-fixed-medium-r-normal--13-*-75-*-*-*-*-*")
  '(set-language-environment (quote utf-8))
  '(set-terminal-coding-system (quote utf-8))
  '(show-paren-mode t nil (paren))
@@ -143,11 +143,11 @@
  '(x-select-enable-clipboard nil))
 
 ;; Some window system only preferences, getting speedbar left to the main window
-(if window-system 
-    (progn (set-frame-position (selected-frame) (. 120) (. 120))))
-(if window-system
-    (progn (set-frame-width (selected-frame) 101)
-	   (set-frame-height (selected-frame) 52)))
+;;(if window-system
+;;    (progn (set-frame-position (selected-frame) (. 120) (. 120))))
+;;(if window-system
+;;    (progn (set-frame-width (selected-frame) 101)
+;;(set-frame-height (selected-frame) 52)))
 
 ;; Themeing if i like
 ;;(if (require 'color-theme nil t) (color-theme-initialize) (color-theme-tty-dark))
