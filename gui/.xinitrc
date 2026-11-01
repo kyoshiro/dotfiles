@@ -69,6 +69,9 @@ fi
 #eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
 #export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
 #dbus-update-activation-environment --systemd DISPLAY
+if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
+    eval $(dbus-launch --sh-syntax --exit-with-session)
+fi
 
 export XDG_SESSION_TYPE=x11
 unset WAYLAND_DISPLAY
@@ -82,6 +85,8 @@ if [ $failsafe = "yes" ]; then
 	#exec dbus-launch i3
 	#exec dbus-launch gnome-session
 	setxkbmap -layout us -variant intl
+	autorandr --change
+	sleep 0.5
 	exec dbus-run-session wmaker
 fi
 exec $command

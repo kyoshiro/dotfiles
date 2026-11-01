@@ -1,9 +1,20 @@
 {
   firefox.Firefox = {
-    Icon = firefox.Firefox.xpm;
+    Icon = firefox.png;
+  };
+  Alacritty.Alacritty = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
+    Icon = Alacritty.svg;
+  };
+  thunderbird.Thunderbird = {
+    Icon = thunderbird.png;
   };
   keepassxc.KeePassXC = {
     Icon = keepassxc.KeePassXC.xpm;
+  };
+  GWorkspace.GNUstep = {
+    Icon = GWorkspace.GNUstep.xpm;
   };
   groupLeader.WPrefs = {
     Icon = groupLeader.WPrefs.xpm;

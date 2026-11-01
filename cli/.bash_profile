@@ -98,7 +98,4 @@ export PATH=$PATH:~/bin:~/.cargo/bin
 # }
 # complete -F _awsume awsume
 #
-# Start Sway on TTY1
-if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec $HOME/bin/start_sway.sh
-fi
+

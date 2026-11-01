@@ -3,7 +3,12 @@
   (
     Applications,
     OPEN_PLMENU,
-    "|| wmmenugen -parser:xdg /usr/share/applications/ ~/.local/share/applications"
+    "|| wmmenugen -parser:xdg /usr/local/share/applications/ /usr/local/GNUstep/"
+  ),
+  (
+    MyApps,
+    OPEN_PLMENU,
+    "|| wmmenugen -parser:xdg ~/.local/share/applications"
   ),
   (Run..., EXEC, "%A(Run,Type command to run)"),
   (
@@ -18,7 +23,7 @@
       EXEC,
       "xscreensaver-command --activate"
     ),
-    (Suspend, EXEC, "loginctl suspend"),
+    (Suspend, EXEC, "zzz"),
     ("Refresh screen", REFRESH),
     (Restart, RESTART)
   ),
@@ -32,7 +37,7 @@
     ("Show All", SHOW_ALL),
     (Workspaces, WORKSPACE_MENU)
   ),
-  (Suspend, EXEC, "loginctl suspend"),
+  (Suspend, EXEC, "zzz"),
   (Exit, EXIT),
   ("Exit session", SHUTDOWN)
 )

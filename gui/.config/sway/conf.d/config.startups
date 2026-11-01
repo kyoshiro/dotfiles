@@ -10,16 +10,18 @@ exec /usr/libexec/polkit-kde-authentication-agent-1 &
 exec gentoo-pipewire-launcher restart &
 exec sleep 3 && exec swaync &
 exec --no-startup-id uair -q &
-exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec nextcloud --background' &
-exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec proton-mail-bridge-gui' &
+# exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec nextcloud --background' &
+# exec --no-startup-id swaymsg 'workspace 1; exec sleep 5 && exec proton-mail-bridge-gui' &
 #exec --no-startup-id swaymsg 'workspace 1; exec blueman-applet &
 ##exec --no-startup-id swaymsg 'workspace 1; exec koi' &
-exec --no-startup-id swaymsg 'workspace 4; exec keepassxc' &
+#exec --no-startup-id swaymsg 'workspace 4; exec keepassxc' &
 #exec --no-startup-id swaymsg 'workspace 2; exec firefox' &
 #exec --no-startup-id swaymsg 'workspace 6; exec discord' &
 #exec --no-startup-id swaymsg 'workspace 3; exec thunderbird' &
-exec --no-startup-id swaymsg 'workspace 1; exec kitty' &
+exec --no-startup-id swaymsg 'workspace 1; exec alacritty' &
 # Check gtk theme settings and apply theme
 #exec_always --no-startup-id ~/.cargo/bin/workstyle &> /tmp/workstyle.log
 exec_always --no-startup-id ~/.config/sway/scripts/import-gsettings
 exec_always --no-startup-id kanshi
+exec_always  workstyle &> /tmp/workstyle.log
+exec_always ~/.config/sway/scripts/import-gsettings

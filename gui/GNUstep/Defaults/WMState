@@ -12,17 +12,6 @@
       },
       {
         Forced = No;
-        Name = wmcalc.wmcalc;
-        DropCommand = "wmcalc %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,2";
-        Lock = Yes;
-        PasteCommand = "wmcalc %s";
-        Command = wmcalc;
-      },
-      {
-        Forced = No;
         Name = wmmoonclock.wmmoonclock;
         DropCommand = "wmmoonclock %d";
         BuggyApplication = No;
@@ -45,36 +34,14 @@
       },
       {
         Forced = No;
-        Name = wmmon.wmmon;
-        DropCommand = "wmmon %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,5";
-        Lock = Yes;
-        PasteCommand = "wmmon %s";
-        Command = wmmon;
-      },
-      {
-        Forced = No;
         Name = wmsystemtray0.wmsystemtray;
         DropCommand = "wmsystemtray %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,11";
+        Position = "0,9";
         Lock = Yes;
         PasteCommand = "wmsystemtray %s";
         Command = wmsystemtray;
-      },
-      {
-        Forced = No;
-        Name = wmweather.wmweather;
-        DropCommand = "wmweather %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,6";
-        Lock = Yes;
-        PasteCommand = "wmweather %s";
-        Command = wmweather;
       },
       {
         Forced = No;
@@ -82,21 +49,10 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,1";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
-      },
-      {
-        Forced = No;
-        Name = wmnet.WMNET;
-        DropCommand = "wmnet -d 100000 -Wwlp0s20f3 %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,7";
-        Lock = Yes;
-        PasteCommand = "wmnet -d 100000 -Wwlp0s20f3 %s";
-        Command = "wmnet -d 100000 -Wwlp0s20f3";
       },
       {
         Forced = No;
@@ -104,7 +60,7 @@
         DropCommand = "wmwork %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,8";
+        Position = "0,6";
         Lock = Yes;
         PasteCommand = "wmwork %s";
         Command = wmwork;
@@ -115,7 +71,7 @@
         DropCommand = "GWorkspace %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,9";
+        Position = "0,7";
         Lock = No;
         PasteCommand = "GWorkspace %s";
         Command = GWorkspace;
@@ -126,10 +82,54 @@
         DropCommand = "wmeyes -w %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,10";
+        Position = "0,8";
         Lock = Yes;
         PasteCommand = "wmeyes -w %s";
         Command = "wmeyes -w";
+      },
+      {
+        Forced = No;
+        Name = wmnet.wmnet;
+        DropCommand = "wmnet -i igc0 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmnet -i igc0 %s";
+        Command = "wmnet -i igc0";
+      },
+      {
+        Forced = No;
+        Name = wmsmixer.Wmsmixer;
+        DropCommand = "wmsmixer -w %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,10";
+        Lock = Yes;
+        PasteCommand = "wmsmixer -w %s";
+        Command = "wmsmixer -w";
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %s";
+        Command = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = wmbright.wmbright;
+        DropCommand = "wmbright %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,11";
+        Lock = Yes;
+        PasteCommand = "wmbright %s";
+        Command = wmbright;
       }
     );
     AutoRaiseLower = No;
@@ -145,17 +145,6 @@
       },
       {
         Forced = No;
-        Name = wmcalc.wmcalc;
-        DropCommand = "wmcalc %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,2";
-        Lock = Yes;
-        PasteCommand = "wmcalc %s";
-        Command = wmcalc;
-      },
-      {
-        Forced = No;
         Name = wmmoonclock.wmmoonclock;
         DropCommand = "wmmoonclock %d";
         BuggyApplication = No;
@@ -178,36 +167,14 @@
       },
       {
         Forced = No;
-        Name = wmmon.wmmon;
-        DropCommand = "wmmon %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,5";
-        Lock = Yes;
-        PasteCommand = "wmmon %s";
-        Command = wmmon;
-      },
-      {
-        Forced = No;
         Name = wmsystemtray0.wmsystemtray;
         DropCommand = "wmsystemtray %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,11";
+        Position = "0,9";
         Lock = Yes;
         PasteCommand = "wmsystemtray %s";
         Command = wmsystemtray;
-      },
-      {
-        Forced = No;
-        Name = wmweather.wmweather;
-        DropCommand = "wmweather %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,6";
-        Lock = Yes;
-        PasteCommand = "wmweather %s";
-        Command = wmweather;
       },
       {
         Forced = No;
@@ -215,21 +182,10 @@
         DropCommand = "wmclock %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,1";
+        Position = "0,2";
         Lock = Yes;
         PasteCommand = "wmclock %s";
         Command = wmclock;
-      },
-      {
-        Forced = No;
-        Name = wmnet.WMNET;
-        DropCommand = "wmnet -d 100000 -Wwlp0s20f3 %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,7";
-        Lock = Yes;
-        PasteCommand = "wmnet -d 100000 -Wwlp0s20f3 %s";
-        Command = "wmnet -d 100000 -Wwlp0s20f3";
       },
       {
         Forced = No;
@@ -237,7 +193,7 @@
         DropCommand = "wmwork %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,8";
+        Position = "0,6";
         Lock = Yes;
         PasteCommand = "wmwork %s";
         Command = wmwork;
@@ -248,7 +204,7 @@
         DropCommand = "GWorkspace %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,9";
+        Position = "0,7";
         Lock = No;
         PasteCommand = "GWorkspace %s";
         Command = GWorkspace;
@@ -259,96 +215,69 @@
         DropCommand = "wmeyes -w %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,10";
+        Position = "0,8";
         Lock = Yes;
         PasteCommand = "wmeyes -w %s";
         Command = "wmeyes -w";
+      },
+      {
+        Forced = No;
+        Name = wmnet.wmnet;
+        DropCommand = "wmnet -i igc0 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmnet -i igc0 %s";
+        Command = "wmnet -i igc0";
+      },
+      {
+        Forced = No;
+        Name = wmsmixer.Wmsmixer;
+        DropCommand = "wmsmixer -w %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,10";
+        Lock = Yes;
+        PasteCommand = "wmsmixer -w %s";
+        Command = "wmsmixer -w";
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %s";
+        Command = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs";
+      },
+      {
+        Forced = No;
+        Name = wmbright.wmbright;
+        DropCommand = "wmbright %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,11";
+        Lock = Yes;
+        PasteCommand = "wmbright %s";
+        Command = wmbright;
       }
     );
     Lowered = Yes;
-    Position = "0,0";
+    Position = "0,124";
   };
   Clip = {
     Forced = No;
     Name = Logo.WMClip;
     BuggyApplication = No;
     AutoLaunch = No;
-    Position = "5360,1536";
+    Position = "6336,1736";
     Lock = No;
     Command = "-";
   };
-  Applications = (
-    {
-      Maximized = 0x0000;
-      Name = wmstickynotes.Wmstickynotes;
-      Shaded = No;
-      Miniaturized = No;
-      Command = wmstickynotes;
-      Geometry = "150x150+146+17";
-      Hidden = No;
-      Workspace = "Workspace 1";
-      ShortcutMask = 0;
-    },
-    {
-      Maximized = 0x0000;
-      Name = wmstickynotes.Wmstickynotes;
-      Shaded = No;
-      Miniaturized = No;
-      Command = wmstickynotes;
-      Geometry = "150x150+146+17";
-      Hidden = No;
-      Workspace = "Workspace 1";
-      ShortcutMask = 0;
-    },
-    {
-      Maximized = 0x0000;
-      Name = wmstickynotes.Wmstickynotes;
-      Shaded = No;
-      Miniaturized = No;
-      Command = wmstickynotes;
-      Geometry = "150x150+146+17";
-      Hidden = No;
-      Workspace = "Workspace 1";
-      ShortcutMask = 0;
-    }
-  );
-  Drawers = (
-    {
-      Dock = {
-        AutoCollapse = Yes;
-        Applications = (
-          {
-            Forced = No;
-            Name = groupLeader.WPrefs;
-            DropCommand = "WPrefs %d";
-            BuggyApplication = No;
-            AutoLaunch = No;
-            Position = "1,0";
-            Lock = No;
-            PasteCommand = "WPrefs %s";
-            Command = WPrefs;
-            Omnipresent = No;
-          },
-          {
-            Forced = No;
-            Name = firefox.Firefox;
-            DropCommand = "firefox %d";
-            BuggyApplication = No;
-            AutoLaunch = No;
-            Position = "2,0";
-            Lock = No;
-            PasteCommand = "firefox %s";
-            Command = firefox;
-            Omnipresent = No;
-          }
-        );
-        Collapsed = Yes;
-        AutoAttractIcons = No;
-      };
-      Name = Drawer0;
-      Position = "0,1024";
-    }
-  );
+  Drawers = ();
   Workspaces = (
     {
       Clip = {
@@ -362,5 +291,4 @@
       Name = "Workspace 1";
     }
   );
-  Workspace = "Workspace 1";
 }
