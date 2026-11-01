@@ -16,32 +16,37 @@
   RaiseDelay = 350;
   ClipTitleFont = "Verdana:bold:pixelsize=10";
   IconTitleFont = "Arial,sans serif:pixelsize=9";
-  MenuTextBack = (hgradient, "rgb:18/38/59", "rgb:00/14/28");
   LargeDisplayFont = "Trebuchet MS,sans serif:pixelsize=24";
   CenterKey = None;
   IconTitleColor = "#ffffff";
-  MenuTextColor = "#ffffff";
-  IconBack = (mdgradient, "rgb:61/51/59", "rgb:38/58/79", black, "rgb:18/38/59");
   MenuTitleColor = "#ffffff";
-  AntialiasedText = YES;
   MenuTitleFont = "Trebuchet MS,sans serif:bold:pixelsize=12";
   DoubleClickTime = 350;
   MoveTo6to12Head = None;
   DbClickFullScreen = NO;
-  MenuTextFont = "Trebuchet MS,sans serif:pixelsize=12";
   HighlightTextColor = "#000000";
-  MenuTitleBack = (hgradient, "rgb:08/24/38", black);
   EnforceIconMargin = NO;
   AutoArrangeIcons = YES;
   ClipTitleColor = "#ffffff";
   MoveTo12to6Head = None;
   FrameFocusedBorderColor = "#000000";
-  HighlightColor = "#ffffff";
   WindowTitleFont = "Trebuchet MS,sans serif:weight=200:pixelsize=12";
-  FocusMode = sloppy;
-  RunKey = "Mod4+D";
-  CClipTitleColor = "#666666";
+  RunKey = "Mod1+D";
   ResizebarBack = (hgradient, "rgb:38/58/79", "rgb:26/36/46");
+  DisplayFont = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*";
+  KbdModeLock = NO;
+  CloseRootMenuByLeftOrRightMouseClick = NO;
+  FrameSelectedBorderColor = "#ffffff";
+  ToggleKbdModeKey = None;
+  MenuTextBack = (hgradient, "rgb:18/38/59", "rgb:00/14/28");
+  MenuTextColor = "#ffffff";
+  IconBack = (mdgradient, "rgb:61/51/59", "rgb:38/58/79", black, "rgb:18/38/59");
+  AntialiasedText = YES;
+  MenuTextFont = "Trebuchet MS,sans serif:pixelsize=12";
+  MenuTitleBack = (hgradient, "rgb:08/24/38", black);
+  HighlightColor = "#ffffff";
+  FocusMode = sloppy;
+  CClipTitleColor = "#666666";
   IconPath = (
     "~/GNUstep/Library/Icons",
     "~/GNUstep/Library/WindowMaker/Pixmaps",
@@ -52,12 +57,8 @@
     "/usr/local/share/pixmaps",
     "/usr/local/share/icons/hicolor/64x64"
   );
-  DisplayFont = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*";
-  KbdModeLock = NO;
   PTitleBack = (hgradient, "rgb:18/38/59", black);
   UTitleColor = "#999999";
   UTitleBack = (hgradient, "rgb:38/58/79", "rgb:26/36/46");
-  CloseRootMenuByLeftOrRightMouseClick = NO;
   PTitleColor = "#999999";
-  FrameSelectedBorderColor = "#ffffff";
 }
