@@ -3,12 +3,7 @@
   (
     Applications,
     OPEN_PLMENU,
-    "|| wmmenugen -parser:xdg /usr/local/share/applications/ /usr/local/GNUstep/"
-  ),
-  (
-    MyApps,
-    OPEN_PLMENU,
-    "|| wmmenugen -parser:xdg ~/.local/share/applications"
+    "|| wmmenugen -parser:xdg /usr/share/applications/ ~/.local/share/applications /usr/local/share/applications/ /usr/local/GNUstep/"
   ),
   (Run..., EXEC, "%A(Run,Type command to run)"),
   (
@@ -23,8 +18,7 @@
       EXEC,
       "xscreensaver-command --activate"
     ),
-    (Suspend FreeBSD, EXEC, "zzz"),
-    (Suspend Linux, EXEC, "systemctl suspend"),
+    (Suspend, EXEC, "zzz || systemctl suspend"),
     ("Refresh screen", REFRESH),
     (Restart, RESTART)
   ),
@@ -38,7 +32,6 @@
     ("Show All", SHOW_ALL),
     (Workspaces, WORKSPACE_MENU)
   ),
-  (Suspend FreeBSD, EXEC, "zzz"),
   (
     "Lock screen",
     SHORTCUT,
@@ -46,7 +39,7 @@
     EXEC,
     "xscreensaver-command --activate"
   ),
-  (Suspend Linux, EXEC, "systemctl suspend"),
+  (Suspend, EXEC, "zzz || systemctl suspend"),
   (Exit, EXIT),
   ("Exit session", SHUTDOWN)
 )
