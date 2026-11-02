@@ -175,6 +175,12 @@
       "folders": "/",
     },
     {
+      "type": "disk",
+      "key": "│  {#keys}󰋊 Boot (/boot)",
+      "keyColor": "green",
+      "folders": "/boot",
+    },
+    {
       "type": "swap",
       "keyColor": "green",
       "key": "│  {#keys}󰋊 Swap",

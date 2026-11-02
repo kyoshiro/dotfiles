@@ -14,13 +14,24 @@
 #
 # This file must be executable.
 #
+#
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   eval "$(ssh-agent -s)"
+fi
 dunst &
 xscreensaver --no-splash &
 dbus-update-activation-environment --all &
 /usr/libexec/polkit-kde-authentication-agent-1 &
+
+if [[ "$OSTYPE" == "freebsd"* ]]; then
 exec /usr/local/bin/kwalletd6 &
 exec protonmail-bridge -n &
-keepassxc &
+fi
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+/usr/bin/kwalletd6 &
+proton-mail-bridge-gui &
+fi
 nextcloud &
+blueman-applet &
+keepassxc &
 xset m 20/10 4
-

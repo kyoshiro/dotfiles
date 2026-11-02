@@ -11,20 +11,8 @@ if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
   trap "kill $SSH_AGENT_PID" 0
 fi
 
-if [ -z $SSH_AGENT_PID ]; then
-  echo "~/.bash_profile: Starting SSH Agent!"
-  eval `ssh-agent` && ssh-add ~/.ssh/id_rsa
-  echo "~/.bash_profile: SSH Agent running (PID: $SSH_AGENT_PID)"
-else
-  echo "~/.bash_profile: SSH Agent already running (PID: $SSH_AGENT_PID)"
-  if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
-    echo "~/.bash_profile: SSH Agent adding SSH Key:"
-    ssh-add
-  fi
-fi
-
 # Set preferred TERMINAL
-export TERMINAL=/usr/bin/kitty
+export TERMINAL=/usr/bin/alacritty
 
 #pars for fun: install | remove | rollback
 function apt-history(){
@@ -43,7 +31,7 @@ function apt-history(){
                   awk '{print $4"="$5}'
               ;;
         *)
-			grep '(install|upgrade|remove|rollback)' /var/log/dpkg.log | awk '{ print $1" "$2" "$3" "$4 }'
+        grep '(install|upgrade|remove|rollback)' /var/log/dpkg.log | awk '{ print $1" "$2" "$3" "$4 }'
               ;;
       esac
 }
@@ -61,21 +49,21 @@ PURPLE='\[\e[1;35m\]'
 NOCOLOR='\[\e[0m\]'
 
 # # checks if branch has something pending
-# function parse_git_dirty() {
-# 	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo " (*)"
-# }
+function parse_git_dirty() {
+	[[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo " (*)"
+}
 #
-# # gets the current git branch
-# function parse_git_branch() {
-# 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) /'
-# }
+# gets the current git branch
+function parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1) /'
+}
 #
-# # get last commit hash prepended with @ (i.e. @8a323d0)
-# function parse_git_hash() {
-# 	git rev-parse --short HEAD 2> /dev/null | sed "s/\(.*\)/\[\1\]/"
-# }
+# get last commit hash prepended with @ (i.e. @8a323d0)
+function parse_git_hash() {
+	git rev-parse --short HEAD 2> /dev/null | sed "s/\(.*\)/\[\1\]/"
+}
 
-# export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;31m\]\$(parse_git_branch)\[\033[00m\]\[\e[33m\]\$(parse_git_hash)\[\e[1;31m\]\$(parse_git_dirty)\[\e[0m\] $ "
+export PS1="\[\e[1;32m\]\u@\h \[\e[1;34m\]\w\[\e[1;31m\]\$(parse_git_branch)\[\033[00m\]\[\e[33m\]\$(parse_git_hash)\[\e[1;31m\]\$(parse_git_dirty)\[\e[0m\] $ "
 
 export PATH=$PATH:~/bin:~/.cargo/bin
 #export DISPLAY=:0.0
@@ -83,6 +71,7 @@ export PATH=$PATH:~/bin:~/.cargo/bin
 #export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0 # in WSL 2
 #if [ -e /home/$USER/.nix-profile/etc/profile.d/nix.sh ]; then . /home/$USER/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+eval "$(zoxide init bash)"
 # #AWSume alias to source the AWSume script
 # alias awsume="source awsume"
 #
@@ -98,4 +87,8 @@ export PATH=$PATH:~/bin:~/.cargo/bin
 # }
 # complete -F _awsume awsume
 #
-
+# Start Sway on TTY1
+# if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+#  exec $HOME/bin/start_sway.sh
+# fi
+#

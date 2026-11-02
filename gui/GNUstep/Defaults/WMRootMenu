@@ -23,7 +23,8 @@
       EXEC,
       "xscreensaver-command --activate"
     ),
-    (Suspend, EXEC, "zzz"),
+    (Suspend FreeBSD, EXEC, "zzz"),
+    (Suspend Linux, EXEC, "systemctl suspend"),
     ("Refresh screen", REFRESH),
     (Restart, RESTART)
   ),
@@ -37,7 +38,15 @@
     ("Show All", SHOW_ALL),
     (Workspaces, WORKSPACE_MENU)
   ),
-  (Suspend, EXEC, "zzz"),
+  (Suspend FreeBSD, EXEC, "zzz"),
+  (
+    "Lock screen",
+    SHORTCUT,
+    "Mod4+Shift+Escape",
+    EXEC,
+    "xscreensaver-command --activate"
+  ),
+  (Suspend Linux, EXEC, "systemctl suspend"),
   (Exit, EXIT),
   ("Exit session", SHUTDOWN)
 )

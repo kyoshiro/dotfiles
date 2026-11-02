@@ -1,137 +1,5 @@
 {
   Dock = {
-    Applications1800 = (
-      {
-        Forced = No;
-        Name = Logo.WMDock;
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,0";
-        Lock = No;
-        Command = "-";
-      },
-      {
-        Forced = No;
-        Name = wmmoonclock.wmmoonclock;
-        DropCommand = "wmmoonclock %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,3";
-        Lock = Yes;
-        PasteCommand = "wmmoonclock %s";
-        Command = wmmoonclock;
-      },
-      {
-        Forced = No;
-        Name = wmitime.wmitime;
-        DropCommand = "wmitime %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,4";
-        Lock = Yes;
-        PasteCommand = "wmitime %s";
-        Command = wmitime;
-      },
-      {
-        Forced = No;
-        Name = wmsystemtray0.wmsystemtray;
-        DropCommand = "wmsystemtray %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,9";
-        Lock = Yes;
-        PasteCommand = "wmsystemtray %s";
-        Command = wmsystemtray;
-      },
-      {
-        Forced = No;
-        Name = wmclock.WMClock;
-        DropCommand = "wmclock %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,2";
-        Lock = Yes;
-        PasteCommand = "wmclock %s";
-        Command = wmclock;
-      },
-      {
-        Forced = No;
-        Name = wmwork.wmwork;
-        DropCommand = "wmwork %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,6";
-        Lock = Yes;
-        PasteCommand = "wmwork %s";
-        Command = wmwork;
-      },
-      {
-        Forced = No;
-        Name = GWorkspace.GNUstep;
-        DropCommand = "GWorkspace %d";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,7";
-        Lock = No;
-        PasteCommand = "GWorkspace %s";
-        Command = GWorkspace;
-      },
-      {
-        Forced = No;
-        Name = wmeyes.WMeyes;
-        DropCommand = "wmeyes -w %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,8";
-        Lock = Yes;
-        PasteCommand = "wmeyes -w %s";
-        Command = "wmeyes -w";
-      },
-      {
-        Forced = No;
-        Name = wmnet.wmnet;
-        DropCommand = "wmnet -i igc0 %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,5";
-        Lock = Yes;
-        PasteCommand = "wmnet -i igc0 %s";
-        Command = "wmnet -i igc0";
-      },
-      {
-        Forced = No;
-        Name = wmsmixer.Wmsmixer;
-        DropCommand = "wmsmixer -w %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,10";
-        Lock = Yes;
-        PasteCommand = "wmsmixer -w %s";
-        Command = "wmsmixer -w";
-      },
-      {
-        Forced = No;
-        Name = groupLeader.WPrefs;
-        DropCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %d";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,1";
-        Lock = Yes;
-        PasteCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %s";
-        Command = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs";
-      },
-      {
-        Forced = No;
-        Name = wmbright.wmbright;
-        DropCommand = "wmbright %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,11";
-        Lock = Yes;
-        PasteCommand = "wmbright %s";
-        Command = wmbright;
-      }
-    );
     AutoRaiseLower = No;
     Applications = (
       {
@@ -167,14 +35,36 @@
       },
       {
         Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmmon %s";
+        Command = wmmon;
+      },
+      {
+        Forced = No;
         Name = wmsystemtray0.wmsystemtray;
         DropCommand = "wmsystemtray %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,9";
+        Position = "0,11";
         Lock = Yes;
         PasteCommand = "wmsystemtray %s";
         Command = wmsystemtray;
+      },
+      {
+        Forced = No;
+        Name = wmweather.wmweather;
+        DropCommand = "wmweather %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "wmweather %s";
+        Command = wmweather;
       },
       {
         Forced = No;
@@ -189,11 +79,22 @@
       },
       {
         Forced = No;
+        Name = wmnet.WMNET;
+        DropCommand = "wmnet -d 100000 -Wwlp0s20f3 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "wmnet -d 100000 -Wwlp0s20f3 %s";
+        Command = "wmnet -d 100000 -Wwlp0s20f3";
+      },
+      {
+        Forced = No;
         Name = wmwork.wmwork;
         DropCommand = "wmwork %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,6";
+        Position = "0,8";
         Lock = Yes;
         PasteCommand = "wmwork %s";
         Command = wmwork;
@@ -204,7 +105,7 @@
         DropCommand = "GWorkspace %d";
         BuggyApplication = No;
         AutoLaunch = No;
-        Position = "0,7";
+        Position = "0,9";
         Lock = No;
         PasteCommand = "GWorkspace %s";
         Command = GWorkspace;
@@ -215,43 +116,21 @@
         DropCommand = "wmeyes -w %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,8";
+        Position = "0,10";
         Lock = Yes;
         PasteCommand = "wmeyes -w %s";
         Command = "wmeyes -w";
       },
       {
         Forced = No;
-        Name = wmnet.wmnet;
-        DropCommand = "wmnet -i igc0 %d";
+        Name = wmpulsemixer.WmPulseMixer;
+        DropCommand = "wmpulsemixer -w %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,5";
+        Position = "0,12";
         Lock = Yes;
-        PasteCommand = "wmnet -i igc0 %s";
-        Command = "wmnet -i igc0";
-      },
-      {
-        Forced = No;
-        Name = wmsmixer.Wmsmixer;
-        DropCommand = "wmsmixer -w %d";
-        BuggyApplication = No;
-        AutoLaunch = Yes;
-        Position = "0,10";
-        Lock = Yes;
-        PasteCommand = "wmsmixer -w %s";
-        Command = "wmsmixer -w";
-      },
-      {
-        Forced = No;
-        Name = groupLeader.WPrefs;
-        DropCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %d";
-        BuggyApplication = No;
-        AutoLaunch = No;
-        Position = "0,1";
-        Lock = Yes;
-        PasteCommand = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs %s";
-        Command = "/usr/local/GNUstep/Applications/WPrefs.app/WPrefs";
+        PasteCommand = "wmpulsemixer -w %s";
+        Command = "wmpulsemixer -w";
       },
       {
         Forced = No;
@@ -259,24 +138,224 @@
         DropCommand = "wmbright %d";
         BuggyApplication = No;
         AutoLaunch = Yes;
-        Position = "0,11";
+        Position = "0,13";
         Lock = Yes;
         PasteCommand = "wmbright %s";
         Command = wmbright;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "WPrefs %s";
+        Command = WPrefs;
+      }
+    );
+    Applications3040 = (
+      {
+        Forced = No;
+        Name = Logo.WMDock;
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,0";
+        Lock = No;
+        Command = "-";
+      },
+      {
+        Forced = No;
+        Name = wmmoonclock.wmmoonclock;
+        DropCommand = "wmmoonclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,3";
+        Lock = Yes;
+        PasteCommand = "wmmoonclock %s";
+        Command = wmmoonclock;
+      },
+      {
+        Forced = No;
+        Name = wmitime.wmitime;
+        DropCommand = "wmitime %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,4";
+        Lock = Yes;
+        PasteCommand = "wmitime %s";
+        Command = wmitime;
+      },
+      {
+        Forced = No;
+        Name = wmmon.wmmon;
+        DropCommand = "wmmon %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,5";
+        Lock = Yes;
+        PasteCommand = "wmmon %s";
+        Command = wmmon;
+      },
+      {
+        Forced = No;
+        Name = wmsystemtray0.wmsystemtray;
+        DropCommand = "wmsystemtray %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,11";
+        Lock = Yes;
+        PasteCommand = "wmsystemtray %s";
+        Command = wmsystemtray;
+      },
+      {
+        Forced = No;
+        Name = wmweather.wmweather;
+        DropCommand = "wmweather %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,6";
+        Lock = Yes;
+        PasteCommand = "wmweather %s";
+        Command = wmweather;
+      },
+      {
+        Forced = No;
+        Name = wmclock.WMClock;
+        DropCommand = "wmclock %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,2";
+        Lock = Yes;
+        PasteCommand = "wmclock %s";
+        Command = wmclock;
+      },
+      {
+        Forced = No;
+        Name = wmnet.WMNET;
+        DropCommand = "wmnet -d 100000 -Wwlp0s20f3 %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,7";
+        Lock = Yes;
+        PasteCommand = "wmnet -d 100000 -Wwlp0s20f3 %s";
+        Command = "wmnet -d 100000 -Wwlp0s20f3";
+      },
+      {
+        Forced = No;
+        Name = wmwork.wmwork;
+        DropCommand = "wmwork %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,8";
+        Lock = Yes;
+        PasteCommand = "wmwork %s";
+        Command = wmwork;
+      },
+      {
+        Forced = No;
+        Name = GWorkspace.GNUstep;
+        DropCommand = "GWorkspace %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,9";
+        Lock = No;
+        PasteCommand = "GWorkspace %s";
+        Command = GWorkspace;
+      },
+      {
+        Forced = No;
+        Name = wmeyes.WMeyes;
+        DropCommand = "wmeyes -w %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,10";
+        Lock = Yes;
+        PasteCommand = "wmeyes -w %s";
+        Command = "wmeyes -w";
+      },
+      {
+        Forced = No;
+        Name = wmpulsemixer.WmPulseMixer;
+        DropCommand = "wmpulsemixer -w %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,12";
+        Lock = Yes;
+        PasteCommand = "wmpulsemixer -w %s";
+        Command = "wmpulsemixer -w";
+      },
+      {
+        Forced = No;
+        Name = wmbright.wmbright;
+        DropCommand = "wmbright %d";
+        BuggyApplication = No;
+        AutoLaunch = Yes;
+        Position = "0,13";
+        Lock = Yes;
+        PasteCommand = "wmbright %s";
+        Command = wmbright;
+      },
+      {
+        Forced = No;
+        Name = groupLeader.WPrefs;
+        DropCommand = "WPrefs %d";
+        BuggyApplication = No;
+        AutoLaunch = No;
+        Position = "0,1";
+        Lock = Yes;
+        PasteCommand = "WPrefs %s";
+        Command = WPrefs;
       }
     );
     Lowered = Yes;
-    Position = "0,124";
+    Position = "0,66";
   };
   Clip = {
     Forced = No;
     Name = Logo.WMClip;
     BuggyApplication = No;
     AutoLaunch = No;
-    Position = "6336,1736";
+    Position = "2496,1376";
     Lock = No;
     Command = "-";
   };
+  Applications = (
+    {
+      Maximized = 0x0000;
+      Name = wmstickynotes.Wmstickynotes;
+      Shaded = No;
+      Miniaturized = No;
+      Command = wmstickynotes;
+      Geometry = "150x150+146+17";
+      Hidden = No;
+      Workspace = "Workspace 1";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = wmstickynotes.Wmstickynotes;
+      Shaded = No;
+      Miniaturized = No;
+      Command = wmstickynotes;
+      Geometry = "150x150+146+17";
+      Hidden = No;
+      Workspace = "Workspace 1";
+      ShortcutMask = 0;
+    },
+    {
+      Maximized = 0x0000;
+      Name = wmstickynotes.Wmstickynotes;
+      Shaded = No;
+      Miniaturized = No;
+      Command = wmstickynotes;
+      Geometry = "150x150+146+17";
+      Hidden = No;
+      Workspace = "Workspace 1";
+      ShortcutMask = 0;
+    }
+  );
   Drawers = ();
   Workspaces = (
     {
@@ -291,4 +370,5 @@
       Name = "Workspace 1";
     }
   );
+  Workspace = "Workspace 1";
 }
