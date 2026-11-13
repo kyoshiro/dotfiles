@@ -63,7 +63,6 @@
   WrapAppiconsInDock = YES;
   RunKey = "Mod4+D";
   LHMaximizeKey = None;
-  MoveToPrevWorkspaceKey = None;
   ResizebarBack = (hgradient, "rgb:38/58/79", "rgb:26/36/46");
   MoveToWorkspace6Key = None;
   MoveToWorkspace10Key = None;
