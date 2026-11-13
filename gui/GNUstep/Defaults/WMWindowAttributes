@@ -2,14 +2,6 @@
   firefox.Firefox = {
     Icon = firefox.png;
   };
-  Alacritty.Alacritty = {
-    AlwaysUserIcon = No;
-    EmulateAppIcon = Yes;
-    Icon = Alacritty.svg;
-  };
-  thunderbird.Thunderbird = {
-    Icon = thunderbird.png;
-  };
   bookify.Bookify = {
     AlwaysUserIcon = No;
     EmulateAppIcon = Yes;
@@ -31,15 +23,15 @@
     AlwaysUserIcon = No;
     EmulateAppIcon = Yes;
   };
+  thunderbird.Thunderbird = {
+    Icon = thunderbird.png;
+  };
   gimp.Gimp = {
     Icon = gimp.png;
   };
   com.microsoft.vscode.com.microsoft.VSCode = {
     AlwaysUserIcon = No;
     EmulateAppIcon = Yes;
-  };
-  GWorkspace.GNUstep = {
-    Icon = GWorkspace.GNUstep.xpm;
   };
   groupLeader.WPrefs = {
     Icon = groupLeader.WPrefs.xpm;

@@ -31,7 +31,7 @@ local function set_theme()
 		vim.cmd [[colorscheme tokyonight-night]]
 	else
 		vim.o.background = "light"
-		vim.cmd [[colorscheme tokyonight-day]]
+		vim.cmd [[colorscheme unokai]]
 	end
 end
 

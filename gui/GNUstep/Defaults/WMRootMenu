@@ -18,7 +18,7 @@
       EXEC,
       "xscreensaver-command --activate"
     ),
-    (Suspend, EXEC, "zzz || systemctl suspend"),
+    (Suspend, SHEXEC, "zzz || systemctl suspend"),
     ("Refresh screen", REFRESH),
     (Restart, RESTART)
   ),
@@ -39,7 +39,7 @@
     EXEC,
     "xscreensaver-command --activate"
   ),
-  (Suspend, EXEC, "zzz || systemctl suspend"),
+  (Suspend, SHEXEC, "zzz || systemctl suspend"),
   (Exit, EXIT),
   ("Exit session", SHUTDOWN)
 )

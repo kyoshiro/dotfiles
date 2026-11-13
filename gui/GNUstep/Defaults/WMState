@@ -155,7 +155,9 @@
         Command = WPrefs;
       }
     );
-    Applications3040 = (
+    Lowered = Yes;
+    Position = "0,66";
+    Applications1440 = (
       {
         Forced = No;
         Name = Logo.WMDock;
@@ -309,15 +311,13 @@
         Command = WPrefs;
       }
     );
-    Lowered = Yes;
-    Position = "0,66";
   };
   Clip = {
     Forced = No;
     Name = Logo.WMClip;
     BuggyApplication = No;
     AutoLaunch = No;
-    Position = "2496,1376";
+    Position = "5291,1376";
     Lock = No;
     Command = "-";
   };

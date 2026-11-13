@@ -18,9 +18,15 @@ fi
 
 SSHAGENT=/usr/bin/ssh-agent
 SSHAGENTARGS="-s"
+SSH_ASKPASS_REQUIRE=force
+export SSH_ASKPASS=/usr/bin/ssh-askpass
 if [ -z "$SSH_AUTH_SOCK" -a -x "$SSHAGENT" ]; then
-  eval `$SSHAGENT $SSHAGENTARGS`
-  trap "kill $SSH_AGENT_PID" 0
+	eval $($SSHAGENT $SSHAGENTARGS)
+	export SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+	export SSH_AGENT_PID=$SSH_AGENT_PID
+	export SSH_ASKPASS=$SSH_ASKPASS
+	export SSH_ASKPASS_REQUIRE=$SSH_ASKPASS_REQUIRE
+	trap "kill $SSH_AGENT_PID" 0
 fi
 
 # set PATH so it includes user's private bin if it exists
