@@ -2,7 +2,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-PATH=$PATH:~/bin:~/dev/git/depot_tools
+PATH=$PATH:~/bin
 setopt share_history
 setopt hist_ignore_dups
 setopt hist_expire_dups_first

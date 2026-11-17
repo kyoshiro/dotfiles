@@ -4,6 +4,7 @@
 *.plist
 _build
 node_modules
+gui/GNUStep/Defaults/WMState*
 gui/.config/gtk-3.0/bookmarks
 gui/.config/gtk-3.0/colors.css
 gui/.config/gtk-3.0/gtk.css
