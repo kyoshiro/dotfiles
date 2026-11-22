@@ -1,19 +1,19 @@
 {
-  firefox.Firefox = {
-    Icon = firefox.png;
+  "teams-for-linux.teams-for-linux" = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
+  };
+  spotify.Spotify = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
   };
   bookify.Bookify = {
     AlwaysUserIcon = No;
     EmulateAppIcon = Yes;
     Icon = bookify.png;
   };
-  spotify.Spotify = {
-    AlwaysUserIcon = No;
-    EmulateAppIcon = Yes;
-  };
-  "teams-for-linux.teams-for-linux" = {
-    AlwaysUserIcon = No;
-    EmulateAppIcon = Yes;
+  firefox.Firefox = {
+    Icon = firefox.png;
   };
   Alacritty.Alacritty = {
     AlwaysUserIcon = No;
@@ -29,18 +29,18 @@
   gimp.Gimp = {
     Icon = gimp.png;
   };
-  com.microsoft.vscode.com.microsoft.VSCode = {
-    AlwaysUserIcon = No;
-    EmulateAppIcon = Yes;
-  };
-  groupLeader.WPrefs = {
-    Icon = groupLeader.WPrefs.xpm;
+  thunderbird.Thunderbird = {
+    Icon = thunderbird.png;
   };
   keepassxc.KeePassXC = {
     Icon = keepassxc.KeePassXC.xpm;
   };
   arandr. = {
     Icon = GNUterm.xpm;
+  };
+  com.microsoft.vscode.com.microsoft.VSCode = {
+    AlwaysUserIcon = No;
+    EmulateAppIcon = Yes;
   };
   Navigator.firefox = {
     AlwaysUserIcon = No;
@@ -49,5 +49,8 @@
   };
   GWorkspace.GNUstep = {
     Icon = GWorkspace.GNUstep.xpm;
+  };
+  groupLeader.WPrefs = {
+    Icon = groupLeader.WPrefs.xpm;
   };
 }
