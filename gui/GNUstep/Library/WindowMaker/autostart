@@ -22,11 +22,11 @@ blueman-applet &
 keepassxc &
 nextcloud &
 
-
-if [ "$OSTYPE" == "freebsd" ]; then
+OS="$(uname)"
+if [ "$OS" == "FreeBSD" ]; then
 	protonmail-bridge -n &
 fi
-if [ "$OSTYPE" == "linux-gnu" ]; then
+if [ "$OS" == "Linux" ]; then
 	protonmail-mail-bridge-gui &
 fi
 xset m 20/10 4

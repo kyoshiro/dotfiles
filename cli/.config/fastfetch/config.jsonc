@@ -71,7 +71,7 @@
       "type": "command",
       "key": "│  {#keys}󰅐 Age",
       "keyColor": "magenta",
-      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
+      "text": "birth_install=$(stat -f %B /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
     },
     {
       "type": "custom",
@@ -166,7 +166,7 @@
       "type": "command",
       "key": "│  {#keys} Battery Health",
       "keyColor": "green",
-      "text": "energy_full=$(cat /sys/class/power_supply/BAT0/energy_full); energy_full_design=$(cat /sys/class/power_supply/BAT0/energy_full_design); battery_health=$((energy_full*100/energy_full_design)); echo \"$battery_health%\"",
+      "text": "$([ -r /sys/class/power_supply/BAT0/energy_full ] && energy_full=$(cat /sys/class/power_supply/BAT0/energy_full) && energy_full_design=$(cat /sys/class/power_supply/BAT0/energy_full_design) && battery_health=$((energy_full*100/energy_full_design)) && echo \"$battery_health%\")",
     },
     {
       "type": "disk",
